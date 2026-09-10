@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'pricing/**'
+      - '!pricing/inspect_sources.py'
       - '.github/workflows/update-prices.yml'
   workflow_dispatch:
   schedule:

@@ -3,26 +3,26 @@ import json
 from sync_prices import PublicClient, Document, PriceError, ROOT, read_config
 
 PAGES = {
-    'tottus': ['https://www.tottus.cl/tottus-cl/lista/CATG27069/Carnes',
-               'https://www.tottus.cl/tottus-cl/lista/CATG27055/Despensa'],
-    'unimarc': ['https://www.unimarc.cl/'],
+    'unimarc': ['https://www.unimarc.cl/search?q=mayonesa'],
 }
 
 
 def inspect_page(html):
     doc = Document(html)
-    result = {'bytes': len(html), 'scripts': [], 'samples': [], 'links': []}
+    result = {'bytes': len(html), 'scripts': [], 'samples': [], 'links': [], 'structure': []}
     def walk(value, path=''):
         if isinstance(value, dict):
+            if len(result['structure']) < 120:
+                result['structure'].append({'path': path, 'keys': list(value)[:25]})
             name = value.get('displayName') or value.get('productName') or value.get('name')
-            if name and any(key in value for key in ('prices', 'offers', 'price', 'variants')) and len(result['samples']) < 3:
+            if name and any(key in value for key in ('prices', 'offers', 'price', 'variants', 'items', 'sku')) and len(result['samples']) < 3:
                 result['samples'].append({'path': path, 'data': value})
                 return
             for key, child in value.items():
                 if isinstance(child, (dict, list)):
                     walk(child, path + '/' + key)
         elif isinstance(value, list):
-            for i, child in enumerate(value[:60]):
+            for i, child in enumerate(value[:5]):
                 walk(child, path + '/' + str(i))
     for i, node in enumerate(doc.nodes):
         attrs = node['attrs']
