@@ -23,6 +23,8 @@ class DiscoveryTests(unittest.TestCase):
         verify_name('Sal Fina Cuisine & Co 1 kg', salt)
         with self.assertRaises(PriceError):
             verify_name('Maní con sal fina 1 kg', salt)
+        with self.assertRaises(PriceError):
+            verify_name('Sal Fina Pack de 6 bolsas 1 kg', salt)
 
     def test_cli_publishes_a_missing_search_as_error_instead_of_crashing(self):
         class Response:
