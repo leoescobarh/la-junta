@@ -146,7 +146,7 @@
     filters: [{ id: 'all', name: 'Todo' }, { id: 'main', name: 'Principales' }, { id: 'snack', name: 'Picoteo' }, { id: 'side', name: 'Acompañar' }, { id: 'extra', name: 'Bebidas y postres' }],
     stores: {
       jumbo: { name: 'Jumbo', url: 'https://www.jumbo.cl/busqueda?ft=', productHosts: ['www.jumbo.cl', 'jumbo.cl'] },
-      lider: { name: 'Lider', url: 'https://www.lider.cl/search?q=', productHosts: ['www.lider.cl', 'lider.cl'] },
+      lider: { name: 'Lider', url: 'https://www.lider.cl/supermercado/search?query=', productHosts: ['www.lider.cl', 'lider.cl'] },
       tottus: { name: 'Tottus', url: 'https://www.tottus.cl/tottus-cl/search?Ntt=', productHosts: ['www.tottus.cl', 'tottus.cl'] },
       unimarc: { name: 'Unimarc', url: 'https://www.unimarc.cl/search?q=', productHosts: ['www.unimarc.cl', 'unimarc.cl'] },
       santaIsabel: { name: 'Santa Isabel', url: 'https://www.santaisabel.cl/busqueda?ft=', productHosts: ['www.santaisabel.cl', 'santaisabel.cl'] },

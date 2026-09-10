@@ -158,10 +158,18 @@
           "unit": "kg",
           "pack": 1,
           "expected_terms": [
-            "sal"
+            "sal",
+            "fina"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Sal 1 kg"
+          "query": "Sal fina 1 kg",
+          "name_pattern": "^sal\\b",
+          "excluded_terms": [
+            "mani",
+            "salsa",
+            "salmon",
+            "galleta"
+          ]
         },
         {
           "ingredient": "queso",
@@ -170,10 +178,15 @@
           "pack": 0.25,
           "expected_terms": [
             "queso",
-            "gauda"
+            "gauda",
+            "laminad"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Queso gauda 250 g"
+          "query": "Queso gauda laminado 250 g",
+          "excluded_terms": [
+            "granulado",
+            "rallado"
+          ]
         },
         {
           "ingredient": "jamon",
@@ -208,6 +221,89 @@
           ],
           "expected_pattern": "\\b250\\s*g\\b",
           "query": "Mostaza 250 g"
+        },
+        {
+          "ingredient": "papasChips",
+          "label": "Papas fritas 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "papas",
+            "fritas"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Papas fritas 250 g"
+        },
+        {
+          "ingredient": "nachos",
+          "label": "Nachos 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "nachos"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Nachos 200 g"
+        },
+        {
+          "ingredient": "frutosSecos",
+          "label": "Mix frutos secos 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "mix",
+            "frutos"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Mix frutos secos 250 g"
+        },
+        {
+          "ingredient": "galletaSalada",
+          "label": "Galletas saladas 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "galleta",
+            "salad"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Galletas saladas 200 g"
+        },
+        {
+          "ingredient": "bebida",
+          "label": "Coca Cola original 2 L",
+          "unit": "L",
+          "pack": 2,
+          "expected_terms": [
+            "coca",
+            "cola",
+            "original"
+          ],
+          "expected_pattern": "\\b2\\s*(?:l|lt|litros?)\\b",
+          "query": "Coca Cola original 2 L"
+        },
+        {
+          "ingredient": "agua",
+          "label": "Agua mineral sin gas 1.5 L",
+          "unit": "L",
+          "pack": 1.5,
+          "expected_terms": [
+            "agua",
+            "sin gas"
+          ],
+          "expected_pattern": "\\b1[.,]5\\s*(?:l|lt|litros?)\\b",
+          "query": "Agua mineral sin gas 1.5 L"
+        },
+        {
+          "ingredient": "hielo",
+          "label": "Hielo 2 kg",
+          "unit": "kg",
+          "pack": 2,
+          "expected_terms": [
+            "hielo"
+          ],
+          "expected_pattern": "\\b2\\s*kg\\b",
+          "query": "Hielo 2 kg"
         }
       ]
     },
@@ -299,7 +395,7 @@
             "tomate"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Tomate 1 kg"
+          "product_url": "https://www.santaisabel.cl/tomate-malla-1-kg/p"
         },
         {
           "ingredient": "palta",
@@ -311,7 +407,7 @@
             "hass"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Palta hass 1 kg"
+          "product_url": "https://www.santaisabel.cl/palta-hass-jumbo-malla-1-kg/p"
         },
         {
           "ingredient": "vacuno",
@@ -335,7 +431,7 @@
             "deshuesad"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Pechuga pollo deshuesada 1 kg"
+          "product_url": "https://www.santaisabel.cl/pollo-pechuga-desh-2034037/p"
         },
         {
           "ingredient": "chorizo",
@@ -346,7 +442,7 @@
             "choriz"
           ],
           "expected_pattern": "\\b500\\s*g\\b",
-          "query": "Chorizo 500 g"
+          "product_url": "https://www.santaisabel.cl/chorizo-angus-la-preferida-500-g-8-2/p"
         },
         {
           "ingredient": "carbon",
@@ -357,7 +453,7 @@
             "carbon"
           ],
           "expected_pattern": "\\b2[.,]5\\s*kg\\b",
-          "query": "Carbon 2.5 kg"
+          "product_url": "https://www.santaisabel.cl/carbon-quebracho-blanco-2-5-kg-beef-maker-1895137/p"
         },
         {
           "ingredient": "sal",
@@ -365,10 +461,18 @@
           "unit": "kg",
           "pack": 1,
           "expected_terms": [
-            "sal"
+            "sal",
+            "fina"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Sal 1 kg"
+          "name_pattern": "^sal\\b",
+          "excluded_terms": [
+            "mani",
+            "salsa",
+            "salmon",
+            "galleta"
+          ],
+          "product_url": "https://www.santaisabel.cl/sal-fina-cuisine-and-co-1kg-1924568/p"
         },
         {
           "ingredient": "queso",
@@ -377,10 +481,15 @@
           "pack": 0.25,
           "expected_terms": [
             "queso",
-            "gauda"
+            "gauda",
+            "laminad"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Queso gauda 250 g"
+          "query": "Queso gauda laminado 250 g",
+          "excluded_terms": [
+            "granulado",
+            "rallado"
+          ]
         },
         {
           "ingredient": "jamon",
@@ -392,7 +501,7 @@
             "pierna"
           ],
           "expected_pattern": "\\b200\\s*g\\b",
-          "query": "Jamon pierna 200 g"
+          "product_url": "https://www.santaisabel.cl/jamon-pierna-la-preferida-200-g/p"
         },
         {
           "ingredient": "ketchup",
@@ -403,7 +512,7 @@
             "ketchup"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Ketchup 250 g"
+          "product_url": "https://www.santaisabel.cl/ketchup-hellmanns-doypack-250-g-2/p"
         },
         {
           "ingredient": "mostaza",
@@ -414,7 +523,90 @@
             "mostaza"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Mostaza 250 g"
+          "product_url": "https://www.santaisabel.cl/mostaza-jb-doypack-250-g/p"
+        },
+        {
+          "ingredient": "papasChips",
+          "label": "Papas fritas 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "papas",
+            "fritas"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Papas fritas 250 g"
+        },
+        {
+          "ingredient": "nachos",
+          "label": "Nachos 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "nachos"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Nachos 200 g"
+        },
+        {
+          "ingredient": "frutosSecos",
+          "label": "Mix frutos secos 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "mix",
+            "frutos"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Mix frutos secos 250 g"
+        },
+        {
+          "ingredient": "galletaSalada",
+          "label": "Galletas saladas 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "galleta",
+            "salad"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Galletas saladas 200 g"
+        },
+        {
+          "ingredient": "bebida",
+          "label": "Coca Cola original 2 L",
+          "unit": "L",
+          "pack": 2,
+          "expected_terms": [
+            "coca",
+            "cola",
+            "original"
+          ],
+          "expected_pattern": "\\b2\\s*(?:l|lt|litros?)\\b",
+          "query": "Coca Cola original 2 L"
+        },
+        {
+          "ingredient": "agua",
+          "label": "Agua mineral sin gas 1.5 L",
+          "unit": "L",
+          "pack": 1.5,
+          "expected_terms": [
+            "agua",
+            "sin gas"
+          ],
+          "expected_pattern": "\\b1[.,]5\\s*(?:l|lt|litros?)\\b",
+          "query": "Agua mineral sin gas 1.5 L"
+        },
+        {
+          "ingredient": "hielo",
+          "label": "Hielo 2 kg",
+          "unit": "kg",
+          "pack": 2,
+          "expected_terms": [
+            "hielo"
+          ],
+          "expected_pattern": "\\b2\\s*kg\\b",
+          "query": "Hielo 2 kg"
         }
       ]
     },
@@ -429,8 +621,8 @@
       "seller_id": "1",
       "vtex": false,
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "search_url": "https://www.lider.cl/search?q=",
-      "product_path_pattern": "/ip/|/supermercado/product/",
+      "search_url": "https://www.lider.cl/supermercado/search?query=",
+      "product_path_pattern": "/supermercado/product/",
       "products": [
         {
           "ingredient": "panCompleto",
@@ -572,10 +764,18 @@
           "unit": "kg",
           "pack": 1,
           "expected_terms": [
-            "sal"
+            "sal",
+            "fina"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Sal 1 kg"
+          "query": "Sal fina 1 kg",
+          "name_pattern": "^sal\\b",
+          "excluded_terms": [
+            "mani",
+            "salsa",
+            "salmon",
+            "galleta"
+          ]
         },
         {
           "ingredient": "queso",
@@ -584,10 +784,15 @@
           "pack": 0.25,
           "expected_terms": [
             "queso",
-            "gauda"
+            "gauda",
+            "laminad"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Queso gauda 250 g"
+          "query": "Queso gauda laminado 250 g",
+          "excluded_terms": [
+            "granulado",
+            "rallado"
+          ]
         },
         {
           "ingredient": "jamon",
@@ -622,6 +827,89 @@
           ],
           "expected_pattern": "\\b250\\s*g\\b",
           "query": "Mostaza 250 g"
+        },
+        {
+          "ingredient": "papasChips",
+          "label": "Papas fritas 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "papas",
+            "fritas"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Papas fritas 250 g"
+        },
+        {
+          "ingredient": "nachos",
+          "label": "Nachos 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "nachos"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Nachos 200 g"
+        },
+        {
+          "ingredient": "frutosSecos",
+          "label": "Mix frutos secos 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "mix",
+            "frutos"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Mix frutos secos 250 g"
+        },
+        {
+          "ingredient": "galletaSalada",
+          "label": "Galletas saladas 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "galleta",
+            "salad"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Galletas saladas 200 g"
+        },
+        {
+          "ingredient": "bebida",
+          "label": "Coca Cola original 2 L",
+          "unit": "L",
+          "pack": 2,
+          "expected_terms": [
+            "coca",
+            "cola",
+            "original"
+          ],
+          "expected_pattern": "\\b2\\s*(?:l|lt|litros?)\\b",
+          "query": "Coca Cola original 2 L"
+        },
+        {
+          "ingredient": "agua",
+          "label": "Agua mineral sin gas 1.5 L",
+          "unit": "L",
+          "pack": 1.5,
+          "expected_terms": [
+            "agua",
+            "sin gas"
+          ],
+          "expected_pattern": "\\b1[.,]5\\s*(?:l|lt|litros?)\\b",
+          "query": "Agua mineral sin gas 1.5 L"
+        },
+        {
+          "ingredient": "hielo",
+          "label": "Hielo 2 kg",
+          "unit": "kg",
+          "pack": 2,
+          "expected_terms": [
+            "hielo"
+          ],
+          "expected_pattern": "\\b2\\s*kg\\b",
+          "query": "Hielo 2 kg"
         }
       ]
     },
@@ -779,10 +1067,18 @@
           "unit": "kg",
           "pack": 1,
           "expected_terms": [
-            "sal"
+            "sal",
+            "fina"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Sal 1 kg"
+          "query": "Sal fina 1 kg",
+          "name_pattern": "^sal\\b",
+          "excluded_terms": [
+            "mani",
+            "salsa",
+            "salmon",
+            "galleta"
+          ]
         },
         {
           "ingredient": "queso",
@@ -791,10 +1087,15 @@
           "pack": 0.25,
           "expected_terms": [
             "queso",
-            "gauda"
+            "gauda",
+            "laminad"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Queso gauda 250 g"
+          "query": "Queso gauda laminado 250 g",
+          "excluded_terms": [
+            "granulado",
+            "rallado"
+          ]
         },
         {
           "ingredient": "jamon",
@@ -829,6 +1130,89 @@
           ],
           "expected_pattern": "\\b250\\s*g\\b",
           "query": "Mostaza 250 g"
+        },
+        {
+          "ingredient": "papasChips",
+          "label": "Papas fritas 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "papas",
+            "fritas"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Papas fritas 250 g"
+        },
+        {
+          "ingredient": "nachos",
+          "label": "Nachos 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "nachos"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Nachos 200 g"
+        },
+        {
+          "ingredient": "frutosSecos",
+          "label": "Mix frutos secos 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "mix",
+            "frutos"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Mix frutos secos 250 g"
+        },
+        {
+          "ingredient": "galletaSalada",
+          "label": "Galletas saladas 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "galleta",
+            "salad"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Galletas saladas 200 g"
+        },
+        {
+          "ingredient": "bebida",
+          "label": "Coca Cola original 2 L",
+          "unit": "L",
+          "pack": 2,
+          "expected_terms": [
+            "coca",
+            "cola",
+            "original"
+          ],
+          "expected_pattern": "\\b2\\s*(?:l|lt|litros?)\\b",
+          "query": "Coca Cola original 2 L"
+        },
+        {
+          "ingredient": "agua",
+          "label": "Agua mineral sin gas 1.5 L",
+          "unit": "L",
+          "pack": 1.5,
+          "expected_terms": [
+            "agua",
+            "sin gas"
+          ],
+          "expected_pattern": "\\b1[.,]5\\s*(?:l|lt|litros?)\\b",
+          "query": "Agua mineral sin gas 1.5 L"
+        },
+        {
+          "ingredient": "hielo",
+          "label": "Hielo 2 kg",
+          "unit": "kg",
+          "pack": 2,
+          "expected_terms": [
+            "hielo"
+          ],
+          "expected_pattern": "\\b2\\s*kg\\b",
+          "query": "Hielo 2 kg"
         }
       ]
     },
@@ -986,10 +1370,18 @@
           "unit": "kg",
           "pack": 1,
           "expected_terms": [
-            "sal"
+            "sal",
+            "fina"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Sal 1 kg"
+          "query": "Sal fina 1 kg",
+          "name_pattern": "^sal\\b",
+          "excluded_terms": [
+            "mani",
+            "salsa",
+            "salmon",
+            "galleta"
+          ]
         },
         {
           "ingredient": "queso",
@@ -998,10 +1390,15 @@
           "pack": 0.25,
           "expected_terms": [
             "queso",
-            "gauda"
+            "gauda",
+            "laminad"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Queso gauda 250 g"
+          "query": "Queso gauda laminado 250 g",
+          "excluded_terms": [
+            "granulado",
+            "rallado"
+          ]
         },
         {
           "ingredient": "jamon",
@@ -1036,6 +1433,89 @@
           ],
           "expected_pattern": "\\b250\\s*g\\b",
           "query": "Mostaza 250 g"
+        },
+        {
+          "ingredient": "papasChips",
+          "label": "Papas fritas 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "papas",
+            "fritas"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Papas fritas 250 g"
+        },
+        {
+          "ingredient": "nachos",
+          "label": "Nachos 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "nachos"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Nachos 200 g"
+        },
+        {
+          "ingredient": "frutosSecos",
+          "label": "Mix frutos secos 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "mix",
+            "frutos"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Mix frutos secos 250 g"
+        },
+        {
+          "ingredient": "galletaSalada",
+          "label": "Galletas saladas 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "galleta",
+            "salad"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Galletas saladas 200 g"
+        },
+        {
+          "ingredient": "bebida",
+          "label": "Coca Cola original 2 L",
+          "unit": "L",
+          "pack": 2,
+          "expected_terms": [
+            "coca",
+            "cola",
+            "original"
+          ],
+          "expected_pattern": "\\b2\\s*(?:l|lt|litros?)\\b",
+          "query": "Coca Cola original 2 L"
+        },
+        {
+          "ingredient": "agua",
+          "label": "Agua mineral sin gas 1.5 L",
+          "unit": "L",
+          "pack": 1.5,
+          "expected_terms": [
+            "agua",
+            "sin gas"
+          ],
+          "expected_pattern": "\\b1[.,]5\\s*(?:l|lt|litros?)\\b",
+          "query": "Agua mineral sin gas 1.5 L"
+        },
+        {
+          "ingredient": "hielo",
+          "label": "Hielo 2 kg",
+          "unit": "kg",
+          "pack": 2,
+          "expected_terms": [
+            "hielo"
+          ],
+          "expected_pattern": "\\b2\\s*kg\\b",
+          "query": "Hielo 2 kg"
         }
       ]
     }

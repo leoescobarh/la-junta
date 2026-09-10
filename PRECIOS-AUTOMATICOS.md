@@ -4,9 +4,9 @@ El proyecto incluye un actualizador ejecutable y una integración con la calcula
 
 ## Estado de la entrega
 
-Las cinco fichas iniciales se localizaron en la web pública de Jumbo el 9 de septiembre de 2026. Se comprobaron sus nombres y formatos, pero **no se pudo validar una extracción directa desde el actualizador debido al acceso de red de este entorno**. Las pruebas usan respuestas sintéticas. El archivo público comienza en estado `pending`, sin importe ni fecha de consulta ficticios.
+La extracción real de las cinco fichas iniciales de Jumbo se verificó desde GitHub Actions el 10 de septiembre de 2026, mediante HTML JSON-LD. El catálogo ahora contempla 23 ingredientes en cinco supermercados. Esto expresa la cobertura configurada, no la cantidad de precios obtenidos: revisa `dist/prices.json` y el enlace `runUrl` de su ejecución para conocer la cobertura real.
 
-La primera ejecución en tu servidor determinará cuáles entregan datos utilizables. Cuando no se obtienen, se registra el motivo y la calculadora sigue funcionando con precios identificados como anteriores o de ejemplo. Si una ficha requiere JavaScript para mostrar el precio, puede necesitar un adaptador específico; el extractor no ejecuta JavaScript de la tienda.
+Cada ejecución registra qué tiendas entregan datos utilizables y el motivo de los fallos. La calculadora compara las ofertas en la columna Tienda, descarta precios anteriores de la selección automática y usa valores de ejemplo identificados cuando no hay una oferta vigente. Si una ficha requiere JavaScript para mostrar el precio, puede necesitar un adaptador específico; el extractor no ejecuta JavaScript de la tienda.
 
 ## Cómo funciona
 
@@ -31,7 +31,7 @@ Una respuesta de autenticación, bloqueo o límite de consultas detiene las cons
 | `arroz` | [Arroz Tucapel Grado 1 Gran Selección](https://www.jumbo.cl/arroz-grado-1-tucapel-gran-seleccion-grano-largo-y-ancho-1-kg/p) | 1 kg |
 | `pasta` | [Spaghetti Carozzi N°5](https://www.jumbo.cl/spaghetti-n-5-carozzi-bolsa-400-g-2/p) | 0,4 kg |
 
-Los demás ingredientes usan precios de ejemplo hasta que les asignes y compruebes una fuente. Mercado Libre conserva enlaces de búsqueda, sin integración de precios. Los importes son del contexto web público consultado, sin ubicación, sesión ni despacho. La disponibilidad local y el precio final se confirman en la tienda.
+Además se buscan dieciocho ingredientes de verduras, carnes, despensa, picoteo y bebidas con formato explícito. `pricing/discover.py` descubre hasta tres fichas por búsqueda y valida su nombre y formato antes de leer precios. Los ingredientes sin resultado conservan estimaciones identificadas. Mercado Libre no participa en la comparación de supermercados. Los importes corresponden al contexto web público consultado, sin ubicación, sesión ni despacho. La disponibilidad local y el precio final se confirman en la tienda.
 
 ## Primera ejecución
 
@@ -87,7 +87,7 @@ Si tu hosting no permite Python o cron, usa la opción B.
 
 El horario incluido es `23 */6 * * *`, en UTC. Las ejecuciones programadas requieren que el archivo exista en la rama predeterminada y pueden retrasarse; GitHub también puede desactivar horarios en repositorios públicos inactivos. Revisa periódicamente el estado de Actions, según su [documentación de eventos programados](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
 
-No se ha creado ni activado ninguna tarea en tu cuenta desde esta entrega. Los costos o cuotas de tu proveedor dependen de tu plan.
+El workflow está subido al repositorio y se comprobó una ejecución real. Además del horario cada seis horas y del botón manual, se ejecuta cuando cambian `pricing/` o el workflow en `main`. Los costos o cuotas de tu proveedor dependen de tu plan.
 
 ## Añadir productos o tiendas
 

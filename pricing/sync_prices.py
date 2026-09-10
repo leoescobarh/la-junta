@@ -75,6 +75,12 @@ def verify_name(name, target):
     pattern = target.get('expected_pattern')
     if pattern and not re.search(pattern, text, re.I):
         raise PriceError('product_mismatch', 'Cambió el formato del producto; requiere revisión.')
+    if target.get('name_pattern') and not re.search(target['name_pattern'], text, re.I):
+        raise PriceError('product_mismatch', 'La categoría del producto no coincide con el ingrediente.')
+    if any(normalized(term) in text for term in target.get('excluded_terms', [])):
+        raise PriceError('product_mismatch', 'La ficha corresponde a otra preparación o presentación.')
+    if not target.get('allow_multipack') and re.search(r'\b(?:pack\s+(?:de\s+)?[2-9]\d*|[2-9]\d*\s*[x×]\s*\d)', text):
+        raise PriceError('product_mismatch', 'Multipack sin equivalencia de formato configurada.')
 
 
 def availability(value):

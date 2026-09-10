@@ -102,7 +102,7 @@ python3 pricing/sync_prices.py --validate-config
 
 También están disponibles `npm run check`, `npm test` y `npm run test:prices`. **No hace falta ejecutar `npm install` ni instalar paquetes de Python.** Node solo se utiliza para las comprobaciones; Python 3.11 o superior se utiliza para actualizar precios. Ninguno es necesario para servir la web estática.
 
-Se incluyen 30 pruebas de JavaScript y 18 de Python. Cubren el cálculo, la conversión de formatos, prioridad de fuentes, extracción HTML, datos incompletos, precios vencidos, moneda, falta de stock y conservación de fechas ante fallos. Las respuestas de tiendas en las pruebas son sintéticas. No se ejecutaron pruebas visuales en un navegador ni un despliegue en un hosting.
+Se incluyen 33 pruebas de JavaScript y 24 de Python. Cubren cálculo, comparación de envases, stock antes de elegir supermercado, rechazo de precios vencidos, extracción, enlaces seguros y la ejecución del actualizador ante una búsqueda fallida. Las pruebas unitarias usan respuestas sintéticas; las ejecuciones reales están registradas en Actions. No se ejecutaron pruebas visuales en navegador.
 
 ## Activar precios automáticos
 
@@ -112,7 +112,7 @@ Lee [PRECIOS-AUTOMATICOS.md](PRECIOS-AUTOMATICOS.md). El actualizador funciona f
 python3 pricing/sync_prices.py
 ```
 
-El catálogo configura **16 ingredientes en cinco supermercados**: cinco fichas de referencia y once búsquedas adicionales para carnes, verduras y despensa. Se exige coincidencia del nombre y formato; los productos sin coincidencia quedan sin precio. Para otras marcas o ingredientes hay que ampliar y comprobar `pricing/sources.json`. Mercado Libre no participa en la comparación de supermercados.
+El catálogo configura **23 ingredientes en cinco supermercados**: cinco fichas de referencia y dieciocho búsquedas adicionales para carnes, verduras y despensa. Se exige coincidencia del nombre y formato; los productos sin coincidencia quedan sin precio. Para otras marcas o ingredientes hay que ampliar y comprobar `pricing/sources.json`. Mercado Libre no participa en la comparación de supermercados.
 
 La primera extracción real se completó desde GitHub Actions el 10 de septiembre de 2026. Los datos publicados conservan la fecha de consulta y el enlace de la ejecución que los generó. Si no se puede obtener un precio fiable, la web indica el fallo y muestra el dato anterior como referencia, o usa una estimación etiquetada para el presupuesto.
 
@@ -120,7 +120,7 @@ Subir `dist` publica la calculadora. Para que los precios cambien solos también
 
 ## Alcance de esta versión
 
-Los precios iniciales de `data.js` son **datos de ejemplo**. Se reemplazan por la consulta de la tienda cuando hay un resultado válido. El formato cambia junto con el precio; por ejemplo, las vienesas configuradas vienen en 20 unidades, frente a las 10 del catálogo de ejemplo. Un precio manual se aplica al formato mostrado y se descarta si ese formato cambia. Los precios manuales se mantienen por tienda durante la sesión.
+Los precios iniciales de `data.js` son **datos de ejemplo**. Se reemplazan por el menor costo consultado vigente para cada ingrediente. El formato cambia junto con el precio; por ejemplo, las vienesas configuradas vienen en 20 unidades, frente a las 10 del catálogo de ejemplo. Un precio manual se aplica al formato mostrado y se descarta si ese formato cambia. Los precios manuales se mantienen por ingrediente durante la sesión.
 
 Los enlaces abren la ficha configurada cuando existe o una búsqueda del ingrediente. «Ver ficha» con precio de ejemplo requiere revisar el formato en la tienda. No crean carritos, no reservan stock ni compran productos. No hay afiliación con las tiendas. Las fuentes de [Jumbo](https://www.jumbo.cl/busqueda?ft=pan) se localizaron el 9 de septiembre de 2026. El enlace de Mercado Libre es una búsqueda que debe comprobarse desde un navegador habitual. Las tiendas pueden cambiar sus rutas y precios según ubicación, sesión, promociones o disponibilidad.
 
