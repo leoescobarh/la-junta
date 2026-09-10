@@ -1,16 +1,23 @@
 globalThis.JuntaPriceSnapshot = {
-  "generatedAt": "2026-09-10T14:23:29Z",
-  "maxAgeHours": 24,
-  "runUrl": "https://github.com/leoescobarh/la-junta/actions/runs/34488730478",
   "schemaVersion": 1,
+  "generatedAt": "2026-09-10T14:30:05Z",
+  "maxAgeHours": 24,
   "stores": {
     "jumbo": {
-      "checkedAt": "2026-09-10T14:23:29Z",
-      "configured": 16,
-      "currency": "CLP",
       "name": "Jumbo",
+      "currency": "CLP",
+      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
+      "checkedAt": "2026-09-10T14:30:05Z",
+      "configured": 23,
+      "status": "partial",
       "products": {
-        "arroz": {
+        "panCompleto": {
+          "ingredientId": "panCompleto",
+          "productUrl": "https://www.jumbo.cl/pan-hot-dog-castano-480-gr-8-un/p",
+          "pack": 8,
+          "unit": "un",
+          "fingerprint": "f4945c1e9097aeb9837807f5",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "vtex",
@@ -21,172 +28,46 @@ globalThis.JuntaPriceSnapshot = {
               "status": "ok"
             }
           ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
+          "price": 2530,
           "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "4e33da3179e18384e64aa440",
-          "ingredientId": "arroz",
-          "pack": 1,
-          "price": 1790,
-          "productName": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg",
-          "productUrl": "https://www.jumbo.cl/arroz-grado-1-tucapel-gran-seleccion-grano-largo-y-ancho-1-kg/p",
+          "productName": "Pan Hot Dog Castaño 480 g 8 un.",
+          "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "unit": "kg"
+          "fetchedAt": "2026-09-10T14:30:05Z"
         },
-        "carbon": {
+        "vienesa": {
+          "ingredientId": "vienesa",
+          "productUrl": "https://www.jumbo.cl/salchichas-san-jorge-1-kg-2/p",
+          "pack": 20,
+          "unit": "un",
+          "fingerprint": "6ec3cb245e0666579194abf4",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
-              "source": "html-search",
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "html",
               "status": "ok"
             }
           ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
+          "price": 4150,
           "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "ingredientId": "carbon",
-          "pack": 2.5,
-          "price": 4490,
-          "productName": "Carbón Quebracho Blanco 2.5 kg",
-          "productUrl": "https://www.jumbo.cl/carbon-quebracho-blanco-2-5-kg-beef-maker-1895137/p",
+          "productName": "Salchichas San Jorge 1 kg 20 un.",
+          "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "unit": "kg"
-        },
-        "chorizo": {
-          "attempts": [
-            {
-              "source": "html-search",
-              "status": "ok"
-            }
-          ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "9722d59c712caa16829e98c0",
-          "ingredientId": "chorizo",
-          "pack": 0.5,
-          "price": 4890,
-          "productName": "Chorizo Angus La Preferida 500 g 8 un.",
-          "productUrl": "https://www.jumbo.cl/chorizo-angus-la-preferida-500-g-8-2/p",
-          "source": "html-jsonld",
-          "status": "ok",
-          "unit": "kg"
-        },
-        "jamon": {
-          "attempts": [
-            {
-              "source": "html-search",
-              "status": "ok"
-            }
-          ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "d3828a2bab61d49d21e97f53",
-          "ingredientId": "jamon",
-          "pack": 0.2,
-          "price": 3450,
-          "productName": "Jamón Pierna La Preferida 200 g",
-          "productUrl": "https://www.jumbo.cl/jamon-pierna-la-preferida-200-g/p",
-          "source": "html-jsonld",
-          "status": "ok",
-          "unit": "kg"
-        },
-        "ketchup": {
-          "attempts": [
-            {
-              "source": "html-search",
-              "status": "ok"
-            }
-          ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "e62b51deaa3779be372bc949",
-          "ingredientId": "ketchup",
-          "pack": 0.25,
-          "price": 2010,
-          "productName": "Kétchup Hellmann's Regular Doypack 250 g",
-          "productUrl": "https://www.jumbo.cl/ketchup-hellmanns-doypack-250-g-2/p",
-          "source": "html-jsonld",
-          "status": "ok",
-          "unit": "kg"
+          "fetchedAt": "2026-09-10T14:30:05Z"
         },
         "mayo": {
-          "attempts": [
-            {
-              "source": "vtex",
-              "status": "http_404"
-            },
-            {
-              "source": "html",
-              "status": "ok"
-            }
-          ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "769811c49c55ebd7528a058b",
           "ingredientId": "mayo",
-          "pack": 0.8,
-          "price": 3530,
-          "productName": "Mayonesa Hellmann's Doypack 800 g",
           "productUrl": "https://www.jumbo.cl/mayonesa-hellmanns-2054590/p",
-          "source": "html-jsonld",
-          "status": "ok",
-          "unit": "kg"
-        },
-        "mostaza": {
-          "attempts": [
-            {
-              "source": "html-search",
-              "status": "ok"
-            }
-          ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "ingredientId": "mostaza",
-          "pack": 0.25,
-          "price": 1530,
-          "productName": "Mostaza JB Regular Doypack 250 g",
-          "productUrl": "https://www.jumbo.cl/mostaza-jb-doypack-250-g/p",
-          "source": "html-jsonld",
-          "status": "ok",
-          "unit": "kg"
-        },
-        "palta": {
-          "attempts": [
-            {
-              "source": "html-search",
-              "status": "ok"
-            }
-          ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "e12c67fe1743d836c8014bd2",
-          "ingredientId": "palta",
-          "pack": 1,
-          "price": 3490,
-          "productName": "Palta Hass Malla 1 kg",
-          "productUrl": "https://www.jumbo.cl/palta-hass-jumbo-malla-1-kg/p",
-          "source": "html-jsonld",
-          "status": "ok",
-          "unit": "kg"
-        },
-        "panCompleto": {
+          "pack": 0.8,
+          "unit": "kg",
+          "fingerprint": "769811c49c55ebd7528a058b",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "vtex",
@@ -197,21 +78,46 @@ globalThis.JuntaPriceSnapshot = {
               "status": "ok"
             }
           ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
+          "price": 3530,
           "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "f4945c1e9097aeb9837807f5",
-          "ingredientId": "panCompleto",
-          "pack": 8,
-          "price": 2530,
-          "productName": "Pan Hot Dog Castaño 480 g 8 un.",
-          "productUrl": "https://www.jumbo.cl/pan-hot-dog-castano-480-gr-8-un/p",
+          "productName": "Mayonesa Hellmann's Doypack 800 g",
+          "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "unit": "un"
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "arroz": {
+          "ingredientId": "arroz",
+          "productUrl": "https://www.jumbo.cl/arroz-grado-1-tucapel-gran-seleccion-grano-largo-y-ancho-1-kg/p",
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "4e33da3179e18384e64aa440",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "html",
+              "status": "ok"
+            }
+          ],
+          "price": 1790,
+          "currency": "CLP",
+          "productName": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
         },
         "pasta": {
+          "ingredientId": "pasta",
+          "productUrl": "https://www.jumbo.cl/spaghetti-n-5-carozzi-bolsa-400-g-2/p",
+          "pack": 0.4,
+          "unit": "kg",
+          "fingerprint": "69e887450d3bcf53916f31bd",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "vtex",
@@ -222,86 +128,21 @@ globalThis.JuntaPriceSnapshot = {
               "status": "ok"
             }
           ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "69e887450d3bcf53916f31bd",
-          "ingredientId": "pasta",
-          "pack": 0.4,
           "price": 1090,
+          "currency": "CLP",
           "productName": "Pasta Spaghetti N°5 Carozzi 400 g",
-          "productUrl": "https://www.jumbo.cl/spaghetti-n-5-carozzi-bolsa-400-g-2/p",
-          "source": "html-jsonld",
-          "status": "ok",
-          "unit": "kg"
-        },
-        "pollo": {
-          "attempts": [
-            {
-              "source": "html-search",
-              "status": "ok"
-            }
-          ],
           "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "49e52faf64f515b748ab79b7",
-          "ingredientId": "pollo",
-          "pack": 1,
-          "price": 6990,
-          "productName": "Pechuga Deshuesada de Pollo Sadia 1 kg",
-          "productUrl": "https://www.jumbo.cl/pollo-pechuga-desh-2034037/p",
           "source": "html-jsonld",
           "status": "ok",
-          "unit": "kg"
-        },
-        "queso": {
-          "attempts": [
-            {
-              "source": "html-search",
-              "status": "ok"
-            }
-          ],
-          "available": null,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "error": "product_mismatch",
-          "fetchedAt": null,
-          "fingerprint": "34395541ac7a8556e5687360",
-          "ingredientId": "queso",
-          "message": "El queso granulado no corresponde al formato laminado requerido.",
-          "pack": 0.25,
-          "price": null,
-          "productName": "Queso Gauda La Vaquita Envasado Granulado 250 g",
-          "productUrl": null,
-          "source": "",
-          "status": "error",
-          "unit": "kg"
-        },
-        "sal": {
-          "attempts": [
-            {
-              "source": "html-search",
-              "status": "ok"
-            }
-          ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "5c9cf1eedcc55be6cf8c9716",
-          "ingredientId": "sal",
-          "pack": 1,
-          "price": 490,
-          "productName": "Sal Fina Cuisine & Co 1 kg",
-          "productUrl": "https://www.jumbo.cl/sal-fina-cuisine-and-co-1kg-1924568/p",
-          "source": "html-jsonld",
-          "status": "ok",
-          "unit": "kg"
+          "fetchedAt": "2026-09-10T14:30:05Z"
         },
         "tomate": {
+          "ingredientId": "tomate",
+          "productUrl": "https://www.jumbo.cl/tomate-malla-1-kg/p",
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "e3cca02f81031920d077665b",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "vtex-search",
@@ -312,544 +153,380 @@ globalThis.JuntaPriceSnapshot = {
               "status": "ok"
             }
           ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "e3cca02f81031920d077665b",
-          "ingredientId": "tomate",
-          "pack": 1,
           "price": 1990,
+          "currency": "CLP",
           "productName": "Tomate Larga Vida Malla 1 kg",
-          "productUrl": "https://www.jumbo.cl/tomate-malla-1-kg/p",
-          "source": "html-jsonld",
-          "status": "ok",
-          "unit": "kg"
-        },
-        "vacuno": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "ingredientId": "vacuno",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "vienesa": {
-          "attempts": [
-            {
-              "source": "vtex",
-              "status": "http_404"
-            },
-            {
-              "source": "html",
-              "status": "ok"
-            }
-          ],
           "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "6ec3cb245e0666579194abf4",
-          "ingredientId": "vienesa",
-          "pack": 20,
-          "price": 4150,
-          "productName": "Salchichas San Jorge 1 kg 20 un.",
-          "productUrl": "https://www.jumbo.cl/salchichas-san-jorge-1-kg-2/p",
           "source": "html-jsonld",
           "status": "ok",
-          "unit": "un"
-        }
-      },
-      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "status": "partial"
-    },
-    "lider": {
-      "checkedAt": "2026-09-10T14:23:29Z",
-      "configured": 16,
-      "currency": "CLP",
-      "name": "Lider",
-      "products": {
-        "arroz": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "ec5616479e8bb94a101f2b89",
-          "ingredientId": "arroz",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "carbon": {
-          "attempts": [
-            {
-              "source": "html-search",
-              "status": "ok"
-            }
-          ],
-          "available": null,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "error": "product_mismatch",
-          "fetchedAt": null,
-          "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "ingredientId": "carbon",
-          "message": "La ficha pertenece al catálogo general, fuera del supermercado.",
-          "pack": 2.5,
-          "price": null,
-          "productName": "Carbón Kutral 2.5 Kg Encendido Automático Quebracho Blanco",
-          "productUrl": null,
-          "source": "",
-          "status": "error",
-          "unit": "kg"
-        },
-        "chorizo": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "9722d59c712caa16829e98c0",
-          "ingredientId": "chorizo",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 0.5,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "jamon": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "d3828a2bab61d49d21e97f53",
-          "ingredientId": "jamon",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 0.2,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "ketchup": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "e62b51deaa3779be372bc949",
-          "ingredientId": "ketchup",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 0.25,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "mayo": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "fee5a640eecf8d4f821ce1df",
-          "ingredientId": "mayo",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 0.8,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "mostaza": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "ingredientId": "mostaza",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 0.25,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
+          "fetchedAt": "2026-09-10T14:30:05Z"
         },
         "palta": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "e12c67fe1743d836c8014bd2",
           "ingredientId": "palta",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
+          "productUrl": "https://www.jumbo.cl/palta-hass-jumbo-malla-1-kg/p",
           "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "panCompleto": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "b2bb8f210bf3a2668b7faaa3",
-          "ingredientId": "panCompleto",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 8,
-          "productUrl": null,
-          "status": "error",
-          "unit": "un"
-        },
-        "pasta": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "adae243cdb659ee4ea5fff10",
-          "ingredientId": "pasta",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 0.4,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "pollo": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "49e52faf64f515b748ab79b7",
-          "ingredientId": "pollo",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "queso": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "34395541ac7a8556e5687360",
-          "ingredientId": "queso",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 0.25,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "sal": {
+          "unit": "kg",
+          "fingerprint": "e12c67fe1743d836c8014bd2",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "html-search",
               "status": "ok"
             }
           ],
-          "available": null,
-          "checkedAt": "2026-09-10T14:23:29Z",
+          "price": 3490,
           "currency": "CLP",
-          "error": "product_mismatch",
-          "fetchedAt": null,
-          "fingerprint": "5c9cf1eedcc55be6cf8c9716",
-          "ingredientId": "sal",
-          "message": "La ficha de maní con sal no corresponde al ingrediente sal.",
-          "pack": 1,
-          "price": null,
-          "productName": "Maní con Sal - 1 kg",
-          "productUrl": null,
-          "source": "",
-          "status": "error",
-          "unit": "kg"
-        },
-        "tomate": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "e3cca02f81031920d077665b",
-          "ingredientId": "tomate",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
+          "productName": "Palta Hass Malla 1 kg",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
         },
         "vacuno": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
           "ingredientId": "vacuno",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 1,
           "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "vienesa": {
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "sync",
               "status": "no_matching_public_product"
             }
           ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "f5d31745f56805b9d25f399b",
-          "ingredientId": "vienesa",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 20,
-          "productUrl": null,
           "status": "error",
-          "unit": "un"
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+        },
+        "pollo": {
+          "ingredientId": "pollo",
+          "productUrl": "https://www.jumbo.cl/pollo-pechuga-desh-2034037/p",
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "49e52faf64f515b748ab79b7",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 6990,
+          "currency": "CLP",
+          "productName": "Pechuga Deshuesada de Pollo Sadia 1 kg",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "chorizo": {
+          "ingredientId": "chorizo",
+          "productUrl": "https://www.jumbo.cl/chorizo-angus-la-preferida-500-g-8-2/p",
+          "pack": 0.5,
+          "unit": "kg",
+          "fingerprint": "9722d59c712caa16829e98c0",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 4890,
+          "currency": "CLP",
+          "productName": "Chorizo Angus La Preferida 500 g 8 un.",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "carbon": {
+          "ingredientId": "carbon",
+          "productUrl": "https://www.jumbo.cl/carbon-quebracho-blanco-2-5-kg-beef-maker-1895137/p",
+          "pack": 2.5,
+          "unit": "kg",
+          "fingerprint": "8c55ecdf2d45be005ba88c4e",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 4490,
+          "currency": "CLP",
+          "productName": "Carbón Quebracho Blanco 2.5 kg",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "sal": {
+          "ingredientId": "sal",
+          "productUrl": "https://www.jumbo.cl/sal-fina-cuisine-and-co-1kg-1924568/p",
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "ca88a1da0c9e5f09ad084b7d",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 490,
+          "currency": "CLP",
+          "productName": "Sal Fina Cuisine & Co 1 kg",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "queso": {
+          "ingredientId": "queso",
+          "productUrl": "https://www.jumbo.cl/queso-gouda-soprole-dos-alamos-250-g-2/p",
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 3150,
+          "currency": "CLP",
+          "productName": "Queso Gauda Soprole Envasado Laminado 250 g",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "jamon": {
+          "ingredientId": "jamon",
+          "productUrl": "https://www.jumbo.cl/jamon-pierna-la-preferida-200-g/p",
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "d3828a2bab61d49d21e97f53",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 3450,
+          "currency": "CLP",
+          "productName": "Jamón Pierna La Preferida 200 g",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "ketchup": {
+          "ingredientId": "ketchup",
+          "productUrl": "https://www.jumbo.cl/ketchup-hellmanns-doypack-250-g-2/p",
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "e62b51deaa3779be372bc949",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 2010,
+          "currency": "CLP",
+          "productName": "Kétchup Hellmann's Regular Doypack 250 g",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "mostaza": {
+          "ingredientId": "mostaza",
+          "productUrl": "https://www.jumbo.cl/mostaza-jb-doypack-250-g/p",
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "ca5e5ba0fbed1363c6a89235",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 1530,
+          "currency": "CLP",
+          "productName": "Mostaza JB Regular Doypack 250 g",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "papasChips": {
+          "ingredientId": "papasChips",
+          "productUrl": "https://www.jumbo.cl/papas-artesanales-sal-de-mar-250-g-cuisine-and-co-1802309/p",
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "5b39d1b258792f60e7eba010",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 3040,
+          "currency": "CLP",
+          "productName": "Papas Fritas Cuisine & Co Artesanal Sal de Mar 250 g",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "nachos": {
+          "ingredientId": "nachos",
+          "productUrl": null,
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "5dacb403dc3db661a3bc3cc3",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "no_matching_public_product"
+            }
+          ],
+          "status": "error",
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+        },
+        "frutosSecos": {
+          "ingredientId": "frutosSecos",
+          "productUrl": "https://www.jumbo.cl/mix-frutos-secos-surco-250-g-2/p",
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 2790,
+          "currency": "CLP",
+          "productName": "Mix de Frutos Secos 250 g",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "galletaSalada": {
+          "ingredientId": "galletaSalada",
+          "productUrl": "https://www.jumbo.cl/galletas-saladas-snax-original-200-g-1999414/p",
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "76bd36626cdfd104e44e39f6",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 1190,
+          "currency": "CLP",
+          "productName": "Galletas Saladas Snax Original 200 g",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "bebida": {
+          "ingredientId": "bebida",
+          "productUrl": "https://www.jumbo.cl/bebida-coca-cola-original-2-l-263217/p",
+          "pack": 2,
+          "unit": "L",
+          "fingerprint": "ef71dd5ff1ec417820c7fb9b",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 2590,
+          "currency": "CLP",
+          "productName": "Bebida Coca-Cola Original 2 L",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "agua": {
+          "ingredientId": "agua",
+          "productUrl": "https://www.jumbo.cl/agua-mineral-1500l-2077677/p",
+          "pack": 1.5,
+          "unit": "L",
+          "fingerprint": "3bf2d1397844a53378224352",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 1590,
+          "currency": "CLP",
+          "productName": "Agua Mineral Summus Natural Sin Gas 1.5 L",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "hielo": {
+          "ingredientId": "hielo",
+          "productUrl": "https://www.jumbo.cl/hielo-ice-monkey-2kg-1973829/p",
+          "pack": 2,
+          "unit": "kg",
+          "fingerprint": "65723e07b1c4ba8ffd2d3b07",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "html-search",
+              "status": "ok"
+            }
+          ],
+          "price": 1580,
+          "currency": "CLP",
+          "productName": "Hielo Ice Monkey 2 kg",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
         }
-      },
-      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "status": "partial"
+      }
     },
     "santaIsabel": {
-      "checkedAt": "2026-09-10T14:23:29Z",
-      "configured": 16,
-      "currency": "CLP",
       "name": "Santa Isabel",
+      "currency": "CLP",
+      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
+      "checkedAt": "2026-09-10T14:30:05Z",
+      "configured": 23,
+      "status": "partial",
       "products": {
-        "arroz": {
-          "attempts": [
-            {
-              "source": "vtex",
-              "status": "http_404"
-            },
-            {
-              "source": "html",
-              "status": "ok"
-            }
-          ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "413a78522433b815fd706bea",
-          "ingredientId": "arroz",
-          "pack": 1,
-          "price": 1790,
-          "productName": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg",
-          "productUrl": "https://www.santaisabel.cl/arroz-grado-1-tucapel-gran-seleccion-grano-largo-y-ancho-1-kg/p",
-          "source": "html-jsonld",
-          "status": "ok",
-          "unit": "kg"
-        },
-        "carbon": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "ingredientId": "carbon",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 2.5,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "chorizo": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "9722d59c712caa16829e98c0",
-          "ingredientId": "chorizo",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 0.5,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "jamon": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "d3828a2bab61d49d21e97f53",
-          "ingredientId": "jamon",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 0.2,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "ketchup": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "e62b51deaa3779be372bc949",
-          "ingredientId": "ketchup",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 0.25,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "mayo": {
-          "attempts": [
-            {
-              "source": "vtex",
-              "status": "http_404"
-            },
-            {
-              "source": "html",
-              "status": "ok"
-            }
-          ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "82efdfcb029f80a4cbffa6fc",
-          "ingredientId": "mayo",
-          "pack": 0.8,
-          "price": 3290,
-          "productName": "Mayonesa Hellmann's Doypack 800 g",
-          "productUrl": "https://www.santaisabel.cl/mayonesa-hellmanns-2054590/p",
-          "source": "html-jsonld",
-          "status": "ok",
-          "unit": "kg"
-        },
-        "mostaza": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "ingredientId": "mostaza",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 0.25,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "palta": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "e12c67fe1743d836c8014bd2",
-          "ingredientId": "palta",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
         "panCompleto": {
-          "attempts": [
-            {
-              "source": "vtex",
-              "status": "http_404"
-            },
-            {
-              "source": "html",
-              "status": "ok"
-            }
-          ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "11378b10dcf592f4cafb4599",
           "ingredientId": "panCompleto",
-          "pack": 8,
-          "price": 2430,
-          "productName": "Pan Hot Dog Castaño 480 g 8 un.",
           "productUrl": "https://www.santaisabel.cl/pan-hot-dog-castano-480-gr-8-un/p",
-          "source": "html-jsonld",
-          "status": "ok",
-          "unit": "un"
-        },
-        "pasta": {
+          "pack": 8,
+          "unit": "un",
+          "fingerprint": "11378b10dcf592f4cafb4599",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "vtex",
@@ -860,106 +537,21 @@ globalThis.JuntaPriceSnapshot = {
               "status": "ok"
             }
           ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
+          "price": 2430,
           "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "a9718cb484a4d00492fc86d0",
-          "ingredientId": "pasta",
-          "pack": 0.4,
-          "price": 1050,
-          "productName": "Pasta Spaghetti N°5 Carozzi 400 g",
-          "productUrl": "https://www.santaisabel.cl/spaghetti-n-5-carozzi-bolsa-400-g-2/p",
+          "productName": "Pan Hot Dog Castaño 480 g 8 un.",
+          "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "unit": "kg"
-        },
-        "pollo": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "49e52faf64f515b748ab79b7",
-          "ingredientId": "pollo",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "queso": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "34395541ac7a8556e5687360",
-          "ingredientId": "queso",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 0.25,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "sal": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "5c9cf1eedcc55be6cf8c9716",
-          "ingredientId": "sal",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "tomate": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "e3cca02f81031920d077665b",
-          "ingredientId": "tomate",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "vacuno": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "no_matching_public_product"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "no_matching_public_product",
-          "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "ingredientId": "vacuno",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
+          "fetchedAt": "2026-09-10T14:30:05Z"
         },
         "vienesa": {
+          "ingredientId": "vienesa",
+          "productUrl": "https://www.santaisabel.cl/salchichas-san-jorge-1-kg-2/p",
+          "pack": 20,
+          "unit": "un",
+          "fingerprint": "5da6c1d901c617cccecb6b76",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "vtex",
@@ -970,588 +562,1659 @@ globalThis.JuntaPriceSnapshot = {
               "status": "ok"
             }
           ],
-          "available": true,
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "currency": "CLP",
-          "fetchedAt": "2026-09-10T14:23:29Z",
-          "fingerprint": "5da6c1d901c617cccecb6b76",
-          "ingredientId": "vienesa",
-          "pack": 20,
           "price": 3590,
+          "currency": "CLP",
           "productName": "Salchichas San Jorge 1 kg 20 un.",
-          "productUrl": "https://www.santaisabel.cl/salchichas-san-jorge-1-kg-2/p",
+          "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "unit": "un"
-        }
-      },
-      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "status": "partial"
-    },
-    "tottus": {
-      "checkedAt": "2026-09-10T14:23:29Z",
-      "configured": 16,
-      "currency": "CLP",
-      "name": "Tottus",
-      "products": {
-        "arroz": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "host_blocked"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "ec5616479e8bb94a101f2b89",
-          "ingredientId": "arroz",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "carbon": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "host_blocked"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "ingredientId": "carbon",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 2.5,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "chorizo": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "host_blocked"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "9722d59c712caa16829e98c0",
-          "ingredientId": "chorizo",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 0.5,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "jamon": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "host_blocked"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "d3828a2bab61d49d21e97f53",
-          "ingredientId": "jamon",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 0.2,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "ketchup": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "host_blocked"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "e62b51deaa3779be372bc949",
-          "ingredientId": "ketchup",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 0.25,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
+          "fetchedAt": "2026-09-10T14:30:05Z"
         },
         "mayo": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "host_blocked"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "fee5a640eecf8d4f821ce1df",
           "ingredientId": "mayo",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
+          "productUrl": "https://www.santaisabel.cl/mayonesa-hellmanns-2054590/p",
           "pack": 0.8,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "mostaza": {
+          "unit": "kg",
+          "fingerprint": "82efdfcb029f80a4cbffa6fc",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
-              "source": "sync",
-              "status": "host_blocked"
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "html",
+              "status": "ok"
             }
           ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "ingredientId": "mostaza",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 0.25,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
+          "price": 3290,
+          "currency": "CLP",
+          "productName": "Mayonesa Hellmann's Doypack 800 g",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "arroz": {
+          "ingredientId": "arroz",
+          "productUrl": "https://www.santaisabel.cl/arroz-grado-1-tucapel-gran-seleccion-grano-largo-y-ancho-1-kg/p",
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "413a78522433b815fd706bea",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "html",
+              "status": "ok"
+            }
+          ],
+          "price": 1790,
+          "currency": "CLP",
+          "productName": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "pasta": {
+          "ingredientId": "pasta",
+          "productUrl": "https://www.santaisabel.cl/spaghetti-n-5-carozzi-bolsa-400-g-2/p",
+          "pack": 0.4,
+          "unit": "kg",
+          "fingerprint": "a9718cb484a4d00492fc86d0",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "html",
+              "status": "ok"
+            }
+          ],
+          "price": 1050,
+          "currency": "CLP",
+          "productName": "Pasta Spaghetti N°5 Carozzi 400 g",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "tomate": {
+          "ingredientId": "tomate",
+          "productUrl": "https://www.santaisabel.cl/tomate-malla-1-kg/p",
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "6d1b9755c3c40bc444e599c1",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "html",
+              "status": "ok"
+            }
+          ],
+          "price": 1990,
+          "currency": "CLP",
+          "productName": "Tomate Larga Vida Malla 1 kg",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
         },
         "palta": {
+          "ingredientId": "palta",
+          "productUrl": "https://www.santaisabel.cl/palta-hass-jumbo-malla-1-kg/p",
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "7b958ee2400a2df3a253b2c4",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "sync",
+              "status": "http_404"
+            }
+          ],
+          "status": "error",
+          "error": "http_404",
+          "message": "La tienda respondió HTTP 404."
+        },
+        "vacuno": {
+          "ingredientId": "vacuno",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "no_matching_public_product"
             }
           ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "e12c67fe1743d836c8014bd2",
-          "ingredientId": "palta",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 1,
-          "productUrl": null,
           "status": "error",
-          "unit": "kg"
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
+        "pollo": {
+          "ingredientId": "pollo",
+          "productUrl": "https://www.santaisabel.cl/pollo-pechuga-desh-2034037/p",
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "e0de8ddc1c7b4fbbc1ef0a4e",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "sync",
+              "status": "http_404"
+            }
+          ],
+          "status": "error",
+          "error": "http_404",
+          "message": "La tienda respondió HTTP 404."
+        },
+        "chorizo": {
+          "ingredientId": "chorizo",
+          "productUrl": "https://www.santaisabel.cl/chorizo-angus-la-preferida-500-g-8-2/p",
+          "pack": 0.5,
+          "unit": "kg",
+          "fingerprint": "85a43690d154ff8a13c1fab0",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "html",
+              "status": "ok"
+            }
+          ],
+          "price": 4890,
+          "currency": "CLP",
+          "productName": "Chorizo Angus La Preferida 500 g 8 un.",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "carbon": {
+          "ingredientId": "carbon",
+          "productUrl": "https://www.santaisabel.cl/carbon-quebracho-blanco-2-5-kg-beef-maker-1895137/p",
+          "pack": 2.5,
+          "unit": "kg",
+          "fingerprint": "1aef129be6f8715b4c70ad78",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "sync",
+              "status": "http_404"
+            }
+          ],
+          "status": "error",
+          "error": "http_404",
+          "message": "La tienda respondió HTTP 404."
+        },
+        "sal": {
+          "ingredientId": "sal",
+          "productUrl": "https://www.santaisabel.cl/sal-fina-cuisine-and-co-1kg-1924568/p",
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "320826d42d32a171b06c21ad",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "sync",
+              "status": "http_404"
+            }
+          ],
+          "status": "error",
+          "error": "http_404",
+          "message": "La tienda respondió HTTP 404."
+        },
+        "queso": {
+          "ingredientId": "queso",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "no_matching_public_product"
+            }
+          ],
+          "status": "error",
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+        },
+        "jamon": {
+          "ingredientId": "jamon",
+          "productUrl": "https://www.santaisabel.cl/jamon-pierna-la-preferida-200-g/p",
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "a5e8eefe6f74a34440406b91",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "html",
+              "status": "ok"
+            }
+          ],
+          "price": 3250,
+          "currency": "CLP",
+          "productName": "Jamón Pierna La Preferida 200 g",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "ketchup": {
+          "ingredientId": "ketchup",
+          "productUrl": "https://www.santaisabel.cl/ketchup-hellmanns-doypack-250-g-2/p",
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "57a26ddfdd8dd04e6742cbdd",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "html",
+              "status": "ok"
+            }
+          ],
+          "price": 1920,
+          "currency": "CLP",
+          "productName": "Kétchup Hellmann's Regular Doypack 250 g",
+          "available": true,
+          "source": "html-jsonld",
+          "status": "ok",
+          "fetchedAt": "2026-09-10T14:30:05Z"
+        },
+        "mostaza": {
+          "ingredientId": "mostaza",
+          "productUrl": "https://www.santaisabel.cl/mostaza-jb-doypack-250-g/p",
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "48fac4a8da5f8e2306e985fb",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "vtex",
+              "status": "http_404"
+            },
+            {
+              "source": "sync",
+              "status": "http_404"
+            }
+          ],
+          "status": "error",
+          "error": "http_404",
+          "message": "La tienda respondió HTTP 404."
+        },
+        "papasChips": {
+          "ingredientId": "papasChips",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "5b39d1b258792f60e7eba010",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "no_matching_public_product"
+            }
+          ],
+          "status": "error",
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+        },
+        "nachos": {
+          "ingredientId": "nachos",
+          "productUrl": null,
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "5dacb403dc3db661a3bc3cc3",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "no_matching_public_product"
+            }
+          ],
+          "status": "error",
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+        },
+        "frutosSecos": {
+          "ingredientId": "frutosSecos",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "no_matching_public_product"
+            }
+          ],
+          "status": "error",
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+        },
+        "galletaSalada": {
+          "ingredientId": "galletaSalada",
+          "productUrl": null,
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "76bd36626cdfd104e44e39f6",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "no_matching_public_product"
+            }
+          ],
+          "status": "error",
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+        },
+        "bebida": {
+          "ingredientId": "bebida",
+          "productUrl": null,
+          "pack": 2,
+          "unit": "L",
+          "fingerprint": "ef71dd5ff1ec417820c7fb9b",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "no_matching_public_product"
+            }
+          ],
+          "status": "error",
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+        },
+        "agua": {
+          "ingredientId": "agua",
+          "productUrl": null,
+          "pack": 1.5,
+          "unit": "L",
+          "fingerprint": "3bf2d1397844a53378224352",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "no_matching_public_product"
+            }
+          ],
+          "status": "error",
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+        },
+        "hielo": {
+          "ingredientId": "hielo",
+          "productUrl": null,
+          "pack": 2,
+          "unit": "kg",
+          "fingerprint": "65723e07b1c4ba8ffd2d3b07",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "no_matching_public_product"
+            }
+          ],
+          "status": "error",
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+        }
+      }
+    },
+    "lider": {
+      "name": "Lider",
+      "currency": "CLP",
+      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
+      "checkedAt": "2026-09-10T14:30:05Z",
+      "configured": 23,
+      "status": "error",
+      "products": {
         "panCompleto": {
+          "ingredientId": "panCompleto",
+          "productUrl": null,
+          "pack": 8,
+          "unit": "un",
+          "fingerprint": "b2bb8f210bf3a2668b7faaa3",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "vienesa": {
+          "ingredientId": "vienesa",
+          "productUrl": null,
+          "pack": 20,
+          "unit": "un",
+          "fingerprint": "f5d31745f56805b9d25f399b",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "mayo": {
+          "ingredientId": "mayo",
+          "productUrl": null,
+          "pack": 0.8,
+          "unit": "kg",
+          "fingerprint": "fee5a640eecf8d4f821ce1df",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "arroz": {
+          "ingredientId": "arroz",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "ec5616479e8bb94a101f2b89",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "pasta": {
+          "ingredientId": "pasta",
+          "productUrl": null,
+          "pack": 0.4,
+          "unit": "kg",
+          "fingerprint": "adae243cdb659ee4ea5fff10",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "tomate": {
+          "ingredientId": "tomate",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "e3cca02f81031920d077665b",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "palta": {
+          "ingredientId": "palta",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "e12c67fe1743d836c8014bd2",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "vacuno": {
+          "ingredientId": "vacuno",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "pollo": {
+          "ingredientId": "pollo",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "49e52faf64f515b748ab79b7",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "chorizo": {
+          "ingredientId": "chorizo",
+          "productUrl": null,
+          "pack": 0.5,
+          "unit": "kg",
+          "fingerprint": "9722d59c712caa16829e98c0",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "carbon": {
+          "ingredientId": "carbon",
+          "productUrl": null,
+          "pack": 2.5,
+          "unit": "kg",
+          "fingerprint": "8c55ecdf2d45be005ba88c4e",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "price": null,
+          "currency": "CLP",
+          "productName": "Carbón Kutral 2.5 Kg Encendido Automático Quebracho Blanco",
+          "available": null,
+          "source": "",
+          "fetchedAt": null,
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "sal": {
+          "ingredientId": "sal",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "ca88a1da0c9e5f09ad084b7d",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "queso": {
+          "ingredientId": "queso",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "jamon": {
+          "ingredientId": "jamon",
+          "productUrl": null,
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "d3828a2bab61d49d21e97f53",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "ketchup": {
+          "ingredientId": "ketchup",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "e62b51deaa3779be372bc949",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "mostaza": {
+          "ingredientId": "mostaza",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "ca5e5ba0fbed1363c6a89235",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "papasChips": {
+          "ingredientId": "papasChips",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "5b39d1b258792f60e7eba010",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "nachos": {
+          "ingredientId": "nachos",
+          "productUrl": null,
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "5dacb403dc3db661a3bc3cc3",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "frutosSecos": {
+          "ingredientId": "frutosSecos",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "galletaSalada": {
+          "ingredientId": "galletaSalada",
+          "productUrl": null,
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "76bd36626cdfd104e44e39f6",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "bebida": {
+          "ingredientId": "bebida",
+          "productUrl": null,
+          "pack": 2,
+          "unit": "L",
+          "fingerprint": "ef71dd5ff1ec417820c7fb9b",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "agua": {
+          "ingredientId": "agua",
+          "productUrl": null,
+          "pack": 1.5,
+          "unit": "L",
+          "fingerprint": "3bf2d1397844a53378224352",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        },
+        "hielo": {
+          "ingredientId": "hielo",
+          "productUrl": null,
+          "pack": 2,
+          "unit": "kg",
+          "fingerprint": "65723e07b1c4ba8ffd2d3b07",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "invalid_url"
+            }
+          ],
+          "status": "error",
+          "error": "invalid_url",
+          "message": "URL fuera de los dominios HTTPS configurados."
+        }
+      }
+    },
+    "tottus": {
+      "name": "Tottus",
+      "currency": "CLP",
+      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
+      "checkedAt": "2026-09-10T14:30:05Z",
+      "configured": 23,
+      "status": "error",
+      "products": {
+        "panCompleto": {
+          "ingredientId": "panCompleto",
+          "productUrl": null,
+          "pack": 8,
+          "unit": "un",
+          "fingerprint": "b2bb8f210bf3a2668b7faaa3",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "sync",
               "status": "http_403"
             }
           ],
-          "checkedAt": "2026-09-10T14:23:29Z",
+          "status": "error",
           "error": "http_403",
-          "fingerprint": "b2bb8f210bf3a2668b7faaa3",
-          "ingredientId": "panCompleto",
-          "message": "La tienda requiere acceso o ha limitado las consultas.",
-          "pack": 8,
-          "productUrl": null,
-          "status": "error",
-          "unit": "un"
-        },
-        "pasta": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "host_blocked"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "adae243cdb659ee4ea5fff10",
-          "ingredientId": "pasta",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 0.4,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "pollo": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "host_blocked"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "49e52faf64f515b748ab79b7",
-          "ingredientId": "pollo",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "queso": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "host_blocked"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "34395541ac7a8556e5687360",
-          "ingredientId": "queso",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 0.25,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "sal": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "host_blocked"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "5c9cf1eedcc55be6cf8c9716",
-          "ingredientId": "sal",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "tomate": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "host_blocked"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "e3cca02f81031920d077665b",
-          "ingredientId": "tomate",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "vacuno": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "host_blocked"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "host_blocked",
-          "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "ingredientId": "vacuno",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
+          "message": "La tienda requiere acceso o ha limitado las consultas."
         },
         "vienesa": {
+          "ingredientId": "vienesa",
+          "productUrl": null,
+          "pack": 20,
+          "unit": "un",
+          "fingerprint": "f5d31745f56805b9d25f399b",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "sync",
               "status": "host_blocked"
             }
           ],
-          "checkedAt": "2026-09-10T14:23:29Z",
+          "status": "error",
           "error": "host_blocked",
-          "fingerprint": "f5d31745f56805b9d25f399b",
-          "ingredientId": "vienesa",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución.",
-          "pack": 20,
-          "productUrl": null,
-          "status": "error",
-          "unit": "un"
-        }
-      },
-      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "status": "error"
-    },
-    "unimarc": {
-      "checkedAt": "2026-09-10T14:23:29Z",
-      "configured": 16,
-      "currency": "CLP",
-      "name": "Unimarc",
-      "products": {
-        "arroz": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "robots_unavailable"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "ec5616479e8bb94a101f2b89",
-          "ingredientId": "arroz",
-          "message": "No se pudo verificar la política de rastreo.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "carbon": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "robots_unavailable"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "ingredientId": "carbon",
-          "message": "No se pudo verificar la política de rastreo.",
-          "pack": 2.5,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "chorizo": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "robots_unavailable"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "9722d59c712caa16829e98c0",
-          "ingredientId": "chorizo",
-          "message": "No se pudo verificar la política de rastreo.",
-          "pack": 0.5,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "jamon": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "robots_unavailable"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "d3828a2bab61d49d21e97f53",
-          "ingredientId": "jamon",
-          "message": "No se pudo verificar la política de rastreo.",
-          "pack": 0.2,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "ketchup": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "robots_unavailable"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "e62b51deaa3779be372bc949",
-          "ingredientId": "ketchup",
-          "message": "No se pudo verificar la política de rastreo.",
-          "pack": 0.25,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
         },
         "mayo": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "robots_unavailable"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "fee5a640eecf8d4f821ce1df",
           "ingredientId": "mayo",
-          "message": "No se pudo verificar la política de rastreo.",
+          "productUrl": null,
           "pack": 0.8,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "mostaza": {
+          "unit": "kg",
+          "fingerprint": "fee5a640eecf8d4f821ce1df",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "host_blocked"
             }
           ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "ingredientId": "mostaza",
-          "message": "No se pudo verificar la política de rastreo.",
-          "pack": 0.25,
-          "productUrl": null,
           "status": "error",
-          "unit": "kg"
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
         },
-        "palta": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "robots_unavailable"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "e12c67fe1743d836c8014bd2",
-          "ingredientId": "palta",
-          "message": "No se pudo verificar la política de rastreo.",
+        "arroz": {
+          "ingredientId": "arroz",
+          "productUrl": null,
           "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "panCompleto": {
+          "unit": "kg",
+          "fingerprint": "ec5616479e8bb94a101f2b89",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "host_blocked"
             }
           ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "b2bb8f210bf3a2668b7faaa3",
-          "ingredientId": "panCompleto",
-          "message": "No se pudo verificar la política de rastreo.",
-          "pack": 8,
-          "productUrl": null,
           "status": "error",
-          "unit": "un"
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
         },
         "pasta": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "robots_unavailable"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "adae243cdb659ee4ea5fff10",
           "ingredientId": "pasta",
-          "message": "No se pudo verificar la política de rastreo.",
+          "productUrl": null,
           "pack": 0.4,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "pollo": {
+          "unit": "kg",
+          "fingerprint": "adae243cdb659ee4ea5fff10",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "host_blocked"
             }
           ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "49e52faf64f515b748ab79b7",
-          "ingredientId": "pollo",
-          "message": "No se pudo verificar la política de rastreo.",
-          "pack": 1,
-          "productUrl": null,
           "status": "error",
-          "unit": "kg"
-        },
-        "queso": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "robots_unavailable"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "34395541ac7a8556e5687360",
-          "ingredientId": "queso",
-          "message": "No se pudo verificar la política de rastreo.",
-          "pack": 0.25,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
-        },
-        "sal": {
-          "attempts": [
-            {
-              "source": "sync",
-              "status": "robots_unavailable"
-            }
-          ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "5c9cf1eedcc55be6cf8c9716",
-          "ingredientId": "sal",
-          "message": "No se pudo verificar la política de rastreo.",
-          "pack": 1,
-          "productUrl": null,
-          "status": "error",
-          "unit": "kg"
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
         },
         "tomate": {
+          "ingredientId": "tomate",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "e3cca02f81031920d077665b",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "host_blocked"
             }
           ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "e3cca02f81031920d077665b",
-          "ingredientId": "tomate",
-          "message": "No se pudo verificar la política de rastreo.",
-          "pack": 1,
-          "productUrl": null,
           "status": "error",
-          "unit": "kg"
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "palta": {
+          "ingredientId": "palta",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "e12c67fe1743d836c8014bd2",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
         },
         "vacuno": {
+          "ingredientId": "vacuno",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "pollo": {
+          "ingredientId": "pollo",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "49e52faf64f515b748ab79b7",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "chorizo": {
+          "ingredientId": "chorizo",
+          "productUrl": null,
+          "pack": 0.5,
+          "unit": "kg",
+          "fingerprint": "9722d59c712caa16829e98c0",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "carbon": {
+          "ingredientId": "carbon",
+          "productUrl": null,
+          "pack": 2.5,
+          "unit": "kg",
+          "fingerprint": "8c55ecdf2d45be005ba88c4e",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "sal": {
+          "ingredientId": "sal",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "ca88a1da0c9e5f09ad084b7d",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "queso": {
+          "ingredientId": "queso",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "jamon": {
+          "ingredientId": "jamon",
+          "productUrl": null,
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "d3828a2bab61d49d21e97f53",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "ketchup": {
+          "ingredientId": "ketchup",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "e62b51deaa3779be372bc949",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "mostaza": {
+          "ingredientId": "mostaza",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "ca5e5ba0fbed1363c6a89235",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "papasChips": {
+          "ingredientId": "papasChips",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "5b39d1b258792f60e7eba010",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "nachos": {
+          "ingredientId": "nachos",
+          "productUrl": null,
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "5dacb403dc3db661a3bc3cc3",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "frutosSecos": {
+          "ingredientId": "frutosSecos",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "galletaSalada": {
+          "ingredientId": "galletaSalada",
+          "productUrl": null,
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "76bd36626cdfd104e44e39f6",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "bebida": {
+          "ingredientId": "bebida",
+          "productUrl": null,
+          "pack": 2,
+          "unit": "L",
+          "fingerprint": "ef71dd5ff1ec417820c7fb9b",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "agua": {
+          "ingredientId": "agua",
+          "productUrl": null,
+          "pack": 1.5,
+          "unit": "L",
+          "fingerprint": "3bf2d1397844a53378224352",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        },
+        "hielo": {
+          "ingredientId": "hielo",
+          "productUrl": null,
+          "pack": 2,
+          "unit": "kg",
+          "fingerprint": "65723e07b1c4ba8ffd2d3b07",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "host_blocked"
+            }
+          ],
+          "status": "error",
+          "error": "host_blocked",
+          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+        }
+      }
+    },
+    "unimarc": {
+      "name": "Unimarc",
+      "currency": "CLP",
+      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
+      "checkedAt": "2026-09-10T14:30:05Z",
+      "configured": 23,
+      "status": "error",
+      "products": {
+        "panCompleto": {
+          "ingredientId": "panCompleto",
+          "productUrl": null,
+          "pack": 8,
+          "unit": "un",
+          "fingerprint": "b2bb8f210bf3a2668b7faaa3",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "sync",
               "status": "robots_unavailable"
             }
           ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "ingredientId": "vacuno",
-          "message": "No se pudo verificar la política de rastreo.",
-          "pack": 1,
-          "productUrl": null,
           "status": "error",
-          "unit": "kg"
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
         },
         "vienesa": {
+          "ingredientId": "vienesa",
+          "productUrl": null,
+          "pack": 20,
+          "unit": "un",
+          "fingerprint": "f5d31745f56805b9d25f399b",
+          "checkedAt": "2026-09-10T14:30:05Z",
           "attempts": [
             {
               "source": "sync",
               "status": "robots_unavailable"
             }
           ],
-          "checkedAt": "2026-09-10T14:23:29Z",
-          "error": "robots_unavailable",
-          "fingerprint": "f5d31745f56805b9d25f399b",
-          "ingredientId": "vienesa",
-          "message": "No se pudo verificar la política de rastreo.",
-          "pack": 20,
-          "productUrl": null,
           "status": "error",
-          "unit": "un"
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "mayo": {
+          "ingredientId": "mayo",
+          "productUrl": null,
+          "pack": 0.8,
+          "unit": "kg",
+          "fingerprint": "fee5a640eecf8d4f821ce1df",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "arroz": {
+          "ingredientId": "arroz",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "ec5616479e8bb94a101f2b89",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "pasta": {
+          "ingredientId": "pasta",
+          "productUrl": null,
+          "pack": 0.4,
+          "unit": "kg",
+          "fingerprint": "adae243cdb659ee4ea5fff10",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "tomate": {
+          "ingredientId": "tomate",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "e3cca02f81031920d077665b",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "palta": {
+          "ingredientId": "palta",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "e12c67fe1743d836c8014bd2",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "vacuno": {
+          "ingredientId": "vacuno",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "pollo": {
+          "ingredientId": "pollo",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "49e52faf64f515b748ab79b7",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "chorizo": {
+          "ingredientId": "chorizo",
+          "productUrl": null,
+          "pack": 0.5,
+          "unit": "kg",
+          "fingerprint": "9722d59c712caa16829e98c0",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "carbon": {
+          "ingredientId": "carbon",
+          "productUrl": null,
+          "pack": 2.5,
+          "unit": "kg",
+          "fingerprint": "8c55ecdf2d45be005ba88c4e",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "sal": {
+          "ingredientId": "sal",
+          "productUrl": null,
+          "pack": 1,
+          "unit": "kg",
+          "fingerprint": "ca88a1da0c9e5f09ad084b7d",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "queso": {
+          "ingredientId": "queso",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "jamon": {
+          "ingredientId": "jamon",
+          "productUrl": null,
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "d3828a2bab61d49d21e97f53",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "ketchup": {
+          "ingredientId": "ketchup",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "e62b51deaa3779be372bc949",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "mostaza": {
+          "ingredientId": "mostaza",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "ca5e5ba0fbed1363c6a89235",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "papasChips": {
+          "ingredientId": "papasChips",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "5b39d1b258792f60e7eba010",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "nachos": {
+          "ingredientId": "nachos",
+          "productUrl": null,
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "5dacb403dc3db661a3bc3cc3",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "frutosSecos": {
+          "ingredientId": "frutosSecos",
+          "productUrl": null,
+          "pack": 0.25,
+          "unit": "kg",
+          "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "galletaSalada": {
+          "ingredientId": "galletaSalada",
+          "productUrl": null,
+          "pack": 0.2,
+          "unit": "kg",
+          "fingerprint": "76bd36626cdfd104e44e39f6",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "bebida": {
+          "ingredientId": "bebida",
+          "productUrl": null,
+          "pack": 2,
+          "unit": "L",
+          "fingerprint": "ef71dd5ff1ec417820c7fb9b",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "agua": {
+          "ingredientId": "agua",
+          "productUrl": null,
+          "pack": 1.5,
+          "unit": "L",
+          "fingerprint": "3bf2d1397844a53378224352",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
+        },
+        "hielo": {
+          "ingredientId": "hielo",
+          "productUrl": null,
+          "pack": 2,
+          "unit": "kg",
+          "fingerprint": "65723e07b1c4ba8ffd2d3b07",
+          "checkedAt": "2026-09-10T14:30:05Z",
+          "attempts": [
+            {
+              "source": "sync",
+              "status": "robots_unavailable"
+            }
+          ],
+          "status": "error",
+          "error": "robots_unavailable",
+          "message": "No se pudo verificar la política de rastreo."
         }
-      },
-      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "status": "error"
+      }
     }
-  }
+  },
+  "runUrl": "https://github.com/leoescobarh/la-junta/actions/runs/34489447566"
 }
 ;
