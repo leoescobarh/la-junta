@@ -54,6 +54,8 @@ if __name__ == '__main__':
                 result = inspect_page(client.get(url))
                 print(json.dumps({'store': sid, 'url': url, 'result': result}, ensure_ascii=False)[:26000], flush=True)
                 for asset in result['assets'][:80]:
+                    if 'pages/search-' not in asset and 'search-' not in asset:
+                        continue
                     if asset.startswith('/') or asset.startswith('https://www.unimarc.cl'):
                         code = client.get(urljoin(url, asset))
                         urls = sorted(set(re.findall(r'https://[a-zA-Z0-9./_-]+', code)))
