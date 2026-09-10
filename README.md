@@ -6,7 +6,7 @@ Proyecto web completo en español, pensado para organizar comidas en Chile. Dise
 
 La columna **Tienda** muestra los supermercados por ingrediente, sin seleccionar una tienda para toda la compra. El presupuesto toma el menor costo consultado vigente para la cantidad pendiente, descontando stock y considerando envases completos. Las marcas pueden diferir: cada oferta indica su producto, formato y precio por kg, litro o unidad. Los precios anteriores se muestran como referencia y no compiten como vigentes.
 
-El actualizador consulta Jumbo, Santa Isabel, Lider, Tottus y Unimarc. Se verificó una primera ejecución real con cinco precios de Jumbo extraídos del HTML. Las fuentes tienen cobertura parcial: una configuración no garantiza extracción, y las páginas pueden bloquearla o requerir JavaScript. Consulta [SUPERMERCADOS.md](SUPERMERCADOS.md) y los estados publicados en `dist/prices.json`.
+El actualizador consulta Jumbo, Santa Isabel, Lider, Tottus y Unimarc cada seis horas. La última ejecución real verificó 41 ofertas: Jumbo 21/23, Santa Isabel 9/23 y Lider 11/23; Tottus devolvió HTTP 403 y Unimarc no entregó fichas públicas en su respuesta de búsqueda. Las fuentes tienen cobertura parcial: una configuración no garantiza extracción, y las páginas pueden bloquearla o requerir JavaScript. Consulta [SUPERMERCADOS.md](SUPERMERCADOS.md) y los estados publicados en `dist/prices.json`.
 
 Para conectar el sitio existente de Netlify, vincula este repositorio y selecciona la rama `main`, la base del proyecto vacía, ningún comando de compilación y `dist` como carpeta de publicación. `dist/index.html` ya está incluido en el repositorio. No subas el ZIP como si fuera código fuente.
 
@@ -135,3 +135,4 @@ Las recetas son aproximaciones prácticas para planificar, no pautas nutricional
 Código original bajo licencia MIT; consulta `LICENSE`. La fotografía fue generada para este proyecto y está incluida, sin dependencia de un servicio de imágenes externo. Los emojis usan la representación del sistema operativo. La tipografía usa fuentes del sistema, sin descargas de terceros.
 
 El nombre «La Junta» es un nombre de trabajo para el proyecto; puedes sustituirlo en los textos, el título y el favicon.
+
