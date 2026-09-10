@@ -47,14 +47,14 @@ def inspect_page(html):
 
 if __name__ == '__main__':
     config = read_config(ROOT / 'pricing/sources.json')
-    client = PublicClient(config['stores'])
+    client = PublicClient(config['stores'], max_bytes=40 * 1024 * 1024)
     for sid, urls in PAGES.items():
         for url in urls:
             try:
                 result = inspect_page(client.get(url))
                 print(json.dumps({'store': sid, 'url': url, 'result': result}, ensure_ascii=False)[:26000], flush=True)
                 for asset in result['assets'][:80]:
-                    if 'pages/search-' not in asset and 'search-' not in asset:
+                    if 'pages/search-' not in asset and 'search-' not in asset and '/_app-' not in asset:
                         continue
                     if asset.startswith('/') or asset.startswith('https://www.unimarc.cl'):
                         code = client.get(urljoin(url, asset))
