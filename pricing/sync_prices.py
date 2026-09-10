@@ -427,10 +427,15 @@ def fingerprint(target):
 
 def refresh_product(client, target, store, previous=None, checked_at=None):
     checked_at = checked_at or timestamp()
-    base = {'ingredientId': target['ingredient'], 'productUrl': target['product_url'],
+    base = {'ingredientId': target['ingredient'], 'productUrl': target.get('product_url'),
             'pack': target['pack'], 'unit': target['unit'], 'fingerprint': fingerprint(target),
             'checkedAt': checked_at, 'attempts': []}
     try:
+        if not target.get('product_url'):
+            from discover import discover_product
+            found, attempts = discover_product(client, target, store)
+            base['attempts'].extend(attempts)
+            return {**base, **found, 'status': 'ok', 'fetchedAt': checked_at}
         if store.get('vtex', True):
             slug = urlsplit(target['product_url']).path.strip('/').removesuffix('/p')
             api_url = store['origin'].rstrip('/') + '/api/catalog_system/pub/products/search/' + quote(unquote(slug), safe='-') + '/p'
@@ -456,7 +461,7 @@ def refresh_product(client, target, store, previous=None, checked_at=None):
         message = str(error) if isinstance(error, PriceError) else 'La tienda devolvió datos incompletos.'
         old = previous if isinstance(previous, dict) and previous.get('fingerprint') == base['fingerprint'] else {}
         # Conserva la fecha REAL del precio anterior, nunca la renueva ante un error.
-        keep = {key: old[key] for key in ('price', 'currency', 'productName', 'available', 'source', 'fetchedAt') if key in old}
+        keep = {key: old[key] for key in ('price', 'currency', 'productName', 'productUrl', 'available', 'source', 'fetchedAt') if key in old}
         return {**base, **keep, 'status': 'stale' if old.get('price') else 'error', 'error': code, 'message': message}
 
 
@@ -470,7 +475,12 @@ def read_config(path):
             raise ValueError('Esta versión calcula únicamente en CLP.')
         seen = set()
         for target in store['products']:
-            safe_url(target['product_url'], store['allowed_hosts'])
+            if target.get('product_url'):
+                safe_url(target['product_url'], store['allowed_hosts'])
+            elif target.get('query') and store.get('search_url') and store.get('product_path_pattern'):
+                safe_url(store['search_url'], store['allowed_hosts'])
+            else:
+                raise ValueError('Falta ficha o configuración de búsqueda.')
             if target['ingredient'] in seen:
                 raise ValueError('Hay dos productos para el mismo ingrediente en ' + store_id)
             seen.add(target['ingredient'])

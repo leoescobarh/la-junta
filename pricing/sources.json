@@ -7,11 +7,16 @@
     "jumbo": {
       "name": "Jumbo",
       "origin": "https://www.jumbo.cl",
-      "allowed_hosts": ["www.jumbo.cl", "jumbo.cl"],
+      "allowed_hosts": [
+        "www.jumbo.cl",
+        "jumbo.cl"
+      ],
       "currency": "CLP",
       "seller_id": "1",
       "vtex": true,
-      "scope": "Precio web público sin ubicación ni sesión. Confirma disponibilidad, despacho y condiciones en la tienda.",
+      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
+      "search_url": "https://www.jumbo.cl/busqueda?ft=",
+      "product_path_pattern": "/p/?$",
       "products": [
         {
           "ingredient": "panCompleto",
@@ -19,7 +24,13 @@
           "product_url": "https://www.jumbo.cl/pan-hot-dog-castano-480-gr-8-un/p",
           "unit": "un",
           "pack": 8,
-          "expected_terms": ["pan", "hot", "dog", "castaño", "480"],
+          "expected_terms": [
+            "pan",
+            "hot",
+            "dog",
+            "castaño",
+            "480"
+          ],
           "expected_pattern": "\\b8\\s*un"
         },
         {
@@ -28,7 +39,10 @@
           "product_url": "https://www.jumbo.cl/salchichas-san-jorge-1-kg-2/p",
           "unit": "un",
           "pack": 20,
-          "expected_terms": ["salchich", "san jorge"],
+          "expected_terms": [
+            "salchich",
+            "san jorge"
+          ],
           "expected_pattern": "\\b20\\s*un"
         },
         {
@@ -37,7 +51,10 @@
           "product_url": "https://www.jumbo.cl/mayonesa-hellmanns-2054590/p",
           "unit": "kg",
           "pack": 0.8,
-          "expected_terms": ["mayonesa", "hellmann"],
+          "expected_terms": [
+            "mayonesa",
+            "hellmann"
+          ],
           "expected_pattern": "\\b800\\s*g\\b"
         },
         {
@@ -46,7 +63,12 @@
           "product_url": "https://www.jumbo.cl/arroz-grado-1-tucapel-gran-seleccion-grano-largo-y-ancho-1-kg/p",
           "unit": "kg",
           "pack": 1,
-          "expected_terms": ["arroz", "tucapel", "grado 1", "gran seleccion"],
+          "expected_terms": [
+            "arroz",
+            "tucapel",
+            "grado 1",
+            "gran seleccion"
+          ],
           "expected_pattern": "\\b1\\s*kg\\b"
         },
         {
@@ -55,8 +77,965 @@
           "product_url": "https://www.jumbo.cl/spaghetti-n-5-carozzi-bolsa-400-g-2/p",
           "unit": "kg",
           "pack": 0.4,
-          "expected_terms": ["spaghetti", "carozzi"],
+          "expected_terms": [
+            "spaghetti",
+            "carozzi"
+          ],
           "expected_pattern": "\\b400\\s*g\\b"
+        },
+        {
+          "ingredient": "tomate",
+          "label": "Tomate 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "tomate"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Tomate 1 kg"
+        },
+        {
+          "ingredient": "palta",
+          "label": "Palta hass 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "palta",
+            "hass"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Palta hass 1 kg"
+        },
+        {
+          "ingredient": "vacuno",
+          "label": "Lomo vetado vacuno 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "lomo",
+            "vetado"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Lomo vetado vacuno 1 kg"
+        },
+        {
+          "ingredient": "pollo",
+          "label": "Pechuga pollo deshuesada 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "pechuga",
+            "deshuesad"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Pechuga pollo deshuesada 1 kg"
+        },
+        {
+          "ingredient": "chorizo",
+          "label": "Chorizo 500 g",
+          "unit": "kg",
+          "pack": 0.5,
+          "expected_terms": [
+            "choriz"
+          ],
+          "expected_pattern": "\\b500\\s*g\\b",
+          "query": "Chorizo 500 g"
+        },
+        {
+          "ingredient": "carbon",
+          "label": "Carbon 2.5 kg",
+          "unit": "kg",
+          "pack": 2.5,
+          "expected_terms": [
+            "carbon"
+          ],
+          "expected_pattern": "\\b2[.,]5\\s*kg\\b",
+          "query": "Carbon 2.5 kg"
+        },
+        {
+          "ingredient": "sal",
+          "label": "Sal 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "sal"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Sal 1 kg"
+        },
+        {
+          "ingredient": "queso",
+          "label": "Queso gauda 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "queso",
+            "gauda"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Queso gauda 250 g"
+        },
+        {
+          "ingredient": "jamon",
+          "label": "Jamon pierna 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "jamon",
+            "pierna"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Jamon pierna 200 g"
+        },
+        {
+          "ingredient": "ketchup",
+          "label": "Ketchup 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "ketchup"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Ketchup 250 g"
+        },
+        {
+          "ingredient": "mostaza",
+          "label": "Mostaza 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "mostaza"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Mostaza 250 g"
+        }
+      ]
+    },
+    "santaIsabel": {
+      "name": "Santa Isabel",
+      "origin": "https://www.santaisabel.cl",
+      "allowed_hosts": [
+        "www.santaisabel.cl",
+        "santaisabel.cl"
+      ],
+      "currency": "CLP",
+      "seller_id": "1",
+      "vtex": true,
+      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
+      "search_url": "https://www.santaisabel.cl/busqueda?ft=",
+      "product_path_pattern": "/p/?$",
+      "products": [
+        {
+          "ingredient": "panCompleto",
+          "label": "Pan Hot Dog Castaño 480 g 8 un.",
+          "product_url": "https://www.santaisabel.cl/pan-hot-dog-castano-480-gr-8-un/p",
+          "unit": "un",
+          "pack": 8,
+          "expected_terms": [
+            "pan",
+            "hot",
+            "dog",
+            "castaño",
+            "480"
+          ],
+          "expected_pattern": "\\b8\\s*un"
+        },
+        {
+          "ingredient": "vienesa",
+          "label": "Salchichas San Jorge 1 kg 20 un.",
+          "product_url": "https://www.santaisabel.cl/salchichas-san-jorge-1-kg-2/p",
+          "unit": "un",
+          "pack": 20,
+          "expected_terms": [
+            "salchich",
+            "san jorge"
+          ],
+          "expected_pattern": "\\b20\\s*un"
+        },
+        {
+          "ingredient": "mayo",
+          "label": "Mayonesa Hellmann's Doypack 800 g",
+          "product_url": "https://www.santaisabel.cl/mayonesa-hellmanns-2054590/p",
+          "unit": "kg",
+          "pack": 0.8,
+          "expected_terms": [
+            "mayonesa",
+            "hellmann"
+          ],
+          "expected_pattern": "\\b800\\s*g\\b"
+        },
+        {
+          "ingredient": "arroz",
+          "label": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg",
+          "product_url": "https://www.santaisabel.cl/arroz-grado-1-tucapel-gran-seleccion-grano-largo-y-ancho-1-kg/p",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "arroz",
+            "tucapel",
+            "grado 1",
+            "gran seleccion"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b"
+        },
+        {
+          "ingredient": "pasta",
+          "label": "Pasta Spaghetti N°5 Carozzi 400 g",
+          "product_url": "https://www.santaisabel.cl/spaghetti-n-5-carozzi-bolsa-400-g-2/p",
+          "unit": "kg",
+          "pack": 0.4,
+          "expected_terms": [
+            "spaghetti",
+            "carozzi"
+          ],
+          "expected_pattern": "\\b400\\s*g\\b"
+        },
+        {
+          "ingredient": "tomate",
+          "label": "Tomate 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "tomate"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Tomate 1 kg"
+        },
+        {
+          "ingredient": "palta",
+          "label": "Palta hass 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "palta",
+            "hass"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Palta hass 1 kg"
+        },
+        {
+          "ingredient": "vacuno",
+          "label": "Lomo vetado vacuno 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "lomo",
+            "vetado"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Lomo vetado vacuno 1 kg"
+        },
+        {
+          "ingredient": "pollo",
+          "label": "Pechuga pollo deshuesada 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "pechuga",
+            "deshuesad"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Pechuga pollo deshuesada 1 kg"
+        },
+        {
+          "ingredient": "chorizo",
+          "label": "Chorizo 500 g",
+          "unit": "kg",
+          "pack": 0.5,
+          "expected_terms": [
+            "choriz"
+          ],
+          "expected_pattern": "\\b500\\s*g\\b",
+          "query": "Chorizo 500 g"
+        },
+        {
+          "ingredient": "carbon",
+          "label": "Carbon 2.5 kg",
+          "unit": "kg",
+          "pack": 2.5,
+          "expected_terms": [
+            "carbon"
+          ],
+          "expected_pattern": "\\b2[.,]5\\s*kg\\b",
+          "query": "Carbon 2.5 kg"
+        },
+        {
+          "ingredient": "sal",
+          "label": "Sal 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "sal"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Sal 1 kg"
+        },
+        {
+          "ingredient": "queso",
+          "label": "Queso gauda 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "queso",
+            "gauda"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Queso gauda 250 g"
+        },
+        {
+          "ingredient": "jamon",
+          "label": "Jamon pierna 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "jamon",
+            "pierna"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Jamon pierna 200 g"
+        },
+        {
+          "ingredient": "ketchup",
+          "label": "Ketchup 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "ketchup"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Ketchup 250 g"
+        },
+        {
+          "ingredient": "mostaza",
+          "label": "Mostaza 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "mostaza"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Mostaza 250 g"
+        }
+      ]
+    },
+    "lider": {
+      "name": "Lider",
+      "origin": "https://www.lider.cl",
+      "allowed_hosts": [
+        "www.lider.cl",
+        "lider.cl"
+      ],
+      "currency": "CLP",
+      "seller_id": "1",
+      "vtex": false,
+      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
+      "search_url": "https://www.lider.cl/search?q=",
+      "product_path_pattern": "/ip/|/supermercado/product/",
+      "products": [
+        {
+          "ingredient": "panCompleto",
+          "label": "Pan Hot Dog Castaño 480 g 8 un.",
+          "unit": "un",
+          "pack": 8,
+          "expected_terms": [
+            "pan",
+            "hot",
+            "dog",
+            "castaño",
+            "480"
+          ],
+          "expected_pattern": "\\b8\\s*un",
+          "query": "Pan Hot Dog Castaño 480 g 8 un."
+        },
+        {
+          "ingredient": "vienesa",
+          "label": "Salchichas San Jorge 1 kg 20 un.",
+          "unit": "un",
+          "pack": 20,
+          "expected_terms": [
+            "salchich",
+            "san jorge"
+          ],
+          "expected_pattern": "\\b20\\s*un",
+          "query": "Salchichas San Jorge 1 kg 20 un."
+        },
+        {
+          "ingredient": "mayo",
+          "label": "Mayonesa Hellmann's Doypack 800 g",
+          "unit": "kg",
+          "pack": 0.8,
+          "expected_terms": [
+            "mayonesa",
+            "hellmann"
+          ],
+          "expected_pattern": "\\b800\\s*g\\b",
+          "query": "Mayonesa Hellmann's Doypack 800 g"
+        },
+        {
+          "ingredient": "arroz",
+          "label": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "arroz",
+            "tucapel",
+            "grado 1",
+            "gran seleccion"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg"
+        },
+        {
+          "ingredient": "pasta",
+          "label": "Pasta Spaghetti N°5 Carozzi 400 g",
+          "unit": "kg",
+          "pack": 0.4,
+          "expected_terms": [
+            "spaghetti",
+            "carozzi"
+          ],
+          "expected_pattern": "\\b400\\s*g\\b",
+          "query": "Pasta Spaghetti N°5 Carozzi 400 g"
+        },
+        {
+          "ingredient": "tomate",
+          "label": "Tomate 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "tomate"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Tomate 1 kg"
+        },
+        {
+          "ingredient": "palta",
+          "label": "Palta hass 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "palta",
+            "hass"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Palta hass 1 kg"
+        },
+        {
+          "ingredient": "vacuno",
+          "label": "Lomo vetado vacuno 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "lomo",
+            "vetado"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Lomo vetado vacuno 1 kg"
+        },
+        {
+          "ingredient": "pollo",
+          "label": "Pechuga pollo deshuesada 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "pechuga",
+            "deshuesad"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Pechuga pollo deshuesada 1 kg"
+        },
+        {
+          "ingredient": "chorizo",
+          "label": "Chorizo 500 g",
+          "unit": "kg",
+          "pack": 0.5,
+          "expected_terms": [
+            "choriz"
+          ],
+          "expected_pattern": "\\b500\\s*g\\b",
+          "query": "Chorizo 500 g"
+        },
+        {
+          "ingredient": "carbon",
+          "label": "Carbon 2.5 kg",
+          "unit": "kg",
+          "pack": 2.5,
+          "expected_terms": [
+            "carbon"
+          ],
+          "expected_pattern": "\\b2[.,]5\\s*kg\\b",
+          "query": "Carbon 2.5 kg"
+        },
+        {
+          "ingredient": "sal",
+          "label": "Sal 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "sal"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Sal 1 kg"
+        },
+        {
+          "ingredient": "queso",
+          "label": "Queso gauda 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "queso",
+            "gauda"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Queso gauda 250 g"
+        },
+        {
+          "ingredient": "jamon",
+          "label": "Jamon pierna 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "jamon",
+            "pierna"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Jamon pierna 200 g"
+        },
+        {
+          "ingredient": "ketchup",
+          "label": "Ketchup 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "ketchup"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Ketchup 250 g"
+        },
+        {
+          "ingredient": "mostaza",
+          "label": "Mostaza 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "mostaza"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Mostaza 250 g"
+        }
+      ]
+    },
+    "tottus": {
+      "name": "Tottus",
+      "origin": "https://www.tottus.cl",
+      "allowed_hosts": [
+        "www.tottus.cl",
+        "tottus.cl"
+      ],
+      "currency": "CLP",
+      "seller_id": "1",
+      "vtex": false,
+      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
+      "search_url": "https://www.tottus.cl/tottus-cl/search?Ntt=",
+      "product_path_pattern": "/articulo/|/product/",
+      "products": [
+        {
+          "ingredient": "panCompleto",
+          "label": "Pan Hot Dog Castaño 480 g 8 un.",
+          "unit": "un",
+          "pack": 8,
+          "expected_terms": [
+            "pan",
+            "hot",
+            "dog",
+            "castaño",
+            "480"
+          ],
+          "expected_pattern": "\\b8\\s*un",
+          "query": "Pan Hot Dog Castaño 480 g 8 un."
+        },
+        {
+          "ingredient": "vienesa",
+          "label": "Salchichas San Jorge 1 kg 20 un.",
+          "unit": "un",
+          "pack": 20,
+          "expected_terms": [
+            "salchich",
+            "san jorge"
+          ],
+          "expected_pattern": "\\b20\\s*un",
+          "query": "Salchichas San Jorge 1 kg 20 un."
+        },
+        {
+          "ingredient": "mayo",
+          "label": "Mayonesa Hellmann's Doypack 800 g",
+          "unit": "kg",
+          "pack": 0.8,
+          "expected_terms": [
+            "mayonesa",
+            "hellmann"
+          ],
+          "expected_pattern": "\\b800\\s*g\\b",
+          "query": "Mayonesa Hellmann's Doypack 800 g"
+        },
+        {
+          "ingredient": "arroz",
+          "label": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "arroz",
+            "tucapel",
+            "grado 1",
+            "gran seleccion"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg"
+        },
+        {
+          "ingredient": "pasta",
+          "label": "Pasta Spaghetti N°5 Carozzi 400 g",
+          "unit": "kg",
+          "pack": 0.4,
+          "expected_terms": [
+            "spaghetti",
+            "carozzi"
+          ],
+          "expected_pattern": "\\b400\\s*g\\b",
+          "query": "Pasta Spaghetti N°5 Carozzi 400 g"
+        },
+        {
+          "ingredient": "tomate",
+          "label": "Tomate 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "tomate"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Tomate 1 kg"
+        },
+        {
+          "ingredient": "palta",
+          "label": "Palta hass 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "palta",
+            "hass"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Palta hass 1 kg"
+        },
+        {
+          "ingredient": "vacuno",
+          "label": "Lomo vetado vacuno 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "lomo",
+            "vetado"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Lomo vetado vacuno 1 kg"
+        },
+        {
+          "ingredient": "pollo",
+          "label": "Pechuga pollo deshuesada 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "pechuga",
+            "deshuesad"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Pechuga pollo deshuesada 1 kg"
+        },
+        {
+          "ingredient": "chorizo",
+          "label": "Chorizo 500 g",
+          "unit": "kg",
+          "pack": 0.5,
+          "expected_terms": [
+            "choriz"
+          ],
+          "expected_pattern": "\\b500\\s*g\\b",
+          "query": "Chorizo 500 g"
+        },
+        {
+          "ingredient": "carbon",
+          "label": "Carbon 2.5 kg",
+          "unit": "kg",
+          "pack": 2.5,
+          "expected_terms": [
+            "carbon"
+          ],
+          "expected_pattern": "\\b2[.,]5\\s*kg\\b",
+          "query": "Carbon 2.5 kg"
+        },
+        {
+          "ingredient": "sal",
+          "label": "Sal 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "sal"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Sal 1 kg"
+        },
+        {
+          "ingredient": "queso",
+          "label": "Queso gauda 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "queso",
+            "gauda"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Queso gauda 250 g"
+        },
+        {
+          "ingredient": "jamon",
+          "label": "Jamon pierna 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "jamon",
+            "pierna"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Jamon pierna 200 g"
+        },
+        {
+          "ingredient": "ketchup",
+          "label": "Ketchup 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "ketchup"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Ketchup 250 g"
+        },
+        {
+          "ingredient": "mostaza",
+          "label": "Mostaza 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "mostaza"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Mostaza 250 g"
+        }
+      ]
+    },
+    "unimarc": {
+      "name": "Unimarc",
+      "origin": "https://www.unimarc.cl",
+      "allowed_hosts": [
+        "www.unimarc.cl",
+        "unimarc.cl"
+      ],
+      "currency": "CLP",
+      "seller_id": "1",
+      "vtex": false,
+      "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
+      "search_url": "https://www.unimarc.cl/search?q=",
+      "product_path_pattern": "/product/",
+      "products": [
+        {
+          "ingredient": "panCompleto",
+          "label": "Pan Hot Dog Castaño 480 g 8 un.",
+          "unit": "un",
+          "pack": 8,
+          "expected_terms": [
+            "pan",
+            "hot",
+            "dog",
+            "castaño",
+            "480"
+          ],
+          "expected_pattern": "\\b8\\s*un",
+          "query": "Pan Hot Dog Castaño 480 g 8 un."
+        },
+        {
+          "ingredient": "vienesa",
+          "label": "Salchichas San Jorge 1 kg 20 un.",
+          "unit": "un",
+          "pack": 20,
+          "expected_terms": [
+            "salchich",
+            "san jorge"
+          ],
+          "expected_pattern": "\\b20\\s*un",
+          "query": "Salchichas San Jorge 1 kg 20 un."
+        },
+        {
+          "ingredient": "mayo",
+          "label": "Mayonesa Hellmann's Doypack 800 g",
+          "unit": "kg",
+          "pack": 0.8,
+          "expected_terms": [
+            "mayonesa",
+            "hellmann"
+          ],
+          "expected_pattern": "\\b800\\s*g\\b",
+          "query": "Mayonesa Hellmann's Doypack 800 g"
+        },
+        {
+          "ingredient": "arroz",
+          "label": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "arroz",
+            "tucapel",
+            "grado 1",
+            "gran seleccion"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg"
+        },
+        {
+          "ingredient": "pasta",
+          "label": "Pasta Spaghetti N°5 Carozzi 400 g",
+          "unit": "kg",
+          "pack": 0.4,
+          "expected_terms": [
+            "spaghetti",
+            "carozzi"
+          ],
+          "expected_pattern": "\\b400\\s*g\\b",
+          "query": "Pasta Spaghetti N°5 Carozzi 400 g"
+        },
+        {
+          "ingredient": "tomate",
+          "label": "Tomate 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "tomate"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Tomate 1 kg"
+        },
+        {
+          "ingredient": "palta",
+          "label": "Palta hass 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "palta",
+            "hass"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Palta hass 1 kg"
+        },
+        {
+          "ingredient": "vacuno",
+          "label": "Lomo vetado vacuno 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "lomo",
+            "vetado"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Lomo vetado vacuno 1 kg"
+        },
+        {
+          "ingredient": "pollo",
+          "label": "Pechuga pollo deshuesada 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "pechuga",
+            "deshuesad"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Pechuga pollo deshuesada 1 kg"
+        },
+        {
+          "ingredient": "chorizo",
+          "label": "Chorizo 500 g",
+          "unit": "kg",
+          "pack": 0.5,
+          "expected_terms": [
+            "choriz"
+          ],
+          "expected_pattern": "\\b500\\s*g\\b",
+          "query": "Chorizo 500 g"
+        },
+        {
+          "ingredient": "carbon",
+          "label": "Carbon 2.5 kg",
+          "unit": "kg",
+          "pack": 2.5,
+          "expected_terms": [
+            "carbon"
+          ],
+          "expected_pattern": "\\b2[.,]5\\s*kg\\b",
+          "query": "Carbon 2.5 kg"
+        },
+        {
+          "ingredient": "sal",
+          "label": "Sal 1 kg",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": [
+            "sal"
+          ],
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "query": "Sal 1 kg"
+        },
+        {
+          "ingredient": "queso",
+          "label": "Queso gauda 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "queso",
+            "gauda"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Queso gauda 250 g"
+        },
+        {
+          "ingredient": "jamon",
+          "label": "Jamon pierna 200 g",
+          "unit": "kg",
+          "pack": 0.2,
+          "expected_terms": [
+            "jamon",
+            "pierna"
+          ],
+          "expected_pattern": "\\b200\\s*g\\b",
+          "query": "Jamon pierna 200 g"
+        },
+        {
+          "ingredient": "ketchup",
+          "label": "Ketchup 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "ketchup"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Ketchup 250 g"
+        },
+        {
+          "ingredient": "mostaza",
+          "label": "Mostaza 250 g",
+          "unit": "kg",
+          "pack": 0.25,
+          "expected_terms": [
+            "mostaza"
+          ],
+          "expected_pattern": "\\b250\\s*g\\b",
+          "query": "Mostaza 250 g"
         }
       ]
     }
