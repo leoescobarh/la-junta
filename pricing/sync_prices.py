@@ -355,6 +355,7 @@ class PublicClient:
         self.delay = max(1.0, float(delay))
         self.robots = {}
         self.blocked = set()
+        self.block_reasons = {}
         self.last_request = {}
         self.opener = build_opener(NoRedirect())
 
@@ -362,7 +363,8 @@ class PublicClient:
         safe_url(url, self.hosts)
         host = urlsplit(url).hostname
         if host in self.blocked:
-            raise AccessBlocked('host_blocked', 'La tienda rechazó la consulta; no se insiste durante esta ejecución.')
+            code, message = self.block_reasons.get(host, ('host_blocked', 'La tienda rechazó la consulta; no se insiste durante esta ejecución.'))
+            raise AccessBlocked(code, message)
         spacing = max(self.delay, self.robots.get(host, ([], 0))[1])
         remaining = self.last_request.get(host, 0) + spacing - time.monotonic()
         if remaining > 0:
@@ -381,6 +383,7 @@ class PublicClient:
                 return {'redirect': urljoin(url, error.headers.get('Location', ''))}, ''
             if error.code in (401, 403, 429):
                 self.blocked.add(host)
+                self.block_reasons[host] = ('http_' + str(error.code), 'La tienda respondió HTTP ' + str(error.code) + ' en ' + urlsplit(url).path + '.')
                 raise AccessBlocked('http_' + str(error.code), 'La tienda requiere acceso o ha limitado las consultas.') from error
             raise PriceError('http_' + str(error.code), 'La tienda respondió HTTP ' + str(error.code) + '.') from error
         except (URLError, TimeoutError, OSError) as error:
@@ -391,7 +394,14 @@ class PublicClient:
         host = urlsplit(url).hostname
         if host not in self.robots:
             try:
-                body, _ = self._raw('https://' + host + '/robots.txt')
+                robots_url = 'https://' + host + '/robots.txt'
+                for _ in range(5):
+                    body, _ = self._raw(robots_url)
+                    if not isinstance(body, dict):
+                        break
+                    robots_url = safe_url(body['redirect'], self.hosts)
+                else:
+                    raise PriceError('robots_redirect_loop', 'Demasiadas redirecciones de robots.txt.')
                 if not isinstance(body, str) or '<html' in body.lower() or '<!doctype' in body.lower():
                     raise PriceError('robots_unavailable', 'No se pudo interpretar robots.txt.')
                 self.robots[host] = parse_robots(body)
@@ -400,7 +410,10 @@ class PublicClient:
                     self.robots[host] = ([], 0)
                 else:
                     self.blocked.add(host)
-                    raise AccessBlocked('robots_unavailable', 'No se pudo verificar la política de rastreo.') from error
+                    code = error.code if isinstance(error, AccessBlocked) else 'robots_' + error.code
+                    message = 'No se pudo verificar robots.txt: ' + str(error)
+                    self.block_reasons[host] = (code, message)
+                    raise AccessBlocked(code, message) from error
         if not robots_allows(self.robots[host][0], url):
             raise AccessBlocked('robots_denied', 'La ruta está excluida por robots.txt.')
 

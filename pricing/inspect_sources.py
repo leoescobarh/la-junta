@@ -1,0 +1,51 @@
+"""Diagnóstico manual de páginas públicas; solo informa estructura y errores."""
+import json
+from sync_prices import PublicClient, Document, PriceError, ROOT, read_config
+
+PAGES = {
+    'tottus': ['https://www.tottus.cl/tottus-cl/lista/CATG27069/Carnes',
+               'https://www.tottus.cl/tottus-cl/lista/CATG27055/Despensa'],
+    'unimarc': ['https://www.unimarc.cl/'],
+}
+
+
+def inspect_page(html):
+    doc = Document(html)
+    result = {'bytes': len(html), 'scripts': [], 'samples': [], 'links': []}
+    def walk(value, path=''):
+        if isinstance(value, dict):
+            name = value.get('displayName') or value.get('productName') or value.get('name')
+            if name and any(key in value for key in ('prices', 'offers', 'price', 'variants')) and len(result['samples']) < 3:
+                result['samples'].append({'path': path, 'data': value})
+                return
+            for key, child in value.items():
+                if isinstance(child, (dict, list)):
+                    walk(child, path + '/' + key)
+        elif isinstance(value, list):
+            for i, child in enumerate(value[:60]):
+                walk(child, path + '/' + str(i))
+    for i, node in enumerate(doc.nodes):
+        attrs = node['attrs']
+        if node['tag'] == 'script' and (attrs.get('type') == 'application/ld+json' or attrs.get('id') == '__NEXT_DATA__'):
+            try:
+                data = json.loads(node['text'])
+                result['scripts'].append({'id': attrs.get('id'), 'keys': list(data)[:15] if isinstance(data, dict) else 'list'})
+                walk(data)
+            except ValueError:
+                pass
+        if node['tag'] == 'a' and len(result['links']) < 12 and any(x in str(attrs.get('href')) for x in ('/product/', '/articulo/', '/search', '/buscar')):
+            result['links'].append(attrs['href'])
+    return result
+
+
+if __name__ == '__main__':
+    config = read_config(ROOT / 'pricing/sources.json')
+    client = PublicClient(config['stores'])
+    for sid, urls in PAGES.items():
+        for url in urls:
+            try:
+                result = inspect_page(client.get(url))
+                print(json.dumps({'store': sid, 'url': url, 'result': result}, ensure_ascii=False)[:26000], flush=True)
+            except PriceError as error:
+                print(json.dumps({'store': sid, 'url': url, 'error': error.code, 'message': str(error)}, ensure_ascii=False), flush=True)
+                break
