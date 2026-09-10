@@ -1,13 +1,13 @@
 globalThis.JuntaPriceSnapshot = {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-10T14:37:10Z",
+  "generatedAt": "2026-09-10T14:53:10Z",
   "maxAgeHours": 24,
   "stores": {
     "jumbo": {
       "name": "Jumbo",
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "checkedAt": "2026-09-10T14:37:10Z",
+      "checkedAt": "2026-09-10T14:53:10Z",
       "configured": 23,
       "status": "partial",
       "products": {
@@ -17,7 +17,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 8,
           "unit": "un",
           "fingerprint": "f4945c1e9097aeb9837807f5",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -34,7 +34,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "vienesa": {
           "ingredientId": "vienesa",
@@ -42,7 +42,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 20,
           "unit": "un",
           "fingerprint": "6ec3cb245e0666579194abf4",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -59,7 +59,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "mayo": {
           "ingredientId": "mayo",
@@ -67,7 +67,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "769811c49c55ebd7528a058b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -84,7 +84,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "arroz": {
           "ingredientId": "arroz",
@@ -92,7 +92,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "4e33da3179e18384e64aa440",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -109,7 +109,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "pasta": {
           "ingredientId": "pasta",
@@ -117,7 +117,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "69e887450d3bcf53916f31bd",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -134,7 +134,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "tomate": {
           "ingredientId": "tomate",
@@ -142,7 +142,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e3cca02f81031920d077665b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex-search",
@@ -159,7 +159,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "palta": {
           "ingredientId": "palta",
@@ -167,7 +167,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e12c67fe1743d836c8014bd2",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -180,7 +180,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "vacuno": {
           "ingredientId": "vacuno",
@@ -188,7 +188,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -205,7 +205,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "49e52faf64f515b748ab79b7",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -218,7 +218,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "chorizo": {
           "ingredientId": "chorizo",
@@ -226,7 +226,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "9722d59c712caa16829e98c0",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -239,7 +239,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "carbon": {
           "ingredientId": "carbon",
@@ -247,7 +247,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -260,7 +260,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "sal": {
           "ingredientId": "sal",
@@ -268,7 +268,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ca88a1da0c9e5f09ad084b7d",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -281,7 +281,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "queso": {
           "ingredientId": "queso",
@@ -289,7 +289,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -302,7 +302,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "jamon": {
           "ingredientId": "jamon",
@@ -310,7 +310,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "d3828a2bab61d49d21e97f53",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -323,7 +323,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "ketchup": {
           "ingredientId": "ketchup",
@@ -331,7 +331,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "e62b51deaa3779be372bc949",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -344,7 +344,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "mostaza": {
           "ingredientId": "mostaza",
@@ -352,7 +352,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -365,7 +365,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "papasChips": {
           "ingredientId": "papasChips",
@@ -373,7 +373,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "5b39d1b258792f60e7eba010",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -386,7 +386,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "nachos": {
           "ingredientId": "nachos",
@@ -394,7 +394,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -411,7 +411,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -424,7 +424,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "galletaSalada": {
           "ingredientId": "galletaSalada",
@@ -432,7 +432,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -445,7 +445,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "bebida": {
           "ingredientId": "bebida",
@@ -453,7 +453,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "L",
           "fingerprint": "ef71dd5ff1ec417820c7fb9b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -466,7 +466,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "agua": {
           "ingredientId": "agua",
@@ -474,7 +474,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -487,7 +487,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "hielo": {
           "ingredientId": "hielo",
@@ -495,7 +495,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -508,7 +508,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         }
       }
     },
@@ -516,7 +516,7 @@ globalThis.JuntaPriceSnapshot = {
       "name": "Santa Isabel",
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "checkedAt": "2026-09-10T14:37:10Z",
+      "checkedAt": "2026-09-10T14:53:10Z",
       "configured": 23,
       "status": "partial",
       "products": {
@@ -526,7 +526,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 8,
           "unit": "un",
           "fingerprint": "11378b10dcf592f4cafb4599",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -543,7 +543,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "vienesa": {
           "ingredientId": "vienesa",
@@ -551,7 +551,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 20,
           "unit": "un",
           "fingerprint": "5da6c1d901c617cccecb6b76",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -568,7 +568,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "mayo": {
           "ingredientId": "mayo",
@@ -576,7 +576,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "82efdfcb029f80a4cbffa6fc",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -593,7 +593,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "arroz": {
           "ingredientId": "arroz",
@@ -601,7 +601,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "413a78522433b815fd706bea",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -618,7 +618,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "pasta": {
           "ingredientId": "pasta",
@@ -626,7 +626,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "a9718cb484a4d00492fc86d0",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -643,7 +643,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "tomate": {
           "ingredientId": "tomate",
@@ -651,7 +651,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "6d1b9755c3c40bc444e599c1",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -668,7 +668,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "palta": {
           "ingredientId": "palta",
@@ -676,7 +676,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "7b958ee2400a2df3a253b2c4",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -697,7 +697,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -714,7 +714,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e0de8ddc1c7b4fbbc1ef0a4e",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -735,7 +735,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "85a43690d154ff8a13c1fab0",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -752,7 +752,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "carbon": {
           "ingredientId": "carbon",
@@ -760,7 +760,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "1aef129be6f8715b4c70ad78",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -781,7 +781,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "320826d42d32a171b06c21ad",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -802,7 +802,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -819,7 +819,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "a5e8eefe6f74a34440406b91",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -836,7 +836,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "ketchup": {
           "ingredientId": "ketchup",
@@ -844,7 +844,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "57a26ddfdd8dd04e6742cbdd",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -861,7 +861,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "mostaza": {
           "ingredientId": "mostaza",
@@ -869,7 +869,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "48fac4a8da5f8e2306e985fb",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -890,7 +890,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "5b39d1b258792f60e7eba010",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -907,7 +907,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -924,7 +924,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -941,7 +941,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -958,7 +958,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "L",
           "fingerprint": "ef71dd5ff1ec417820c7fb9b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -975,7 +975,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -992,7 +992,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1009,7 +1009,7 @@ globalThis.JuntaPriceSnapshot = {
       "name": "Lider",
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "checkedAt": "2026-09-10T14:37:10Z",
+      "checkedAt": "2026-09-10T14:53:10Z",
       "configured": 23,
       "status": "partial",
       "products": {
@@ -1019,7 +1019,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 8,
           "unit": "un",
           "fingerprint": "b2bb8f210bf3a2668b7faaa3",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1036,7 +1036,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 20,
           "unit": "un",
           "fingerprint": "f5d31745f56805b9d25f399b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1053,7 +1053,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "fee5a640eecf8d4f821ce1df",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1070,7 +1070,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ec5616479e8bb94a101f2b89",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1087,7 +1087,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "adae243cdb659ee4ea5fff10",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1104,7 +1104,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e3cca02f81031920d077665b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1121,11 +1121,11 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e12c67fe1743d836c8014bd2",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
-              "source": "html-search",
-              "status": "ok"
+              "source": "sync",
+              "status": "no_matching_public_product"
             }
           ],
           "price": 4990,
@@ -1133,8 +1133,10 @@ globalThis.JuntaPriceSnapshot = {
           "productName": "Palta Hass Chilena Malla, 1 kg",
           "available": true,
           "source": "html-jsonld",
-          "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:37:10Z",
+          "status": "stale",
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "vacuno": {
           "ingredientId": "vacuno",
@@ -1142,7 +1144,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1159,7 +1161,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "49e52faf64f515b748ab79b7",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1176,7 +1178,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "9722d59c712caa16829e98c0",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1189,7 +1191,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "carbon": {
           "ingredientId": "carbon",
@@ -1197,7 +1199,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1210,28 +1212,28 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "sal": {
           "ingredientId": "sal",
-          "productUrl": "https://super.lider.cl/ip/aceites-y-aderezos/00780360000037?from=/search",
+          "productUrl": "https://super.lider.cl/ip/aceites-y-aderezos/00780465163001?from=/search",
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ca88a1da0c9e5f09ad084b7d",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
               "status": "ok"
             }
           ],
-          "price": 970,
+          "price": 790,
           "currency": "CLP",
-          "productName": "Sal Fina Doypack, 1 Kg",
+          "productName": "Sal Fina Seleccionada, 1 kg",
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "queso": {
           "ingredientId": "queso",
@@ -1239,7 +1241,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1252,7 +1254,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T14:37:10Z"
+          "fetchedAt": "2026-09-10T14:53:10Z"
         },
         "jamon": {
           "ingredientId": "jamon",
@@ -1260,7 +1262,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "d3828a2bab61d49d21e97f53",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1277,7 +1279,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "e62b51deaa3779be372bc949",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1294,7 +1296,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1311,7 +1313,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "5b39d1b258792f60e7eba010",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1328,7 +1330,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1345,7 +1347,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1362,7 +1364,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1379,7 +1381,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "L",
           "fingerprint": "ef71dd5ff1ec417820c7fb9b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1396,7 +1398,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1413,7 +1415,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1430,7 +1432,7 @@ globalThis.JuntaPriceSnapshot = {
       "name": "Tottus",
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "checkedAt": "2026-09-10T14:37:10Z",
+      "checkedAt": "2026-09-10T14:53:10Z",
       "configured": 23,
       "status": "error",
       "products": {
@@ -1440,7 +1442,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 8,
           "unit": "un",
           "fingerprint": "b2bb8f210bf3a2668b7faaa3",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
@@ -1457,16 +1459,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 20,
           "unit": "un",
           "fingerprint": "f5d31745f56805b9d25f399b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "mayo": {
           "ingredientId": "mayo",
@@ -1474,16 +1476,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "fee5a640eecf8d4f821ce1df",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "arroz": {
           "ingredientId": "arroz",
@@ -1491,16 +1493,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ec5616479e8bb94a101f2b89",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "pasta": {
           "ingredientId": "pasta",
@@ -1508,16 +1510,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "adae243cdb659ee4ea5fff10",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "tomate": {
           "ingredientId": "tomate",
@@ -1525,16 +1527,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e3cca02f81031920d077665b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "palta": {
           "ingredientId": "palta",
@@ -1542,16 +1544,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e12c67fe1743d836c8014bd2",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "vacuno": {
           "ingredientId": "vacuno",
@@ -1559,16 +1561,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "pollo": {
           "ingredientId": "pollo",
@@ -1576,16 +1578,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "49e52faf64f515b748ab79b7",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "chorizo": {
           "ingredientId": "chorizo",
@@ -1593,16 +1595,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "9722d59c712caa16829e98c0",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "carbon": {
           "ingredientId": "carbon",
@@ -1610,16 +1612,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "sal": {
           "ingredientId": "sal",
@@ -1627,16 +1629,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ca88a1da0c9e5f09ad084b7d",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "queso": {
           "ingredientId": "queso",
@@ -1644,16 +1646,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "jamon": {
           "ingredientId": "jamon",
@@ -1661,16 +1663,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "d3828a2bab61d49d21e97f53",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "ketchup": {
           "ingredientId": "ketchup",
@@ -1678,16 +1680,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "e62b51deaa3779be372bc949",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "mostaza": {
           "ingredientId": "mostaza",
@@ -1695,16 +1697,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "papasChips": {
           "ingredientId": "papasChips",
@@ -1712,16 +1714,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "5b39d1b258792f60e7eba010",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "nachos": {
           "ingredientId": "nachos",
@@ -1729,16 +1731,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "frutosSecos": {
           "ingredientId": "frutosSecos",
@@ -1746,16 +1748,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "galletaSalada": {
           "ingredientId": "galletaSalada",
@@ -1763,16 +1765,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "bebida": {
           "ingredientId": "bebida",
@@ -1780,16 +1782,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "L",
           "fingerprint": "ef71dd5ff1ec417820c7fb9b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "agua": {
           "ingredientId": "agua",
@@ -1797,16 +1799,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         },
         "hielo": {
           "ingredientId": "hielo",
@@ -1814,16 +1816,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "host_blocked"
+              "status": "http_403"
             }
           ],
           "status": "error",
-          "error": "host_blocked",
-          "message": "La tienda rechazó la consulta; no se insiste durante esta ejecución."
+          "error": "http_403",
+          "message": "La tienda respondió HTTP 403 en /tottus-cl/search."
         }
       }
     },
@@ -1831,7 +1833,7 @@ globalThis.JuntaPriceSnapshot = {
       "name": "Unimarc",
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "checkedAt": "2026-09-10T14:37:10Z",
+      "checkedAt": "2026-09-10T14:53:10Z",
       "configured": 23,
       "status": "error",
       "products": {
@@ -1841,16 +1843,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 8,
           "unit": "un",
           "fingerprint": "b2bb8f210bf3a2668b7faaa3",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "vienesa": {
           "ingredientId": "vienesa",
@@ -1858,16 +1860,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 20,
           "unit": "un",
           "fingerprint": "f5d31745f56805b9d25f399b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "mayo": {
           "ingredientId": "mayo",
@@ -1875,16 +1877,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "fee5a640eecf8d4f821ce1df",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "arroz": {
           "ingredientId": "arroz",
@@ -1892,16 +1894,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ec5616479e8bb94a101f2b89",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "pasta": {
           "ingredientId": "pasta",
@@ -1909,16 +1911,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "adae243cdb659ee4ea5fff10",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "tomate": {
           "ingredientId": "tomate",
@@ -1926,16 +1928,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e3cca02f81031920d077665b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "palta": {
           "ingredientId": "palta",
@@ -1943,16 +1945,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e12c67fe1743d836c8014bd2",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "vacuno": {
           "ingredientId": "vacuno",
@@ -1960,16 +1962,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "pollo": {
           "ingredientId": "pollo",
@@ -1977,16 +1979,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "49e52faf64f515b748ab79b7",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "chorizo": {
           "ingredientId": "chorizo",
@@ -1994,16 +1996,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "9722d59c712caa16829e98c0",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "carbon": {
           "ingredientId": "carbon",
@@ -2011,16 +2013,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "sal": {
           "ingredientId": "sal",
@@ -2028,16 +2030,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ca88a1da0c9e5f09ad084b7d",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "queso": {
           "ingredientId": "queso",
@@ -2045,16 +2047,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "jamon": {
           "ingredientId": "jamon",
@@ -2062,16 +2064,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "d3828a2bab61d49d21e97f53",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "ketchup": {
           "ingredientId": "ketchup",
@@ -2079,16 +2081,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "e62b51deaa3779be372bc949",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "mostaza": {
           "ingredientId": "mostaza",
@@ -2096,16 +2098,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "papasChips": {
           "ingredientId": "papasChips",
@@ -2113,16 +2115,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "5b39d1b258792f60e7eba010",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "nachos": {
           "ingredientId": "nachos",
@@ -2130,16 +2132,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "frutosSecos": {
           "ingredientId": "frutosSecos",
@@ -2147,16 +2149,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "galletaSalada": {
           "ingredientId": "galletaSalada",
@@ -2164,16 +2166,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "bebida": {
           "ingredientId": "bebida",
@@ -2181,16 +2183,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "L",
           "fingerprint": "ef71dd5ff1ec417820c7fb9b",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "agua": {
           "ingredientId": "agua",
@@ -2198,16 +2200,16 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         },
         "hielo": {
           "ingredientId": "hielo",
@@ -2215,20 +2217,20 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-10T14:37:10Z",
+          "checkedAt": "2026-09-10T14:53:10Z",
           "attempts": [
             {
               "source": "sync",
-              "status": "robots_unavailable"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "robots_unavailable",
-          "message": "No se pudo verificar la política de rastreo."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         }
       }
     }
   },
-  "runUrl": "https://github.com/leoescobarh/la-junta/actions/runs/34490225233"
+  "runUrl": "https://github.com/leoescobarh/la-junta/actions/runs/34491988828"
 }
 ;
