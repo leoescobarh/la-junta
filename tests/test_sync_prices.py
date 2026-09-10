@@ -43,6 +43,18 @@ class Client:
 
 
 class SyncTests(unittest.TestCase):
+    def test_brand_field_completes_public_product_identity(self):
+        target = {**TARGET, 'expected_terms': ['pan', 'marca'], 'expected_pattern': None}
+        self.assertEqual(s.product_identity({'name': 'Pan Hot Dog 8 un.', 'brand': {'name': 'Marca'}}), 'Pan Hot Dog 8 un. · Marca')
+        s.verify_name(s.product_identity({'name': 'Pan Hot Dog 8 un.', 'brand': 'Marca'}), target)
+
+    def test_explicit_measurement_can_update_pack_without_guessing(self):
+        target = {**TARGET, 'unit': 'kg', 'pack': 0.5, 'measure_from_name': True,
+                  'expected_terms': ['pan', 'prueba'], 'expected_pattern': None}
+        self.assertEqual(s.measured_pack('Pan Prueba 500 g', target), 0.5)
+        with self.assertRaises(s.PriceError):
+            s.measured_pack('Pan Prueba 500 g regalo 100 g', target)
+
     def test_vtex_priority_and_exact_route(self):
         client = Client(json.dumps(api()))
         product = s.refresh_product(client, TARGET, STORE)
@@ -184,3 +196,4 @@ class SyncTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

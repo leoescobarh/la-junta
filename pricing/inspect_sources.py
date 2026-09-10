@@ -62,3 +62,4 @@ if __name__ == '__main__':
             except PriceError as error:
                 print(json.dumps({'store': sid, 'url': url, 'error': error.code, 'message': str(error)}, ensure_ascii=False), flush=True)
                 break
+

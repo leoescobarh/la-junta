@@ -5,7 +5,7 @@ from urllib.parse import quote, urljoin, urlsplit
 
 
 def product_links(html, store, target):
-    from sync_prices import Document, normalized, safe_url, PriceError
+    from sync_prices import Document, normalized, safe_url, PriceError, product_identity
     doc = Document(html)
     candidates = []
     def add(url, name=''):
@@ -29,7 +29,7 @@ def product_links(html, store, target):
             for item in value:
                 walk(item)
         elif isinstance(value, dict):
-            name = str(value.get('name') or value.get('productName') or value.get('displayName') or '')
+            name = product_identity(value)
             for key in ('url', 'link', 'productUrl', 'canonicalUrl'):
                 add(value.get(key), name)
             for item in value.values():
@@ -43,7 +43,7 @@ def product_links(html, store, target):
                 walk(json.loads(node['text']))
             except ValueError:
                 pass
-    return candidates[:3]
+    return candidates[:store.get('candidate_limit', 5)]
 
 
 def discover_product(client, target, store):
@@ -79,6 +79,7 @@ def discover_product(client, target, store):
     search_url = store['search_url'] + quote(target['query'], safe='')
     html = client.get(search_url)
     links = product_links(html, store, target)
+    attempts.append({'source': 'html-search', 'url': search_url, 'candidates': len(links)})
     for url in links:
         try:
             found = parse_html(client.get(url), {**target, 'product_url': url}, store)
@@ -86,6 +87,8 @@ def discover_product(client, target, store):
                 return found, attempts + [{'source': 'html-search', 'status': 'ok'}]
         except AccessBlocked:
             raise
-        except PriceError:
+        except PriceError as error:
+            attempts.append({'source': 'html-product', 'url': url, 'status': error.code})
             continue
-    raise PriceError('no_matching_public_product', 'La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.')
+    raise PriceError('no_matching_public_product', 'La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.', attempts)
+

@@ -85,3 +85,4 @@ jobs:
           if [ -n "$BUILD_HOOK_URL" ]; then
             curl --fail --silent --show-error --max-time 30 --request POST "$BUILD_HOOK_URL" --output /dev/null
           fi
+

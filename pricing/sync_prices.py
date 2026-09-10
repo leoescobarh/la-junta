@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import contextlib
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 import hashlib
@@ -83,6 +84,45 @@ def verify_name(name, target):
         raise PriceError('product_mismatch', 'Multipack sin equivalencia de formato configurada.')
 
 
+def product_identity(product):
+    """La marca puede venir separada del nombre, como en las fichas de Lider."""
+    name = str(product.get('name') or product.get('productName') or product.get('displayName') or '')
+    brand = product.get('brand') or ''
+    if isinstance(brand, dict):
+        brand = brand.get('name') or ''
+    if isinstance(brand, str) and brand and normalized(brand) not in normalized(name):
+        name += ' · ' + brand
+    return name
+
+
+def measured_pack(name, target):
+    """Convierte únicamente cantidades explícitas. Nunca infiere gramos por unidad."""
+    if not target.get('measure_from_name'):
+        return target['pack']
+    text = normalized(name)
+    # Dos medidas de la misma dimensión distintas son ambiguas (neto/drenado,
+    # regalos, tamaños de variantes). No se escoge la que abarata el producto.
+    expressions = {
+        'kg': r'(?<![\d.,])(\d+(?:[.,]\d+)?)\s*(kilogramos?|kilos?|kg|gramos?|grs?|g)\b',
+        'L': r'(?<![\d.,])(\d+(?:[.,]\d+)?)\s*(mililitros?|ml|cc|litros?|lts?|l)\b',
+        'un': r'(?<![\d.,])(\d+)\s*(unidades|unidad|unids?|uds?|un|piezas)\b',
+    }
+    values = set()
+    for match in re.finditer(expressions[target['unit']], text):
+        amount = Decimal(match[1].replace(',', '.'))
+        suffix = match[2]
+        if target['unit'] == 'kg' and suffix.startswith('g') or target['unit'] == 'L' and suffix in ('ml', 'cc', 'mililitro', 'mililitros'):
+            amount /= 1000
+        values.add(amount)
+    if len(values) != 1:
+        raise PriceError('ambiguous_pack' if values else 'missing_pack', 'La ficha no declara un formato de venta único compatible con el ingrediente.')
+    pack = float(values.pop())
+    limits = target.get('pack_range', [0.005, 25])
+    if not limits[0] <= pack <= limits[1]:
+        raise PriceError('invalid_pack', 'El formato está fuera del rango configurado para el ingrediente.')
+    return int(pack) if target['unit'] == 'un' else pack
+
+
 def availability(value):
     if isinstance(value, bool):
         return value
@@ -114,7 +154,7 @@ def offer_value(price, currency, name, stock, source, target, valid_until=None):
     return {
         'price': None if stock is False else parse_price(price),
         'currency': 'CLP', 'productName': str(name), 'available': stock,
-        'pack': target['pack'], 'unit': target['unit'], 'source': source,
+        'pack': measured_pack(name, target), 'unit': target['unit'], 'source': source,
         'productUrl': target['product_url']
     }
 
@@ -148,7 +188,7 @@ def parse_vtex(payload, target, store):
     if len(skus) != 1:
         raise PriceError('ambiguous_sku', 'Configura el SKU exacto; hay varias presentaciones.')
     sku = skus[0]
-    name = sku.get('nameComplete') or product.get('productName') or sku.get('name')
+    name = product_identity({**product, 'name': sku.get('nameComplete') or product.get('productName') or sku.get('name')})
     verify_name(name, target)
     sellers = sku.get('sellers') or []
     if not isinstance(sellers, list) or any(not isinstance(seller, dict) for seller in sellers):
@@ -260,7 +300,7 @@ def parse_html(html, target, store):
             if product.get('url') and canonical(urljoin(target['product_url'], product['url'])) != canonical(target['product_url']):
                 continue
             try:
-                verify_name(product.get('name'), target)
+                verify_name(product_identity(product), target)
             except PriceError:
                 continue
             candidates.append(product)
@@ -278,7 +318,7 @@ def parse_html(html, target, store):
                 raise PriceError('conditional_price', 'La oferta tiene condiciones que requieren revisión.')
             # No se usa lowPrice de AggregateOffer ni cuotas o precios por tarjeta.
             if 'price' in offers or availability(offers.get('availability')) is False:
-                return offer_value(offers.get('price'), offers.get('priceCurrency'), product['name'],
+                return offer_value(offers.get('price'), offers.get('priceCurrency'), product_identity(product),
                                    availability(offers.get('availability')), 'html-jsonld', target,
                                    offers.get('priceValidUntil'))
     # Open Graph de producto: se exige nombre y precio únicos en la página.
@@ -444,6 +484,17 @@ def refresh_product(client, target, store, previous=None, checked_at=None):
     try:
         if not target.get('product_url'):
             from discover import discover_product
+            if isinstance(previous, dict) and previous.get('productUrl'):
+                try:
+                    verify_name(previous.get('productName'), target)
+                    safe_url(previous['productUrl'], store['allowed_hosts'])
+                    found = parse_html(client.get(previous['productUrl']), {**target, 'product_url': previous['productUrl']}, store)
+                    base['attempts'].append({'source': 'known-product', 'status': 'ok', 'url': previous['productUrl']})
+                    return {**base, **found, 'status': 'unavailable' if found['available'] is False else 'ok', 'fetchedAt': checked_at}
+                except AccessBlocked:
+                    raise
+                except PriceError as error:
+                    base['attempts'].append({'source': 'known-product', 'status': error.code})
             found, attempts = discover_product(client, target, store)
             base['attempts'].extend(attempts)
             return {**base, **found, 'status': 'ok', 'fetchedAt': checked_at}
@@ -463,16 +514,27 @@ def refresh_product(client, target, store, previous=None, checked_at=None):
                 raise
             except (PriceError, ValueError, KeyError, TypeError) as error:
                 base['attempts'].append({'source': 'vtex', 'status': error.code if isinstance(error, PriceError) else 'invalid_api_data'})
-        found = parse_html(client.get(target['product_url']), target, store)
+        try:
+            found = parse_html(client.get(target['product_url']), target, store)
+        except AccessBlocked:
+            raise
+        except PriceError as error:
+            if not target.get('fallback'):
+                raise
+            from discover import discover_product
+            base['attempts'].append({'source': 'fixed-product', 'status': error.code, 'url': target['product_url']})
+            found, attempts = discover_product(client, target['fallback'], store)
+            base['attempts'].extend(attempts)
         base['attempts'].append({'source': 'html', 'status': 'ok'})
         return {**base, **found, 'status': 'unavailable' if found['available'] is False else 'ok', 'fetchedAt': checked_at}
     except (PriceError, ValueError, KeyError, TypeError) as error:
         code = error.code if isinstance(error, PriceError) else 'invalid_source_data'
+        base['attempts'].extend(getattr(error, 'attempts', []))
         base['attempts'].append({'source': 'sync', 'status': code})
         message = str(error) if isinstance(error, PriceError) else 'La tienda devolvió datos incompletos.'
         old = previous if isinstance(previous, dict) and previous.get('fingerprint') == base['fingerprint'] else {}
         # Conserva la fecha REAL del precio anterior, nunca la renueva ante un error.
-        keep = {key: old[key] for key in ('price', 'currency', 'productName', 'productUrl', 'available', 'source', 'fetchedAt') if key in old}
+        keep = {key: old[key] for key in ('price', 'currency', 'productName', 'productUrl', 'pack', 'unit', 'available', 'source', 'fetchedAt') if key in old}
         return {**base, **keep, 'status': 'stale' if old.get('price') else 'error', 'error': code, 'message': message}
 
 
@@ -481,6 +543,9 @@ def read_config(path):
     if config.get('schemaVersion') != 1 or not isinstance(config.get('stores'), dict):
         raise ValueError('Configuración de precios inválida.')
     for store_id, store in config['stores'].items():
+        if config.get('ingredients'):
+            overrides = {p['ingredient']: p for p in store.get('products', [])}
+            store['products'] = [{**common, **overrides.get(common['ingredient'], {}), **({'fallback': common} if overrides.get(common['ingredient'], {}).get('product_url') else {})} for common in config['ingredients']]
         safe_url(store['origin'], store['allowed_hosts'])
         if store['currency'] != 'CLP':
             raise ValueError('Esta versión calcula únicamente en CLP.')
@@ -502,11 +567,15 @@ def read_config(path):
     return config
 
 
-def sync(config, previous, client, only_ingredient=None):
+def sync(config, previous, client=None, only_ingredient=None, only_store=None):
     checked_at = timestamp()
     result = {'schemaVersion': 1, 'generatedAt': checked_at, 'maxAgeHours': config.get('maxAgeHours', 24), 'stores': {}}
-    for store_id, store in config['stores'].items():
+    def update_store(entry):
+        store_id, store = entry
         old_store = previous.get('stores', {}).get(store_id, {})
+        if only_store and store_id != only_store:
+            return store_id, old_store
+        store_client = client or PublicClient({store_id: store}, config.get('timeoutSeconds', 15), config.get('requestDelaySeconds', 2))
         products = {}
         for target in store['products']:
             old = old_store.get('products', {}).get(target['ingredient'])
@@ -514,11 +583,17 @@ def sync(config, previous, client, only_ingredient=None):
                 if old:
                     products[target['ingredient']] = old
                 continue
-            products[target['ingredient']] = refresh_product(client, target, store, old, checked_at)
+            products[target['ingredient']] = refresh_product(store_client, target, store, old, checked_at)
         fresh = sum(p.get('status') == 'ok' for p in products.values())
-        result['stores'][store_id] = {'name': store['name'], 'currency': store['currency'], 'scope': store['scope'],
+        return store_id, {'name': store['name'], 'currency': store['currency'], 'scope': store['scope'],
                                     'checkedAt': checked_at, 'configured': len(store['products']),
                                     'status': 'ok' if products and fresh == len(products) else 'partial' if fresh else 'error', 'products': products}
+    # Paralelismo entre tiendas; cada dominio mantiene sus pausas y sus bloqueos.
+    if client is not None:
+        result['stores'] = dict(map(update_store, config['stores'].items()))
+    else:
+        with ThreadPoolExecutor(max_workers=5) as pool:
+            result['stores'] = dict(pool.map(update_store, config['stores'].items()))
     return result
 
 
@@ -557,9 +632,12 @@ def main():
     parser.add_argument('--config', type=Path, default=ROOT / 'pricing/sources.json')
     parser.add_argument('--output', type=Path, default=ROOT / 'dist/prices.json')
     parser.add_argument('--ingredient', help='Comprueba solo un ingrediente, por ejemplo panCompleto.')
+    parser.add_argument('--store', help='Comprueba solo una tienda, por ejemplo unimarc.')
     parser.add_argument('--validate-config', action='store_true', help='Comprueba la configuración sin consultar tiendas.')
     args = parser.parse_args()
     config = read_config(args.config)
+    if args.store and args.store not in config['stores']:
+        parser.error('La tienda no está configurada.')
     if args.ingredient and not any(t['ingredient'] == args.ingredient for s in config['stores'].values() for t in s['products']):
         parser.error('El ingrediente no está configurado.')
     if args.validate_config:
@@ -567,11 +645,12 @@ def main():
         return 0
     previous = json.loads(args.output.read_text(encoding='utf-8')) if args.output.exists() else {}
     with run_lock(args.config.parent / '.sync.lock'):
-        client = PublicClient(config['stores'], config.get('timeoutSeconds', 15), config.get('requestDelaySeconds', 2))
-        snapshot = sync(config, previous, client, args.ingredient)
+        snapshot = sync(config, previous, only_ingredient=args.ingredient, only_store=args.store)
         save_snapshot(snapshot, args.output)
     total = fresh = 0
     for store_id, store in snapshot['stores'].items():
+        if args.store and store_id != args.store:
+            continue
         for ingredient, product in store['products'].items():
             if args.ingredient and ingredient != args.ingredient:
                 continue
@@ -588,3 +667,4 @@ if __name__ == '__main__':
     except (ValueError, OSError, RuntimeError, KeyError, TypeError, PriceError) as exc:
         print('No se pudo completar la actualización:', str(exc))
         raise SystemExit(1)
+

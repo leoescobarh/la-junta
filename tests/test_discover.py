@@ -86,3 +86,4 @@ class DiscoveryTests(unittest.TestCase):
                 return '<script type="application/ld+json">{"@type":"Product","name":"Mayonesa 250 g","offers":{"price":1000,"priceCurrency":"CLP"}}</script>'
         with self.assertRaises(PriceError):
             discover_product(Client(), TARGET, STORE)
+
