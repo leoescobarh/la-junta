@@ -1,13 +1,13 @@
 globalThis.JuntaPriceSnapshot = {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-10T15:12:53Z",
+  "generatedAt": "2026-09-10T20:58:15Z",
   "maxAgeHours": 24,
   "stores": {
     "jumbo": {
       "name": "Jumbo",
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "checkedAt": "2026-09-10T15:12:53Z",
+      "checkedAt": "2026-09-10T20:58:15Z",
       "configured": 23,
       "status": "partial",
       "products": {
@@ -17,7 +17,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 8,
           "unit": "un",
           "fingerprint": "f4945c1e9097aeb9837807f5",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -34,7 +34,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "vienesa": {
           "ingredientId": "vienesa",
@@ -42,7 +42,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 20,
           "unit": "un",
           "fingerprint": "6ec3cb245e0666579194abf4",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -59,7 +59,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "mayo": {
           "ingredientId": "mayo",
@@ -67,7 +67,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "769811c49c55ebd7528a058b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -84,7 +84,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "arroz": {
           "ingredientId": "arroz",
@@ -92,7 +92,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "4e33da3179e18384e64aa440",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -109,7 +109,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "pasta": {
           "ingredientId": "pasta",
@@ -117,7 +117,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "69e887450d3bcf53916f31bd",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -134,7 +134,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "tomate": {
           "ingredientId": "tomate",
@@ -142,7 +142,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e3cca02f81031920d077665b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -156,7 +156,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "palta": {
           "ingredientId": "palta",
@@ -164,7 +164,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e12c67fe1743d836c8014bd2",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -178,7 +178,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "vacuno": {
           "ingredientId": "vacuno",
@@ -186,7 +186,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex-search",
@@ -195,11 +195,21 @@ globalThis.JuntaPriceSnapshot = {
             {
               "source": "html-search",
               "url": "https://www.jumbo.cl/busqueda?ft=Lomo%20vetado%20vacuno%201%20kg",
-              "candidates": 4
+              "candidates": 5
             },
             {
               "source": "html-product",
               "url": "https://www.jumbo.cl/lomo-vetado-cat-v-40/p",
+              "status": "no_public_price"
+            },
+            {
+              "source": "html-product",
+              "url": "https://www.jumbo.cl/lomo-vetado-angus-a-punto-11-kg-aprox/p",
+              "status": "no_public_price"
+            },
+            {
+              "source": "html-product",
+              "url": "https://www.jumbo.cl/lomo-vetado-premium-kg/p",
               "status": "no_public_price"
             },
             {
@@ -210,11 +220,6 @@ globalThis.JuntaPriceSnapshot = {
             {
               "source": "html-product",
               "url": "https://www.jumbo.cl/lomo-vetado-eeuu-v/p",
-              "status": "no_public_price"
-            },
-            {
-              "source": "html-product",
-              "url": "https://www.jumbo.cl/lomo-vetado-natural-cat-v-frigosorno-granel/p",
               "status": "no_public_price"
             },
             {
@@ -232,7 +237,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "49e52faf64f515b748ab79b7",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -246,7 +251,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "chorizo": {
           "ingredientId": "chorizo",
@@ -254,7 +259,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "9722d59c712caa16829e98c0",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -268,7 +273,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "carbon": {
           "ingredientId": "carbon",
@@ -276,7 +281,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -290,7 +295,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "sal": {
           "ingredientId": "sal",
@@ -298,7 +303,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ca88a1da0c9e5f09ad084b7d",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -312,7 +317,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "queso": {
           "ingredientId": "queso",
@@ -320,7 +325,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -334,7 +339,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "jamon": {
           "ingredientId": "jamon",
@@ -342,7 +347,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "d3828a2bab61d49d21e97f53",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -356,7 +361,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "ketchup": {
           "ingredientId": "ketchup",
@@ -364,7 +369,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "e62b51deaa3779be372bc949",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -378,7 +383,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "mostaza": {
           "ingredientId": "mostaza",
@@ -386,7 +391,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -400,7 +405,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "papasChips": {
           "ingredientId": "papasChips",
@@ -408,7 +413,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "5b39d1b258792f60e7eba010",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -422,7 +427,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "nachos": {
           "ingredientId": "nachos",
@@ -430,7 +435,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -452,7 +457,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -466,7 +471,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "galletaSalada": {
           "ingredientId": "galletaSalada",
@@ -474,7 +479,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -488,7 +493,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "bebida": {
           "ingredientId": "bebida",
@@ -496,7 +501,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "L",
           "fingerprint": "ef71dd5ff1ec417820c7fb9b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -510,7 +515,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "agua": {
           "ingredientId": "agua",
@@ -518,7 +523,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -532,7 +537,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "hielo": {
           "ingredientId": "hielo",
@@ -540,7 +545,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -548,13 +553,13 @@ globalThis.JuntaPriceSnapshot = {
               "url": "https://www.jumbo.cl/hielo-ice-monkey-2kg-1973829/p"
             }
           ],
-          "price": 1580,
+          "price": null,
           "currency": "CLP",
           "productName": "Hielo Ice Monkey 2 kg",
-          "available": true,
+          "available": false,
           "source": "html-jsonld",
-          "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "status": "unavailable",
+          "fetchedAt": "2026-09-10T20:58:15Z"
         }
       }
     },
@@ -562,7 +567,7 @@ globalThis.JuntaPriceSnapshot = {
       "name": "Santa Isabel",
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "checkedAt": "2026-09-10T15:12:53Z",
+      "checkedAt": "2026-09-10T20:58:15Z",
       "configured": 23,
       "status": "partial",
       "products": {
@@ -572,7 +577,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 8,
           "unit": "un",
           "fingerprint": "11378b10dcf592f4cafb4599",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -589,7 +594,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "vienesa": {
           "ingredientId": "vienesa",
@@ -597,7 +602,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 20,
           "unit": "un",
           "fingerprint": "5da6c1d901c617cccecb6b76",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -614,7 +619,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "mayo": {
           "ingredientId": "mayo",
@@ -622,7 +627,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "82efdfcb029f80a4cbffa6fc",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -639,7 +644,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "arroz": {
           "ingredientId": "arroz",
@@ -647,7 +652,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "413a78522433b815fd706bea",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -664,7 +669,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "pasta": {
           "ingredientId": "pasta",
@@ -672,7 +677,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "a9718cb484a4d00492fc86d0",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -689,7 +694,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "tomate": {
           "ingredientId": "tomate",
@@ -697,7 +702,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "6d1b9755c3c40bc444e599c1",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -714,7 +719,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "palta": {
           "ingredientId": "palta",
@@ -722,7 +727,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "7b958ee2400a2df3a253b2c4",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -743,7 +748,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex-search",
@@ -769,7 +774,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e0de8ddc1c7b4fbbc1ef0a4e",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -790,7 +795,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "85a43690d154ff8a13c1fab0",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -807,7 +812,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "carbon": {
           "ingredientId": "carbon",
@@ -815,7 +820,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "1aef129be6f8715b4c70ad78",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -836,7 +841,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "320826d42d32a171b06c21ad",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -857,7 +862,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -879,7 +884,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "a5e8eefe6f74a34440406b91",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -896,7 +901,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "ketchup": {
           "ingredientId": "ketchup",
@@ -904,7 +909,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "57a26ddfdd8dd04e6742cbdd",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -921,7 +926,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "mostaza": {
           "ingredientId": "mostaza",
@@ -929,7 +934,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "48fac4a8da5f8e2306e985fb",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "vtex",
@@ -950,7 +955,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "5b39d1b258792f60e7eba010",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -972,7 +977,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -994,7 +999,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1016,7 +1021,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1038,7 +1043,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "L",
           "fingerprint": "ef71dd5ff1ec417820c7fb9b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1060,7 +1065,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1082,7 +1087,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1104,7 +1109,7 @@ globalThis.JuntaPriceSnapshot = {
       "name": "Lider",
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "checkedAt": "2026-09-10T15:12:53Z",
+      "checkedAt": "2026-09-10T20:58:15Z",
       "configured": 23,
       "status": "partial",
       "products": {
@@ -1114,7 +1119,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 8,
           "unit": "un",
           "fingerprint": "b2bb8f210bf3a2668b7faaa3",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1128,7 +1133,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "vienesa": {
           "ingredientId": "vienesa",
@@ -1136,7 +1141,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 20,
           "unit": "un",
           "fingerprint": "f5d31745f56805b9d25f399b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1150,7 +1155,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "mayo": {
           "ingredientId": "mayo",
@@ -1158,7 +1163,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "fee5a640eecf8d4f821ce1df",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1172,7 +1177,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "arroz": {
           "ingredientId": "arroz",
@@ -1180,7 +1185,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ec5616479e8bb94a101f2b89",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1202,7 +1207,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "adae243cdb659ee4ea5fff10",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1216,7 +1221,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "tomate": {
           "ingredientId": "tomate",
@@ -1224,7 +1229,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e3cca02f81031920d077665b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1266,7 +1271,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e12c67fe1743d836c8014bd2",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1280,7 +1285,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "vacuno": {
           "ingredientId": "vacuno",
@@ -1288,7 +1293,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1335,7 +1340,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "49e52faf64f515b748ab79b7",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1354,7 +1359,7 @@ globalThis.JuntaPriceSnapshot = {
             },
             {
               "source": "html-product",
-              "url": "https://super.lider.cl/ip/pollo/00780411500173?from=/search",
+              "url": "https://super.lider.cl/ip/pollo/00780411500139?from=/search",
               "status": "no_public_price"
             },
             {
@@ -1364,7 +1369,7 @@ globalThis.JuntaPriceSnapshot = {
             },
             {
               "source": "html-product",
-              "url": "https://super.lider.cl/ip/pollo/00780874950114?from=/search",
+              "url": "https://super.lider.cl/ip/pollo/00780411500173?from=/search",
               "status": "no_public_price"
             },
             {
@@ -1382,7 +1387,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "9722d59c712caa16829e98c0",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1396,7 +1401,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "carbon": {
           "ingredientId": "carbon",
@@ -1404,7 +1409,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1418,7 +1423,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "sal": {
           "ingredientId": "sal",
@@ -1426,7 +1431,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ca88a1da0c9e5f09ad084b7d",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1440,7 +1445,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "queso": {
           "ingredientId": "queso",
@@ -1448,7 +1453,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1462,7 +1467,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "jamon": {
           "ingredientId": "jamon",
@@ -1470,7 +1475,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "d3828a2bab61d49d21e97f53",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1517,7 +1522,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "e62b51deaa3779be372bc949",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1539,7 +1544,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1561,7 +1566,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "5b39d1b258792f60e7eba010",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1608,7 +1613,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1630,7 +1635,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1654,12 +1659,12 @@ globalThis.JuntaPriceSnapshot = {
             },
             {
               "source": "html-product",
-              "url": "https://super.lider.cl/ip/snacks-y-picoteo/00040005028376?from=/search",
+              "url": "https://super.lider.cl/ip/frutos-secos/00007874236710?from=/search",
               "status": "no_public_price"
             },
             {
               "source": "html-product",
-              "url": "https://super.lider.cl/ip/frutos-secos/00780466054150?from=/search",
+              "url": "https://super.lider.cl/ip/snacks-y-picoteo/00780466054156?from=/search",
               "status": "no_public_price"
             },
             {
@@ -1677,7 +1682,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1696,7 +1701,7 @@ globalThis.JuntaPriceSnapshot = {
             },
             {
               "source": "html-product",
-              "url": "https://super.lider.cl/ip/snacks-y-picoteo/00780463001028",
+              "url": "https://super.lider.cl/ip/snacks-y-picoteo/00762220236163",
               "status": "no_public_price"
             },
             {
@@ -1706,7 +1711,7 @@ globalThis.JuntaPriceSnapshot = {
             },
             {
               "source": "html-product",
-              "url": "https://super.lider.cl/ip/snacks-y-picoteo/00780222568909",
+              "url": "https://super.lider.cl/ip/snacks-y-picoteo/00780222568908",
               "status": "no_public_price"
             },
             {
@@ -1724,7 +1729,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "L",
           "fingerprint": "ef71dd5ff1ec417820c7fb9b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1738,7 +1743,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "agua": {
           "ingredientId": "agua",
@@ -1746,7 +1751,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1760,7 +1765,7 @@ globalThis.JuntaPriceSnapshot = {
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-10T15:12:53Z"
+          "fetchedAt": "2026-09-10T20:58:15Z"
         },
         "hielo": {
           "ingredientId": "hielo",
@@ -1768,7 +1773,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1800,7 +1805,7 @@ globalThis.JuntaPriceSnapshot = {
       "name": "Tottus",
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "checkedAt": "2026-09-10T15:12:53Z",
+      "checkedAt": "2026-09-10T20:58:15Z",
       "configured": 23,
       "status": "error",
       "products": {
@@ -1810,7 +1815,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 8,
           "unit": "un",
           "fingerprint": "b2bb8f210bf3a2668b7faaa3",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -1827,7 +1832,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 20,
           "unit": "un",
           "fingerprint": "f5d31745f56805b9d25f399b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -1844,7 +1849,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "fee5a640eecf8d4f821ce1df",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -1861,7 +1866,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ec5616479e8bb94a101f2b89",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -1878,7 +1883,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "adae243cdb659ee4ea5fff10",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -1895,7 +1900,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e3cca02f81031920d077665b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -1912,7 +1917,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e12c67fe1743d836c8014bd2",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -1929,7 +1934,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -1946,7 +1951,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "49e52faf64f515b748ab79b7",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -1963,7 +1968,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "9722d59c712caa16829e98c0",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -1980,7 +1985,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -1997,7 +2002,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ca88a1da0c9e5f09ad084b7d",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -2014,7 +2019,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -2031,7 +2036,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "d3828a2bab61d49d21e97f53",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -2048,7 +2053,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "e62b51deaa3779be372bc949",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -2065,7 +2070,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -2082,7 +2087,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "5b39d1b258792f60e7eba010",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -2099,7 +2104,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -2116,7 +2121,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -2133,7 +2138,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -2150,7 +2155,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "L",
           "fingerprint": "ef71dd5ff1ec417820c7fb9b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -2167,7 +2172,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -2184,7 +2189,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "sync",
@@ -2201,7 +2206,7 @@ globalThis.JuntaPriceSnapshot = {
       "name": "Unimarc",
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "checkedAt": "2026-09-10T15:12:53Z",
+      "checkedAt": "2026-09-10T20:58:15Z",
       "configured": 23,
       "status": "error",
       "products": {
@@ -2211,7 +2216,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 8,
           "unit": "un",
           "fingerprint": "b2bb8f210bf3a2668b7faaa3",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2233,7 +2238,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 20,
           "unit": "un",
           "fingerprint": "f5d31745f56805b9d25f399b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2255,7 +2260,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "fee5a640eecf8d4f821ce1df",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2277,7 +2282,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ec5616479e8bb94a101f2b89",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2299,7 +2304,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "adae243cdb659ee4ea5fff10",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2321,7 +2326,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e3cca02f81031920d077665b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2343,7 +2348,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e12c67fe1743d836c8014bd2",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2365,7 +2370,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2387,7 +2392,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "49e52faf64f515b748ab79b7",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2409,7 +2414,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "9722d59c712caa16829e98c0",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2431,7 +2436,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2453,7 +2458,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ca88a1da0c9e5f09ad084b7d",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2475,7 +2480,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2497,7 +2502,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "d3828a2bab61d49d21e97f53",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2519,7 +2524,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "e62b51deaa3779be372bc949",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2541,7 +2546,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2563,7 +2568,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "5b39d1b258792f60e7eba010",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2585,7 +2590,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2607,7 +2612,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2629,7 +2634,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2651,7 +2656,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "L",
           "fingerprint": "ef71dd5ff1ec417820c7fb9b",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2673,7 +2678,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2695,7 +2700,7 @@ globalThis.JuntaPriceSnapshot = {
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-10T15:12:53Z",
+          "checkedAt": "2026-09-10T20:58:15Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2714,6 +2719,6 @@ globalThis.JuntaPriceSnapshot = {
       }
     }
   },
-  "runUrl": "https://github.com/leoescobarh/la-junta/actions/runs/34494090027"
+  "runUrl": "https://github.com/leoescobarh/la-junta/actions/runs/34529478363"
 }
 ;
