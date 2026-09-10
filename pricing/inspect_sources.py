@@ -1,5 +1,7 @@
 """Diagnóstico manual de páginas públicas; solo informa estructura y errores."""
 import json
+import re
+from urllib.parse import urljoin
 from sync_prices import PublicClient, Document, PriceError, ROOT, read_config
 
 PAGES = {
@@ -9,7 +11,7 @@ PAGES = {
 
 def inspect_page(html):
     doc = Document(html)
-    result = {'bytes': len(html), 'scripts': [], 'samples': [], 'links': [], 'structure': []}
+    result = {'bytes': len(html), 'scripts': [], 'samples': [], 'links': [], 'structure': [], 'assets': [], 'state': {}}
     def walk(value, path=''):
         if isinstance(value, dict):
             if len(result['structure']) < 120:
@@ -26,11 +28,16 @@ def inspect_page(html):
                 walk(child, path + '/' + str(i))
     for i, node in enumerate(doc.nodes):
         attrs = node['attrs']
+        if node['tag'] == 'script' and attrs.get('src') and '/pages/' in attrs['src']:
+            result['assets'].append(attrs['src'])
         if node['tag'] == 'script' and (attrs.get('type') == 'application/ld+json' or attrs.get('id') == '__NEXT_DATA__'):
             try:
                 data = json.loads(node['text'])
                 result['scripts'].append({'id': attrs.get('id'), 'keys': list(data)[:15] if isinstance(data, dict) else 'list'})
                 walk(data)
+                if attrs.get('id') == '__NEXT_DATA__':
+                    props = data.get('props', {})
+                    result['state'] = {'captcha': props.get('isInvalidUrlForReCaptcha'), 'pageProps': {k: str(v)[:300] for k, v in props.get('pageProps', {}).items() if k not in ('dehydratedState', 'bannerLegal')}}
             except ValueError:
                 pass
         if node['tag'] == 'a' and len(result['links']) < 12 and any(x in str(attrs.get('href')) for x in ('/product/', '/articulo/', '/search', '/buscar')):
@@ -46,6 +53,12 @@ if __name__ == '__main__':
             try:
                 result = inspect_page(client.get(url))
                 print(json.dumps({'store': sid, 'url': url, 'result': result}, ensure_ascii=False)[:26000], flush=True)
+                for asset in result['assets']:
+                    if any(key in asset for key in ('/search-', '/_app-')):
+                        code = client.get(urljoin(url, asset))
+                        urls = sorted(set(re.findall(r'https://[a-zA-Z0-9./_-]+', code)))
+                        contexts = [code[max(0, m.start()-150):m.end()+230] for m in list(re.finditer(r'intelliSearch|productSearch|searchProducts|api\.unimarc|api/search', code))[:25]]
+                        print(json.dumps({'asset': asset, 'publicUrls': urls[:60], 'searchCode': contexts}, ensure_ascii=False), flush=True)
             except PriceError as error:
                 print(json.dumps({'store': sid, 'url': url, 'error': error.code, 'message': str(error)}, ensure_ascii=False), flush=True)
                 break
