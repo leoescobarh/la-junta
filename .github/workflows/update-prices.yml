@@ -1,6 +1,11 @@
 name: Actualizar precios de La Junta
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'pricing/**'
+      - '.github/workflows/update-prices.yml'
   workflow_dispatch:
   schedule:
     # UTC. Evita el minuto cero; GitHub puede retrasar las ejecuciones.
@@ -39,6 +44,23 @@ jobs:
           elif [ "$status" -ne 0 ]; then
             exit "$status"
           fi
+      - name: Registrar cobertura de la consulta
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          data = json.loads(Path('dist/prices.json').read_text())
+          data['runUrl'] = f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}"
+          payload = json.dumps(data, ensure_ascii=False, indent=2) + '\n'
+          Path('dist/prices.json').write_text(payload)
+          Path('dist/prices-snapshot.js').write_text('globalThis.JuntaPriceSnapshot = ' + payload.replace('<', '\\u003c') + ';\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as report:
+              report.write('## Consulta real de supermercados\n\n| Tienda | Producto | Estado | Fuente / error |\n| --- | --- | --- | --- |\n')
+              for sid, store in data['stores'].items():
+                  for pid, item in store['products'].items():
+                      report.write(f"| {sid} | {pid} | {item['status']} | {item.get('error', item.get('source', ''))} |\n")
+          PY
       - name: Publicar los archivos de precios en el repositorio
         id: commit
         shell: bash
