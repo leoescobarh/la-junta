@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "maxAgeHours": 24,
+  "timeoutSeconds": 15,
+  "requestDelaySeconds": 2,
+  "stores": {
+    "jumbo": {
+      "name": "Jumbo",
+      "origin": "https://www.jumbo.cl",
+      "allowed_hosts": ["www.jumbo.cl", "jumbo.cl"],
+      "currency": "CLP",
+      "seller_id": "1",
+      "vtex": true,
+      "scope": "Precio web público sin ubicación ni sesión. Confirma disponibilidad, despacho y condiciones en la tienda.",
+      "products": [
+        {
+          "ingredient": "panCompleto",
+          "label": "Pan Hot Dog Castaño 480 g 8 un.",
+          "product_url": "https://www.jumbo.cl/pan-hot-dog-castano-480-gr-8-un/p",
+          "unit": "un",
+          "pack": 8,
+          "expected_terms": ["pan", "hot", "dog", "castaño", "480"],
+          "expected_pattern": "\\b8\\s*un"
+        },
+        {
+          "ingredient": "vienesa",
+          "label": "Salchichas San Jorge 1 kg 20 un.",
+          "product_url": "https://www.jumbo.cl/salchichas-san-jorge-1-kg-2/p",
+          "unit": "un",
+          "pack": 20,
+          "expected_terms": ["salchich", "san jorge"],
+          "expected_pattern": "\\b20\\s*un"
+        },
+        {
+          "ingredient": "mayo",
+          "label": "Mayonesa Hellmann's Doypack 800 g",
+          "product_url": "https://www.jumbo.cl/mayonesa-hellmanns-2054590/p",
+          "unit": "kg",
+          "pack": 0.8,
+          "expected_terms": ["mayonesa", "hellmann"],
+          "expected_pattern": "\\b800\\s*g\\b"
+        },
+        {
+          "ingredient": "arroz",
+          "label": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg",
+          "product_url": "https://www.jumbo.cl/arroz-grado-1-tucapel-gran-seleccion-grano-largo-y-ancho-1-kg/p",
+          "unit": "kg",
+          "pack": 1,
+          "expected_terms": ["arroz", "tucapel", "grado 1", "gran seleccion"],
+          "expected_pattern": "\\b1\\s*kg\\b"
+        },
+        {
+          "ingredient": "pasta",
+          "label": "Pasta Spaghetti N°5 Carozzi 400 g",
+          "product_url": "https://www.jumbo.cl/spaghetti-n-5-carozzi-bolsa-400-g-2/p",
+          "unit": "kg",
+          "pack": 0.4,
+          "expected_terms": ["spaghetti", "carozzi"],
+          "expected_pattern": "\\b400\\s*g\\b"
+        }
+      ]
+    }
+  }
+}

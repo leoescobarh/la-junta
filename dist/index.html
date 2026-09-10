@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ed542e">
+  <meta name="description" content="Calcula cantidades para asados, completos, sándwiches, pizzas y picoteos. Arma tu menú, ajusta porciones y prepara tu lista de compras.">
+  <title>La Junta — Calculadora de comidas</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="prices-snapshot.js" defer></script>
+  <script src="pricing.js" defer></script>
+  <script src="calculator.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#planner">Saltar a la calculadora</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="La Junta, inicio"><span class="brand-symbol" aria-hidden="true">✳</span> la junta<span class="brand-dot">.</span></a>
+      <span class="brand-description">Calculadora de comidas</span>
+      <nav aria-label="Acciones principales">
+        <button class="button button-quiet help-button" id="help-button"><span data-icon="info"></span> Cómo se calcula</button>
+        <a class="button button-dark" href="#shopping"><span data-icon="basket"></span> <span>Mi lista</span><span class="nav-count" id="nav-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+  <main class="page-wrap">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-copy"><p class="eyebrow">BUENA COMIDA. BUENA COMPAÑÍA.</p><h1 id="page-title">Armemos la <span>junta.</span></h1><p>Elige el menú y descubre cuánto comprar.</p></div>
+      <div class="intro-image"><img src="assets/la-junta.webp" alt="Completos, asado y picoteo para compartir" width="576" height="384" fetchpriority="high"><span class="image-caption">Aquí caben todos los gustos.</span></div>
+    </section>
+    <div class="planner-layout" id="planner">
+      <aside class="settings-column" aria-label="Configuración de la junta">
+        <section class="panel guest-panel">
+          <div class="section-title"><span class="step">01</span><h2>¿Cuántos vienen?</h2><span data-icon="users" class="muted"></span></div>
+          <div class="guest-total"><span id="guest-total">10</span><span>personas en la mesa</span></div>
+          <div class="inline-budget"><span>Compra estimada</span><strong id="quick-total">$0</strong></div>
+          <div class="count-row"><div><label for="adults">Adultos</label><small>Porción completa</small></div><div class="stepper"><button type="button" data-count="adults" data-delta="-1" aria-label="Quitar un adulto">−</button><input id="adults" type="number" min="0" max="500" step="1" value="8" inputmode="numeric"><button type="button" data-count="adults" data-delta="1" aria-label="Agregar un adulto">+</button></div></div>
+          <div class="count-row"><div><label for="children">Niños</label><small>Porción ajustable</small></div><div class="stepper"><button type="button" data-count="children" data-delta="-1" aria-label="Quitar un niño">−</button><input id="children" type="number" min="0" max="500" step="1" value="2" inputmode="numeric"><button type="button" data-count="children" data-delta="1" aria-label="Agregar un niño">+</button></div></div>
+          <details class="child-details"><summary>Ajustar porción de niños <span id="child-factor-label">60 %</span></summary><label class="sr-only" for="child-factor">Porción infantil respecto a la adulta</label><input id="child-factor" type="range" min="30" max="100" step="10" value="60"><p class="small muted">Puedes cambiarla según la edad y el apetito.</p></details>
+          <div class="field-block"><h3>¿Cómo anda el hambre?</h3><div class="segmented" id="appetite-controls" role="group" aria-label="Tamaño de las porciones"><button data-appetite="0.8" aria-pressed="false">Suave</button><button data-appetite="1" aria-pressed="true">Normal</button><button data-appetite="1.25" aria-pressed="false">Abundante</button></div></div>
+          <div class="field-block"><div class="label-row"><label for="margin">Un poquito extra</label><output id="margin-label" for="margin">10 %</output></div><input id="margin" type="range" min="0" max="30" step="5" value="10"><div class="range-labels"><span>Lo justo</span><span>Que sobre un poco</span></div></div>
+        </section>
+        <section class="budget-card" aria-labelledby="budget-heading"><div class="budget-top"><h2 id="budget-heading">Presupuesto estimado</h2><span data-icon="wallet"></span></div><div class="budget-total" id="budget-total">$0</div><div class="budget-per-person"><span id="per-person">$0</span> por persona</div><div class="budget-divider"></div><div class="budget-line"><span>Ingredientes</span><strong id="ingredient-count">0</strong></div><div class="budget-line"><span>Pendiente de comprar</span><strong id="pending-total">$0</strong></div><p id="price-panel-budget">Precios y cobertura en tu lista.</p><a class="button button-orange" href="#shopping">Ver lista de compras <span data-icon="arrow"></span></a></section>
+      </aside>
+      <div class="menu-column">
+        <section class="panel menu-panel" aria-labelledby="menu-heading"><div class="section-title"><span class="step">02</span><h2 id="menu-heading">¿Qué se va a comer?</h2><span class="selection-counter" id="selection-counter">1 elegido</span></div><p class="section-description">Puedes combinar varias opciones.</p><div class="category-filters" role="group" aria-label="Filtrar tipos de comida" id="category-filters"></div><div class="food-grid" id="food-grid"></div><div class="menu-note"><span data-icon="spark"></span><span>Un solo listado, incluso si un ingrediente se repite.</span></div></section>
+        <section class="selected-section" aria-labelledby="selected-heading"><div class="selected-heading"><h2 id="selected-heading" tabindex="-1">Tu menú, a tu pinta</h2><button class="text-button" id="balance-button" hidden>Repartir platos principales</button></div><div id="allocation-note" class="allocation-note" hidden></div><div id="selected-meals"></div></section>
+      </div>
+    </div>
+    <section class="shopping-section panel" id="shopping" aria-labelledby="shopping-heading" tabindex="-1"><div class="shopping-heading"><div><div class="section-title"><span class="step">03</span><h2 id="shopping-heading">La lista para ir a la segura</h2></div><p class="section-description" id="shopping-description">Tus ingredientes, sumados y listos para comprar.</p></div><div class="shopping-actions"><button class="button button-outline" id="copy-button"><span data-icon="copy"></span> Copiar</button><button class="button button-outline" id="download-button"><span data-icon="download"></span> Descargar</button><button class="button button-dark" id="print-button"><span data-icon="print"></span> Imprimir</button></div></div>
+      <div class="shopping-toolbar"><label class="switch-label"><input type="checkbox" id="round-packages" role="switch" checked><span class="switch-track" aria-hidden="true"></span><span>Redondear a envases completos</span></label><div class="store-picker"><label for="store">Tienda para la compra</label><select id="store"><option value="jumbo">Jumbo</option><option value="mercadolibre">Mercado Libre</option></select></div></div>
+      <div class="price-panel"><div class="price-panel-head"><label class="switch-label"><input type="checkbox" id="use-store-prices" role="switch" checked><span class="switch-track" aria-hidden="true"></span><span>Usar precios de la tienda</span></label><button class="text-button" id="refresh-prices" title="Consulta la última actualización disponible">Revisar actualización</button></div><p id="price-coverage" role="status">Consultando actualización disponible…</p><p id="price-sync-status" class="price-sync-status"></p><button class="text-button" id="clear-price-overrides" hidden>Restablecer precios editados</button></div>
+      <section class="comparison-panel" aria-labelledby="comparison-title"><div class="comparison-heading"><h3 id="comparison-title">Comparar supermercados</h3><span>Precio web general</span></div><p id="comparison-status">Los precios se cargarán cuando exista una fuente válida para cada tienda.</p><div id="comparison-table-wrap"></div></section>
+      <div class="shopping-table-wrap" id="shopping-table-wrap"></div>
+      <div class="shopping-bottom"><p id="checked-progress">0 de 0 ingredientes listos</p><button class="text-button" id="clear-checks">Desmarcar lista</button><div class="shopping-grand-total"><span>Total estimado</span><strong id="shopping-total">$0</strong></div></div>
+      <p class="shopping-disclaimer"><span data-icon="info"></span><span>El origen y la fecha se indican en cada ingrediente. Sin una consulta válida se muestra una estimación identificada. Los precios web pueden variar por ubicación o condiciones de compra; confirma disponibilidad y despacho en la tienda.</span></p>
+    </section>
+    <footer class="site-footer"><span class="brand footer-brand">la junta<span class="brand-dot">.</span></span><p>Para compartir, sin calcular de más.</p><button class="text-button" id="reset-button">Empezar de nuevo</button></footer>
+  </main>
+  <div class="mobile-summary"><div><span>Total estimado</span><strong id="mobile-total">$0</strong></div><a class="button button-orange" href="#shopping">Ver mi lista <span data-icon="arrow"></span></a></div>
+  <dialog id="help-dialog" aria-labelledby="help-title"><div class="dialog-header"><h2 id="help-title">Así hacemos las cuentas</h2><button class="icon-button" data-close-dialog aria-label="Cerrar explicación">×</button></div><div class="dialog-body"><p>Son cantidades orientativas para organizar una comida. Ajusta las porciones a tu grupo.</p><ol><li><strong>Comensales equivalentes.</strong> Adultos + niños × la porción infantil que elijas. El valor inicial de los niños es 60 %.</li><li><strong>Porciones por comida.</strong> Aplicamos el porcentaje de invitados, la cantidad por adulto y el nivel de hambre: suave × 0,8; normal × 1; abundante × 1,25.</li><li><strong>Margen extra.</strong> Sumamos el porcentaje elegido. En alimentos por unidad, redondeamos las porciones hacia arriba antes de calcular los ingredientes.</li><li><strong>Una sola compra.</strong> Sumamos ingredientes compartidos, descontamos lo que ya tienes y, si lo activas, redondeamos el resto al formato de venta.</li></ol><div class="formula-box">Cantidad = comensales equivalentes × participación × porción × hambre × margen</div><p><strong>Varias comidas:</strong> cada opción comienza para el 100 % de tus invitados. Si los principales son alternativas, usa «Repartir platos principales» o ajusta sus porcentajes.</p><p><strong>Bebidas:</strong> se calculan por persona, sin factor de hambre ni reducción infantil, más el margen. <strong>Carbón:</strong> se estima según los kilos de carne cruda y depende de tu parrilla y del tiempo de uso.</p><p><strong>Pesos:</strong> carnes, arroz y pasta se expresan en crudo. La palta considera un rendimiento comestible de 70 %; las demás verduras se estiman por peso de compra, sin un factor de merma adicional.</p><p><strong>Precios de tiendas:</strong> se utiliza la última actualización publicada para la tienda elegida. La lista indica la fecha, los precios anteriores y los ingredientes que aún usan valores de ejemplo. Los precios no confirmados no son una cotización vigente. «Revisar actualización» consulta la última sincronización publicada.</p><p><strong>Presupuesto:</strong> combina precios consultados, anteriores, editados o de ejemplo, según lo indicado en cada fila. «Ya tengo» resta stock del presupuesto. Marcar un ingrediente como listo solo lo quita del monto pendiente. El costo por persona se divide entre todos los asistentes.</p><p>La calculadora no revisa alergias ni reemplaza las cantidades de una receta específica.</p></div><div class="dialog-footer"><button class="button button-orange" data-close-dialog>Entendido</button></div></dialog>
+  <dialog id="reset-dialog" aria-labelledby="reset-title"><div class="dialog-header"><h2 id="reset-title">¿Armamos otra junta?</h2><button class="icon-button" data-close-dialog aria-label="Cerrar">×</button></div><div class="dialog-body"><p>Se restablecerán los invitados, el menú, los precios y la lista de compras.</p></div><div class="dialog-footer"><button class="button button-outline" data-close-dialog>Volver</button><button class="button button-orange" id="confirm-reset">Sí, empezar de nuevo</button></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="sr-only" id="calculation-status" role="status" aria-live="polite" aria-atomic="true"></div>
+  <noscript><p class="noscript">Activa JavaScript en tu navegador para calcular las cantidades.</p></noscript>
+</body>
+</html>

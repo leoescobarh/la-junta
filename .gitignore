@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.zip
+.env
+.env.*
+.openai/
+__pycache__/
+*.pyc
+.sync.lock
+*.tmp

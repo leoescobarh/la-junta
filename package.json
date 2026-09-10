@@ -1,0 +1,14 @@
+{
+  "name": "la-junta-calculadora",
+  "version": "2.0.0",
+  "description": "Calculadora de comidas y lista de compras en español para Chile",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "check": "node scripts/check.mjs",
+    "test:prices": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "prices:update": "python3 pricing/sync_prices.py"
+  },
+  "engines": { "node": ">=20" }
+}
