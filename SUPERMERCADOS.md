@@ -23,3 +23,17 @@ El workflow `.github/workflows/update-prices.yml` corre cada seis horas, manualm
 Para ampliar cobertura, edita `pricing/sources.json`: una ficha fija necesita `product_url`; una búsqueda necesita `query` y la tienda necesita `search_url` y `product_path_pattern`. Siempre define `expected_terms`, `expected_pattern`, `unit` y `pack`. Nunca deduzcas el peso del producto usando su precio.
 
 La primera ejecución real validó cinco productos de Jumbo mediante `html-jsonld`: pan, vienesas, mayonesa, arroz y pasta. La cobertura actual y los errores específicos de las demás tiendas se consultan en el snapshot y el resumen de Actions.
+
+## Cobertura comprobada el 10 de septiembre de 2026
+
+[Ejecución real verificada](https://github.com/leoescobarh/la-junta/actions/runs/34490225233), con consultas iniciadas a las 14:37 UTC:
+
+| Supermercado | Precios obtenidos | Resultado |
+| --- | ---: | --- |
+| Jumbo | 21 de 23 | Extracción HTML JSON-LD |
+| Santa Isabel | 9 de 23 | Extracción HTML JSON-LD; otras fichas inexistentes o sin coincidencia |
+| Lider | 5 de 23 | Extracción HTML JSON-LD desde `super.lider.cl` |
+| Tottus | 0 de 23 | HTTP 403; no se insistió después del bloqueo |
+| Unimarc | 0 de 23 | No se pudo verificar robots.txt; no se extrajeron fichas |
+
+Son 35 precios para ingredientes que pueden repetirse entre tiendas, no 35 productos diferentes. Se comprobaron los productos extraídos, se corrigió una coincidencia de maní con sal y se excluyó el catálogo general de Mundo Lider. No se simulan precios para completar las columnas. La cobertura puede cambiar en ejecuciones posteriores.
