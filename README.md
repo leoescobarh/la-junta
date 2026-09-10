@@ -4,7 +4,9 @@ Proyecto web completo en español, pensado para organizar comidas en Chile. Dise
 
 ## Estado del proyecto en GitHub
 
-Este repositorio contiene la calculadora y un actualizador con cinco fichas de Jumbo configuradas. La extracción real aún debe comprobarse desde GitHub Actions. El listado de otras tiendas en la interfaz no significa que sus precios estén conectados: el scraping y la comparación multitienda siguen pendientes.
+La columna **Tienda** muestra los supermercados por ingrediente, sin seleccionar una tienda para toda la compra. El presupuesto toma el menor costo consultado vigente para la cantidad pendiente, descontando stock y considerando envases completos. Las marcas pueden diferir: cada oferta indica su producto, formato y precio por kg, litro o unidad. Los precios anteriores se muestran como referencia y no compiten como vigentes.
+
+El actualizador consulta Jumbo, Santa Isabel, Lider, Tottus y Unimarc. Se verificó una primera ejecución real con cinco precios de Jumbo extraídos del HTML. Las fuentes tienen cobertura parcial: una configuración no garantiza extracción, y las páginas pueden bloquearla o requerir JavaScript. Consulta [SUPERMERCADOS.md](SUPERMERCADOS.md) y los estados publicados en `dist/prices.json`.
 
 Para conectar el sitio existente de Netlify, vincula este repositorio y selecciona la rama `main`, la base del proyecto vacía, ningún comando de compilación y `dist` como carpeta de publicación. `dist/index.html` ya está incluido en el repositorio. No subas el ZIP como si fuera código fuente.
 
@@ -110,9 +112,9 @@ Lee [PRECIOS-AUTOMATICOS.md](PRECIOS-AUTOMATICOS.md). El actualizador funciona f
 python3 pricing/sync_prices.py
 ```
 
-El catálogo inicial contiene **cinco fichas de Jumbo**: pan de completo, vienesas, mayonesa, arroz y pasta. Para otras marcas, ingredientes o tiendas hay que ampliar y comprobar `pricing/sources.json`. Mercado Libre incluye búsquedas; no tiene extracción configurada.
+El catálogo configura **16 ingredientes en cinco supermercados**: cinco fichas de referencia y once búsquedas adicionales para carnes, verduras y despensa. Se exige coincidencia del nombre y formato; los productos sin coincidencia quedan sin precio. Para otras marcas o ingredientes hay que ampliar y comprobar `pricing/sources.json`. Mercado Libre no participa en la comparación de supermercados.
 
-**El ZIP se entrega pendiente de la primera consulta real.** No contiene precios inventados como si hubieran sido extraídos. El acceso de red de este entorno impidió validar la consulta directa del actualizador contra Jumbo. Las fichas públicas y sus formatos se localizaron mediante búsqueda web; la compatibilidad de sus respuestas con el adaptador debe comprobarse en el servidor donde se ejecute. Si no se puede obtener un precio fiable, la web indica el fallo y conserva el dato anterior con su fecha, o usa una estimación etiquetada.
+La primera extracción real se completó desde GitHub Actions el 10 de septiembre de 2026. Los datos publicados conservan la fecha de consulta y el enlace de la ejecución que los generó. Si no se puede obtener un precio fiable, la web indica el fallo y muestra el dato anterior como referencia, o usa una estimación etiquetada para el presupuesto.
 
 Subir `dist` publica la calculadora. Para que los precios cambien solos también debes activar el cron o el workflow y hacer que sus dos archivos lleguen al hosting. Abrir la página o pulsar «Revisar actualización» únicamente lee el último archivo publicado; no inicia consultas a tiendas.
 

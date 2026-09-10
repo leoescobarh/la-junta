@@ -25,4 +25,24 @@ dialog{border:1px solid var(--line);border-radius:20px;padding:0;width:min(620px
 .inline-budget{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--orange-soft);color:var(--orange-dark);padding:10px 12px;margin:5px 0 10px;border-radius:9px;font-size:.875rem}.inline-budget strong{font-size:1.0625rem;font-variant-numeric:tabular-nums}.inline-budget span{font-size:.75rem}@media(max-width:700px){.inline-budget{grid-column:1/-1}.guest-total{margin-bottom:0}}
 
 /* Precios de tiendas: estado, fecha y cobertura. */
+/* Comparación de supermercados dentro de cada ingrediente. */
+.comparison-explainer{font-size:.875rem;color:var(--muted);max-width:480px;line-height:1.5}
+.shopping-table .store-cell{min-width:245px;width:28%;white-space:normal;vertical-align:top}
+.store-offers{display:grid;gap:7px;text-align:left}
+.store-offer{padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:#fff}
+.store-offer.is-best{border-color:#418761;background:#f0faf3}
+.offer-heading{display:flex;flex-wrap:wrap;justify-content:space-between;gap:5px;align-items:center}
+.offer-heading a{font-size:.875rem;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:5px;color:var(--ink)}
+.offer-heading a:hover{text-decoration:underline}
+.offer-heading .icon{width:13px;height:13px}
+.offer-badge{font-size:.75rem;color:#245438;font-weight:600}
+.offer-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 9px;margin-top:4px}
+.offer-price strong{font-size:1rem}
+.shopping-table .store-offer small{display:block;font-size:.8125rem;line-height:1.5;color:var(--muted);white-space:normal}
+.offer-unavailable{font-size:.8125rem;color:var(--muted)}
+.store-offer summary{font-size:.8125rem;cursor:pointer;margin-top:5px;color:var(--muted)}
+.store-offer details[open] small{margin-top:5px}
+@media(max-width:900px){.shopping-table .store-cell{grid-column:2/-1;grid-row:4;justify-self:stretch;width:auto;min-width:0}.shopping-table .ingredient-name{grid-column:2/-1}.store-offers{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.store-offers{grid-template-columns:1fr}.shopping-table .store-cell{grid-column:1/-1}}
+@media print{.shopping-table .store-th,.shopping-table .store-cell{display:table-cell!important}.store-offer{padding:3px;border:0}.store-offer details{display:none}.store-offers{display:block}.offer-heading a,.shopping-table .store-offer small{font-size:7pt}.offer-price strong{font-size:8pt}.offer-badge{font-size:7pt}}
 .price-panel{border:1px solid var(--line);border-radius:12px;background:#f8f9f4;padding:15px 17px;margin:8px 0 18px}.price-panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.price-panel-head .text-button{font-size:.875rem}.price-panel>p{font-size:.875rem;line-height:1.6;margin-top:9px}.price-panel .price-sync-status{color:var(--muted);font-size:.8125rem}.price-origin{display:block;font-size:.75rem;line-height:1.5;margin-top:7px;max-width:190px;white-space:normal}.price-origin-fresh{color:#276645}.price-origin-stale{color:#815016}.price-origin-example{color:#7c6556}.price-origin-manual{color:#4b5e8e}.mapped-product{max-width:240px;line-height:1.5}.shopping-table .price-source small{display:block}.shop-link{white-space:normal;max-width:95px}.price-panel-budget{line-height:1.5}@media(max-width:700px){.price-panel{padding:13px}.price-panel-head{gap:5px}.price-panel .switch-label{font-size:.875rem}.price-origin{max-width:none}.shopping-table .shop-link{line-height:1.4}.price-panel-head .text-button{font-size:.8125rem}}@media print{.price-panel{display:none}.price-origin{font-size:7pt;max-width:none}.shopping-table .price-source{display:block}.mapped-product{font-size:7pt}.shopping-section:after{content:"La Junta · CLP. Revisa el origen y la fecha de cada precio; confirmar disponibilidad, formato y despacho en la tienda."}}

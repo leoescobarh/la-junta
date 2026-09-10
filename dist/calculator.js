@@ -91,7 +91,7 @@
     for (const item of result.items) {
       if (item.group !== previous) { lines.push('', item.group.toLocaleUpperCase('es')); previous = item.group; }
       lines.push(`${item.ready ? '[✓]' : '[ ]'} ${item.name}: comprar ${formatQty(item.buy, item.unit)}${s.roundPackages && item.packs ? ` (${decimal(item.packs)} × ${formatQty(item.pack, item.unit)})` : ''} — ${money(item.cost)}`);
-      if (item.quote?.usable) lines.push(`    ${item.quote.productName} · ${item.priceKind === 'manual' ? 'precio editado' : item.priceKind === 'fresh' ? 'precio consultado' : 'precio anterior, no confirmado'} · consulta ${item.quote.fetchedAt}`);
+      if (item.quote?.usable) lines.push(`    ${item.quote.storeName ? item.quote.storeName + ' · ' : ''}${item.quote.productName} · ${item.priceKind === 'manual' ? 'precio editado' : item.priceKind === 'fresh' ? 'precio consultado' : 'precio anterior, no confirmado'} · consulta ${item.quote.fetchedAt}${item.quote.productUrl ? '\n    ' + item.quote.productUrl : ''}`);
       else if (item.priceKind === 'manual') lines.push('    Precio editado manualmente.');
       else lines.push('    Precio de ejemplo; no confirmado con la tienda.');
     }

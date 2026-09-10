@@ -21,20 +21,11 @@ import unicodedata
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote, unquote, urljoin, urlsplit
 from urllib.request import Request, build_opener, HTTPRedirectHandler
+from price_errors import PriceError, AccessBlocked
 
 ROOT = Path(__file__).resolve().parents[1]
 BOT = 'LaJuntaPriceBot'
 MAX_BYTES = 6 * 1024 * 1024
-
-
-class PriceError(Exception):
-    def __init__(self, code, message):
-        super().__init__(message)
-        self.code = code
-
-
-class AccessBlocked(PriceError):
-    pass
 
 
 def timestamp():
@@ -387,6 +378,7 @@ class PublicClient:
                 raise AccessBlocked('http_' + str(error.code), 'La tienda requiere acceso o ha limitado las consultas.') from error
             raise PriceError('http_' + str(error.code), 'La tienda respondió HTTP ' + str(error.code) + '.') from error
         except (URLError, TimeoutError, OSError) as error:
+            self.blocked.add(host)
             raise PriceError('network_error', 'No se pudo conectar con la tienda.') from error
 
     def _policy(self, url):

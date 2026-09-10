@@ -51,7 +51,7 @@ for (const [storeId, store] of Object.entries(sources.stores)) {
   assert.ok(data.stores[storeId], `Tienda desconocida: ${storeId}`);
   for (const product of store.products) {
     assert.equal(data.ingredients[product.ingredient]?.unit, product.unit, `Unidad incompatible: ${product.ingredient}`);
-    assert.ok(data.stores[storeId].productHosts.includes(new URL(product.product_url).hostname));
+    assert.ok(data.stores[storeId].productHosts.includes(new URL(product.product_url || store.search_url).hostname));
   }
 }
 assert.ok(context.JuntaPricing.resolve(context.JuntaPriceSnapshot, 'jumbo'));

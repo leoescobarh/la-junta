@@ -45,7 +45,6 @@ jobs:
             exit "$status"
           fi
       - name: Registrar cobertura de la consulta
-        if: always()
         run: |
           python - <<'PY'
           import json, os

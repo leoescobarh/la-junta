@@ -30,16 +30,14 @@
   let useStorePrices = true;
   let loadingPrices = false;
   let feedMessage = '';
-  let pricesByStore = {};
-  let manualFormatsByStore = {};
+  let manualFormats = {};
   let market = {};
-  $('store').innerHTML = Object.entries(D.stores).map(([id, store]) => `<option value="${escape(id)}">${escape(store.name)}</option>`).join('');
   function sourceMarkup(item) {
-    return `<span class="price-origin price-origin-${item.priceKind}">${escape(P.itemLabel(item))}</span>${item.quote?.usable && item.quote.available === null ? '<small>Disponibilidad sin confirmar</small>' : ''}`;
+    return `<span class="price-origin price-origin-${item.priceKind}">${escape((item.quote?.storeName ? item.quote.storeName + ' · ' : '') + P.itemLabel(item))}</span>${item.quote?.usable && item.quote.available === null ? '<small>Disponibilidad sin confirmar</small>' : ''}`;
   }
   function drawPriceStatus() {
     const count = P.coverage(result.items);
-    const store = snapshot.stores?.[state.store];
+
     const pieces = [];
     if (count.fresh) pieces.push(`${count.fresh} con precio consultado`);
     if (count.stale) pieces.push(`${count.stale} con precio anterior`);
@@ -47,17 +45,26 @@
     if (count.example) pieces.push(`${count.example} de ejemplo`);
     $('price-coverage').textContent = pieces.length ? pieces.join(' · ') : 'Selecciona comidas para ver los precios.';
     $('price-panel-budget').textContent = pieces.length ? pieces.join(' · ') + '. CLP.' : 'Precios y cobertura en tu lista.';
-    $('price-sync-status').textContent = !useStorePrices ? 'Actualización de tienda desactivada. Se usan precios editados o de ejemplo.' : feedMessage || (store?.checkedAt ? `Último intento: ${P.dateLabel(store.checkedAt)}. ${store.scope || ''}` : state.store === 'jumbo' ? 'Aún no hay una actualización publicada de esta tienda. Las estimaciones están identificadas en cada fila.' : 'Esta tienda tiene enlaces de búsqueda; todavía no tiene productos configurados para actualizar precios.');
+    $('price-sync-status').textContent = !useStorePrices ? 'Presupuesto con precios editados o de ejemplo. Las ofertas siguen visibles en Tienda.' : feedMessage || (snapshot.generatedAt ? `Última consulta: ${P.dateLabel(snapshot.generatedAt)}. Precio web sin ubicación; confirma stock y despacho.` : 'Todavía no hay una consulta publicada. Cada tienda indica su cobertura.');
     $('clear-price-overrides').hidden = !Object.keys(state.prices).length;
     $('refresh-prices').disabled = loadingPrices;
     $('refresh-prices').textContent = loadingPrices ? 'Consultando…' : 'Revisar actualización';
-    drawComparison();
   }
-  function drawComparison() {
-    const rows = P.compare(snapshot, result.items.map(item => item.id));
-    const active = rows.filter(row => row.offers.some(entry => entry.offer.usable));
-    $('comparison-status').textContent = active.length ? 'El menor precio confirmado aparece destacado. Los precios web pueden cambiar según promoción o disponibilidad.' : 'Todavía no hay precios confirmados para comparar; se mantienen las estimaciones de ejemplo.';
-    $('comparison-table-wrap').innerHTML = active.length ? `<div class="comparison-scroll"><table class="comparison-table"><thead><tr><th>Ingrediente</th>${Object.values(D.stores).map(store => `<th>${escape(store.name)}</th>`).join('')}<th>Más barato</th></tr></thead><tbody>${rows.filter(row => row.offers.some(entry => entry.offer.usable || entry.offer.status === 'stale')).map(row => `<tr><th>${escape(row.name)}</th>${row.offers.map(entry => { const offer = entry.offer; return `<td>${offer.usable ? `<strong${row.cheapest?.storeId === entry.storeId ? ' class="comparison-best"' : ''}>${C.money(offer.price)}</strong><small>${escape(offer.status === 'fresh' ? 'Actualizado' : 'Anterior')}</small>` : '<span class="comparison-empty">—</span>'}</td>`; }).join('')}<td>${row.cheapest ? `<strong>${escape(row.cheapest.storeName)}</strong>` : '—'}</td></tr>`).join('')}</tbody></table></div>` : '';
+  function comparisonFor(items, source = snapshot) {
+    return P.compare(source, items.map(item => item.id), Date.now(), Object.fromEntries(items.map(item => [item.id, item.missing])), state.roundPackages);
+  }
+  function storeMarkup(item) {
+    const row = comparisonFor([item])[0];
+    const freshCount = row.offers.filter(entry => entry.offer.status === 'fresh' && entry.offer.usable).length;
+    return '<div class="store-offers">' + row.offers.map(entry => {
+      const o = entry.offer;
+      const isBest = row.cheapest?.storeId === entry.storeId;
+      const url = o.productUrl || C.storeUrl(entry.storeId, item.query);
+      const status = o.status === 'unavailable' ? 'Sin stock' : o.status === 'error' ? 'Consulta no disponible' : 'Sin precio consultado';
+      const price = o.usable ? `<strong>${C.money(o.price)}</strong><small>por ${C.formatQty(o.pack, item.unit)} · ${C.money(entry.unitPrice)}/${item.unit}</small>` : `<span class="offer-unavailable">${status}</span>`;
+      const detail = o.usable ? `<small>${escape(o.productName)}</small><small>${o.status === 'fresh' ? 'Consultado' : 'Precio anterior'} ${escape(P.dateLabel(o.fetchedAt))}${o.available === null ? ' · stock por confirmar' : ''}</small>${item.missing > 0 ? `<small>${state.roundPackages ? C.decimal(entry.packs) + ' envase(s)' : 'Compra proporcional'} · total ${C.money(entry.cost)}</small>` : ''}` : `<small>${escape(o.message || 'Abre la tienda para buscar este ingrediente.')}</small>`;
+      return `<div class="store-offer${isBest ? ' is-best' : ''}"><div class="offer-heading"><a href="${escape(url)}" target="_blank" rel="noopener noreferrer" aria-label="Ver ${escape(item.name)} en ${escape(entry.storeName)} (nueva pestaña)">${escape(entry.storeName)} ${icon('external')}</a>${isBest ? `<span class="offer-badge">${freshCount === 1 ? 'Único precio consultado' : 'Menor total consultado'}</span>` : ''}</div><div class="offer-price">${price}</div><details><summary>Producto y consulta</summary>${detail}</details></div>`;
+    }).join('') + '</div>';
   }
   async function loadPrices(manual = false) {
     if (loadingPrices) return;
@@ -75,7 +82,7 @@
       // Si se empezó a escribir durante la descarga, espera a la próxima revisión.
       if (!manual && document.activeElement?.matches('input,select,textarea')) return;
       // Solo una variación del formato exige revisar lo ya marcado como comprado.
-      const nextMarket = useStorePrices ? P.resolve(value, state.store) : {};
+      const nextMarket = useStorePrices ? P.bestMarket(value, C.calculate(state).items, state.roundPackages) : {};
       for (const item of result.items) {
         const nextPack = nextMarket[item.id]?.usable ? nextMarket[item.id].pack : D.ingredients[item.id].pack;
         if (nextPack !== item.pack) delete state.checked[item.id];
@@ -161,13 +168,13 @@
       previous = item.group;
       return `${group}<tr class="item-row${item.ready ? ' is-ready' : ''}" id="item-${item.id}">
         <td class="check-cell"><input type="checkbox" data-item-field="checked" data-id="${item.id}" ${item.ready ? 'checked' : ''} ${item.buy === 0 ? 'disabled' : ''} aria-label="Marcar ${escape(item.name)} como listo"></td>
-        <td class="ingredient-name"><strong>${escape(item.name)}</strong><small>${escape(item.from.join(' + '))}</small>${item.quote?.usable ? `<small class="mapped-product">${escape(item.quote.productName)}</small>` : ''}</td>
+        <td class="ingredient-name"><strong>${escape(item.name)}</strong><small>${escape(item.from.join(' + '))}</small></td>
         <td class="required-amount" data-label="Necesitas">${C.formatQty(item.required, item.unit)}</td>
         <td class="stock-cell" data-label="Ya tengo"><div class="table-input"><input id="stock-${item.id}" type="number" min="0" max="1000000" step="${item.unit === 'un' ? '1' : '0.001'}" inputmode="decimal" value="${item.stock}" data-item-field="stock" data-id="${item.id}" aria-label="Cantidad que ya tengo de ${escape(item.name)}, en ${escape(item.unit)}"><span>${item.unit}</span></div></td>
         <td class="buy-amount" data-label="A comprar">${buyLabel(item)}</td>
         <td class="price-cell" data-label="Precio por formato"><div class="table-input price-input"><span>$</span><input id="price-${item.id}" type="number" min="0" max="10000000" step="1" inputmode="numeric" value="${item.price}" data-item-field="prices" data-id="${item.id}" aria-label="Precio en pesos chilenos de ${escape(item.name)} por ${escape(C.formatQty(item.pack, item.unit))}"></div><small>por ${C.formatQty(item.pack, item.unit)}</small><div class="price-source">${sourceMarkup(item)}</div></td>
         <td class="subtotal" data-label="Subtotal">${C.money(item.cost)}</td>
-        <td class="store-cell"><a class="shop-link" href="${escape(item.quote?.productUrl || C.storeUrl(state.store, item.query))}" target="_blank" rel="noopener noreferrer" aria-label="Ver ${escape(item.name)} en ${escape(D.stores[state.store].name)} (abre una pestaña nueva)">${item.quote?.productUrl ? item.quote.usable ? 'Ver producto' : 'Ver ficha' : 'Buscar'} ${icon('external')}</a>${item.quote?.productUrl && !item.quote.usable ? '<small>Revisa precio y formato en tienda.</small>' : ''}</td>
+        <td class="store-cell" data-label="Tiendas">${storeMarkup(item)}</td>
       </tr>`;
     }).join('');
     $('shopping-table-wrap').innerHTML = `<table class="shopping-table"><caption class="sr-only">Ingredientes y presupuesto estimado. Precios en pesos chilenos.</caption><thead><tr><th scope="col"><span class="sr-only">Listo</span></th><th scope="col">Ingrediente</th><th scope="col">Necesitas</th><th scope="col">Ya tengo</th><th scope="col">A comprar</th><th scope="col">Precio / formato</th><th scope="col">Subtotal</th><th scope="col" class="store-th">Tienda</th></tr></thead><tbody>${body}</tbody></table>`;
@@ -181,6 +188,11 @@
       row.querySelector('.buy-amount').innerHTML = buyLabel(item);
       row.querySelector('.subtotal').textContent = C.money(item.cost);
       row.querySelector('.price-source').innerHTML = sourceMarkup(item);
+      row.querySelector('.store-cell').innerHTML = storeMarkup(item);
+      const priceInput = row.querySelector('[data-item-field="prices"]');
+      if (document.activeElement !== priceInput) priceInput.value = item.price;
+      row.querySelector('.price-cell > small').textContent = 'por ' + C.formatQty(item.pack, item.unit);
+      priceInput.setAttribute('aria-label', 'Precio de ' + item.name + ' por ' + C.formatQty(item.pack, item.unit));
       const check = row.querySelector('[data-item-field="checked"]');
       check.checked = item.ready;
       check.disabled = item.buy === 0;
@@ -216,10 +228,10 @@
     drawPriceStatus();
   }
   function refresh(options = {}) {
-    market = useStorePrices ? P.resolve(snapshot, state.store) : {};
+    market = useStorePrices ? P.bestMarket(snapshot, C.calculate(state).items, state.roundPackages) : {};
     for (const id of Object.keys(state.prices)) {
       const expectedPack = market[id]?.usable ? market[id].pack : D.ingredients[id]?.pack;
-      const manualPack = manualFormatsByStore[state.store]?.[id];
+      const manualPack = manualFormats[id];
       if (manualPack !== undefined && expectedPack !== manualPack) delete state.prices[id];
     }
     result = C.calculate(state, market);
@@ -235,7 +247,6 @@
     $('child-factor').value = state.childFactor * 100;
     $('margin').value = state.margin;
     $('round-packages').checked = state.roundPackages;
-    $('store').value = state.store;
     document.querySelectorAll('[data-appetite]').forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.appetite) === state.appetite)));
   }
   function clearCompleted() { state.checked = {}; }
@@ -340,16 +351,9 @@
     clearCompleted();
     refresh();
   });
-  $('store').addEventListener('change', event => {
-    pricesByStore[state.store] = { ...state.prices };
-    state.store = event.target.value;
-    state.prices = { ...(pricesByStore[state.store] || {}) };
-    clearCompleted();
-    refresh();
-  });
   $('use-store-prices').addEventListener('change', event => { useStorePrices = event.target.checked; clearCompleted(); refresh(); });
   $('refresh-prices').addEventListener('click', () => loadPrices(true));
-  $('clear-price-overrides').addEventListener('click', () => { state.prices = {}; pricesByStore[state.store] = {}; manualFormatsByStore[state.store] = {}; refresh(); });
+  $('clear-price-overrides').addEventListener('click', () => { state.prices = {}; manualFormats = {}; refresh(); });
   $('shopping-table-wrap').addEventListener('input', event => {
     const field = event.target.dataset.itemField;
     const id = event.target.dataset.id;
@@ -358,8 +362,7 @@
     const raw = event.target.value;
     state[field][id] = C.clamp(raw, 0, field === 'prices' ? 10000000 : 1000000, field === 'prices' ? item.price : 0);
     if (field === 'prices') {
-      if (!manualFormatsByStore[state.store]) manualFormatsByStore[state.store] = {};
-      manualFormatsByStore[state.store][id] = result.items.find(row => row.id === id).pack;
+      manualFormats[id] = result.items.find(row => row.id === id).pack;
     }
     if (field === 'stock') delete state.checked[id];
     refresh({ inline: true });
@@ -416,8 +419,7 @@
   }));
   $('confirm-reset').addEventListener('click', () => {
     state = C.defaultState();
-    pricesByStore = {};
-    manualFormatsByStore = {};
+    manualFormats = {};
     useStorePrices = true;
     $('use-store-prices').checked = true;
     filter = 'all';

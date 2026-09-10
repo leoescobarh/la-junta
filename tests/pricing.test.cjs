@@ -8,6 +8,40 @@ const snapshot = offer => ({ schemaVersion: 1, maxAgeHours: 24, stores: { jumbo:
 const market = changes => P.resolve(snapshot(quote(changes)), 'jumbo', now);
 const row = result => result.items.find(item => item.id === 'vienesa');
 
+function twoStores() {
+  const value = snapshot(quote({ price: 4000, pack: 20 }));
+  value.stores.lider = { products: { vienesa: quote({ price: 2300, pack: 10, productUrl: 'https://www.lider.cl/ip/vienesas/123' }) } };
+  return value;
+}
+
+test('compara costo para cubrir la cantidad, no solo precio del paquete', () => {
+  const source = twoStores();
+  const one = P.compare(source, ['vienesa'], now, { vienesa: 10 })[0];
+  assert.equal(one.cheapest.storeId, 'lider');
+  const many = P.compare(source, ['vienesa'], now, { vienesa: 20 })[0];
+  assert.equal(many.cheapest.storeId, 'jumbo');
+  assert.equal(many.cheapest.cost, 4000);
+  assert.equal(P.compare(source, ['vienesa'], now)[0].cheapest.unitPrice, 200);
+});
+
+test('sin redondeo compara la cantidad proporcional y descarta precios viejos', () => {
+  const source = twoStores();
+  assert.equal(P.compare(source, ['vienesa'], now, { vienesa: 10 }, false)[0].cheapest.storeId, 'jumbo');
+  source.stores.jumbo.products.vienesa.status = 'stale';
+  assert.equal(P.compare(source, ['vienesa'], now)[0].cheapest.storeId, 'lider');
+  source.stores.lider.products.vienesa.available = false;
+  assert.equal(P.compare(source, ['vienesa'], now)[0].cheapest, null);
+});
+
+test('presupuesto automático descuenta stock antes de elegir supermercado', () => {
+  const state = { ...C.defaultState(), adults: 10, children: 0, margin: 0, stock: { vienesa: 10 } };
+  const market = P.bestMarket(twoStores(), C.calculate(state).items, true, now);
+  const result = C.calculate(state, market);
+  assert.equal(row(result).quote.storeId, 'lider');
+  assert.equal(row(result).buy, 10);
+  assert.equal(row(result).cost, 2300);
+});
+
 test('un precio reciente aplica su formato real de 20 unidades al redondeo', () => {
   const item = row(C.calculate(C.defaultState(), market()));
   assert.equal(item.required, 21);

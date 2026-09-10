@@ -53,14 +53,32 @@
   function coverage(items) {
     return items.reduce((sum, item) => { sum[item.priceKind || 'example']++; return sum; }, { fresh: 0, stale: 0, manual: 0, example: 0 });
   }
-  function compare(snapshot, ingredientIds, now = Date.now()) {
+  function compare(snapshot, ingredientIds, now = Date.now(), quantities = {}, roundPackages = true) {
+    const stores = Object.entries(data.stores).filter(([id]) => id !== 'mercadolibre');
+    const resolved = Object.fromEntries(stores.map(([id]) => [id, resolve(snapshot, id, now)]));
     return ingredientIds.map(id => {
       const ingredient = data.ingredients[id];
-      const offers = Object.entries(data.stores).map(([storeId, store]) => ({ storeId, storeName: store.name, offer: resolve(snapshot, storeId, now)[id] || { status: 'missing', usable: false, productName: ingredient.name, productUrl: null } }));
-      const available = offers.filter(entry => entry.offer.usable && entry.offer.available !== false);
-      const cheapest = available.length ? available.reduce((best, entry) => entry.offer.price < best.offer.price ? entry : best) : null;
+      const offers = stores.map(([storeId, store]) => {
+        const offer = resolved[storeId][id] || { status: 'missing', usable: false, productName: ingredient.name, productUrl: null };
+        const missing = Math.max(0, quantities[id] || 0);
+        const packs = offer.usable ? (roundPackages ? Math.max(0, Math.ceil(missing / offer.pack - 1e-9)) : missing / offer.pack) : null;
+        return { storeId, storeName: store.name, offer, unitPrice: offer.usable ? offer.price / offer.pack : null,
+          packs, cost: offer.usable ? Math.round(packs * offer.price) : null };
+      });
+      const available = offers.filter(entry => entry.offer.usable && entry.offer.status === 'fresh' && entry.offer.available !== false);
+      const byQuantity = Object.hasOwn(quantities, id) && quantities[id] > 0;
+      available.sort((a, b) => (byQuantity ? a.cost - b.cost : a.unitPrice - b.unitPrice) || a.unitPrice - b.unitPrice || a.storeId.localeCompare(b.storeId));
+      const cheapest = available[0] || null;
       return { id, name: ingredient.name, offers, cheapest };
     });
   }
-  return { safeProductUrl, resolve, dateLabel, itemLabel, coverage, compare };
+  function bestMarket(snapshot, items, roundPackages = true, now = Date.now()) {
+    const quantities = Object.fromEntries(items.map(item => [item.id, item.missing]));
+    const values = {};
+    for (const row of compare(snapshot, items.map(item => item.id), now, quantities, roundPackages)) {
+      if (row.cheapest) values[row.id] = { ...row.cheapest.offer, storeId: row.cheapest.storeId, storeName: row.cheapest.storeName };
+    }
+    return values;
+  }
+  return { safeProductUrl, resolve, dateLabel, itemLabel, coverage, compare, bestMarket };
 });
