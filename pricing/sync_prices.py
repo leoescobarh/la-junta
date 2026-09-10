@@ -389,7 +389,7 @@ class NoRedirect(HTTPRedirectHandler):
 
 
 class PublicClient:
-    def __init__(self, stores, timeout=15, delay=2):
+    def __init__(self, stores, timeout=15, delay=2, max_bytes=MAX_BYTES):
         self.hosts = {host for store in stores.values() for host in store['allowed_hosts']}
         self.timeout = timeout
         self.delay = max(1.0, float(delay))
@@ -397,6 +397,7 @@ class PublicClient:
         self.blocked = set()
         self.block_reasons = {}
         self.last_request = {}
+        self.max_bytes = max_bytes
         self.opener = build_opener(NoRedirect())
 
     def _raw(self, url):
@@ -414,7 +415,7 @@ class PublicClient:
         try:
             with self.opener.open(request, timeout=self.timeout) as response:
                 body = response.read(MAX_BYTES + 1)
-                if len(body) > MAX_BYTES:
+                if len(body) > self.max_bytes:
                     raise PriceError('response_too_large', 'La respuesta supera el tamaño permitido.')
                 charset = response.headers.get_content_charset() or 'utf-8'
                 return body.decode(charset, errors='replace'), response.headers.get_content_type()
