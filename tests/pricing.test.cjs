@@ -10,7 +10,7 @@ const row = result => result.items.find(item => item.id === 'vienesa');
 
 function twoStores() {
   const value = snapshot(quote({ price: 4000, pack: 20 }));
-  value.stores.lider = { products: { vienesa: quote({ price: 2300, pack: 10, productUrl: 'https://www.lider.cl/ip/vienesas/123' }) } };
+  value.stores.lider = { products: { vienesa: quote({ price: 2300, pack: 10, productUrl: 'https://super.lider.cl/ip/vienesas/123' }) } };
   return value;
 }
 

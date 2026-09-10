@@ -612,17 +612,16 @@
     },
     "lider": {
       "name": "Lider",
-      "origin": "https://www.lider.cl",
+      "origin": "https://super.lider.cl",
       "allowed_hosts": [
-        "www.lider.cl",
-        "lider.cl"
+        "super.lider.cl"
       ],
       "currency": "CLP",
       "seller_id": "1",
       "vtex": false,
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
-      "search_url": "https://www.lider.cl/supermercado/search?query=",
-      "product_path_pattern": "/supermercado/product/",
+      "search_url": "https://super.lider.cl/search?q=",
+      "product_path_pattern": "/ip/",
       "products": [
         {
           "ingredient": "panCompleto",
