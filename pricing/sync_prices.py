@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""VTEX público → HTML público (JSON-LD/metadatos/selectores).
-
-Python 3.11+, solo biblioteca estándar. No ejecuta JavaScript remoto,
-no usa sesiones privadas y no sortea bloqueos ni CAPTCHA.
-"""
+"""Precios públicos por API/HTML y, con --browser, Chromium en las tiendas configuradas."""
 from __future__ import annotations
 
 import argparse
@@ -414,7 +410,7 @@ class PublicClient:
         request = Request(url, headers={'User-Agent': BOT + '/2.0 (+public price comparison)', 'Accept': 'application/json,text/html,text/plain;q=0.9', 'Accept-Encoding': 'identity'})
         try:
             with self.opener.open(request, timeout=self.timeout) as response:
-                body = response.read(MAX_BYTES + 1)
+                body = response.read(self.max_bytes + 1)
                 if len(body) > self.max_bytes:
                     raise PriceError('response_too_large', 'La respuesta supera el tamaño permitido.')
                 charset = response.headers.get_content_charset() or 'utf-8'
@@ -477,11 +473,31 @@ def fingerprint(target):
     return hashlib.sha256(json.dumps(target, sort_keys=True, ensure_ascii=True).encode()).hexdigest()[:24]
 
 
+def parse_page(client, html, target, store):
+    found = parse_html(html, target, store)
+    if getattr(client, 'rendered', False):
+        found['source'] = found['source'].replace('html-', 'browser-')
+    return found
+
+
+def last_valid(previous, target):
+    if not isinstance(previous, dict):
+        return {}
+    candidate = previous if previous.get('price') else previous.get('lastValid', {})
+    if not isinstance(candidate, dict) or candidate.get('fingerprint') != fingerprint(target):
+        return {}
+    keys = ('price', 'currency', 'productName', 'productUrl', 'pack', 'unit', 'available', 'source', 'fetchedAt', 'fingerprint')
+    return {key: candidate[key] for key in keys if key in candidate}
+
+
 def refresh_product(client, target, store, previous=None, checked_at=None):
     checked_at = checked_at or timestamp()
     base = {'ingredientId': target['ingredient'], 'productUrl': target.get('product_url'),
             'pack': target['pack'], 'unit': target['unit'], 'fingerprint': fingerprint(target),
             'checkedAt': checked_at, 'attempts': []}
+    historical = last_valid(previous, target)
+    if historical:
+        base['lastValid'] = historical
     try:
         if not target.get('product_url'):
             from discover import discover_product
@@ -489,7 +505,7 @@ def refresh_product(client, target, store, previous=None, checked_at=None):
                 try:
                     verify_name(previous.get('productName'), target)
                     safe_url(previous['productUrl'], store['allowed_hosts'])
-                    found = parse_html(client.get(previous['productUrl']), {**target, 'product_url': previous['productUrl']}, store)
+                    found = parse_page(client, client.get(previous['productUrl']), {**target, 'product_url': previous['productUrl']}, store)
                     base['attempts'].append({'source': 'known-product', 'status': 'ok', 'url': previous['productUrl']})
                     return {**base, **found, 'status': 'unavailable' if found['available'] is False else 'ok', 'fetchedAt': checked_at}
                 except AccessBlocked:
@@ -516,7 +532,7 @@ def refresh_product(client, target, store, previous=None, checked_at=None):
             except (PriceError, ValueError, KeyError, TypeError) as error:
                 base['attempts'].append({'source': 'vtex', 'status': error.code if isinstance(error, PriceError) else 'invalid_api_data'})
         try:
-            found = parse_html(client.get(target['product_url']), target, store)
+            found = parse_page(client, client.get(target['product_url']), target, store)
         except AccessBlocked:
             raise
         except PriceError as error:
@@ -533,7 +549,7 @@ def refresh_product(client, target, store, previous=None, checked_at=None):
         base['attempts'].extend(getattr(error, 'attempts', []))
         base['attempts'].append({'source': 'sync', 'status': code})
         message = str(error) if isinstance(error, PriceError) else 'La tienda devolvió datos incompletos.'
-        old = previous if isinstance(previous, dict) and previous.get('fingerprint') == base['fingerprint'] else {}
+        old = historical
         # Conserva la fecha REAL del precio anterior, nunca la renueva ante un error.
         keep = {key: old[key] for key in ('price', 'currency', 'productName', 'productUrl', 'pack', 'unit', 'available', 'source', 'fetchedAt') if key in old}
         return {**base, **keep, 'status': 'stale' if old.get('price') else 'error', 'error': code, 'message': message}
@@ -568,7 +584,7 @@ def read_config(path):
     return config
 
 
-def sync(config, previous, client=None, only_ingredient=None, only_store=None):
+def sync(config, previous, client=None, only_ingredient=None, only_store=None, use_browser=False, report_dir=None):
     checked_at = timestamp()
     result = {'schemaVersion': 1, 'generatedAt': checked_at, 'maxAgeHours': config.get('maxAgeHours', 24), 'stores': {}}
     def update_store(entry):
@@ -576,17 +592,30 @@ def sync(config, previous, client=None, only_ingredient=None, only_store=None):
         old_store = previous.get('stores', {}).get(store_id, {})
         if only_store and store_id != only_store:
             return store_id, old_store
-        store_client = client or PublicClient({store_id: store}, config.get('timeoutSeconds', 15), config.get('requestDelaySeconds', 2))
+        factory = PublicClient
+        if use_browser and store.get('browser', {}).get('enabled'):
+            from browser_client import BrowserClient
+            factory = BrowserClient
+        store_client = client or factory({store_id: store}, config.get('timeoutSeconds', 20), config.get('requestDelaySeconds', 2))
         products = {}
-        for target in store['products']:
-            old = old_store.get('products', {}).get(target['ingredient'])
-            if only_ingredient and target['ingredient'] != only_ingredient:
-                if old:
-                    products[target['ingredient']] = old
-                continue
-            products[target['ingredient']] = refresh_product(store_client, target, store, old, checked_at)
+        try:
+            for target in store['products']:
+                old = old_store.get('products', {}).get(target['ingredient'])
+                if only_ingredient and target['ingredient'] != only_ingredient:
+                    if old:
+                        products[target['ingredient']] = old
+                    continue
+                products[target['ingredient']] = refresh_product(store_client, target, store, old, timestamp())
+        finally:
+            if not client and hasattr(store_client, 'close'):
+                store_client.close()
+            if report_dir:
+                report = store_client.report() if hasattr(store_client, 'report') else {'engine': 'http'}
+                atomic_write(report_dir / (store_id + '.json'), json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+                if report['engine'] == 'chromium':
+                    print(f"Navegador {store_id}: {report['pagesRead']} páginas; motivo de detención: {report['stopReason'] or 'ninguno'}", flush=True)
         fresh = sum(p.get('status') == 'ok' for p in products.values())
-        return store_id, {'name': store['name'], 'currency': store['currency'], 'scope': store['scope'],
+        return store_id, {'name': store['name'], 'currency': store['currency'], 'scope': store['scope'], 'engine': 'chromium' if getattr(store_client, 'rendered', False) else 'http',
                                     'checkedAt': checked_at, 'configured': len(store['products']),
                                     'status': 'ok' if products and fresh == len(products) else 'partial' if fresh else 'error', 'products': products}
     # Paralelismo entre tiendas; cada dominio mantiene sus pausas y sus bloqueos.
@@ -634,6 +663,8 @@ def main():
     parser.add_argument('--output', type=Path, default=ROOT / 'dist/prices.json')
     parser.add_argument('--ingredient', help='Comprueba solo un ingrediente, por ejemplo panCompleto.')
     parser.add_argument('--store', help='Comprueba solo una tienda, por ejemplo unimarc.')
+    parser.add_argument('--browser', action='store_true', help='Usa Chromium en las tiendas configuradas para renderizado.')
+    parser.add_argument('--report-dir', type=Path, help='Guarda informes de ejecución sin cookies ni cabeceras.')
     parser.add_argument('--validate-config', action='store_true', help='Comprueba la configuración sin consultar tiendas.')
     args = parser.parse_args()
     config = read_config(args.config)
@@ -646,7 +677,7 @@ def main():
         return 0
     previous = json.loads(args.output.read_text(encoding='utf-8')) if args.output.exists() else {}
     with run_lock(args.config.parent / '.sync.lock'):
-        snapshot = sync(config, previous, only_ingredient=args.ingredient, only_store=args.store)
+        snapshot = sync(config, previous, only_ingredient=args.ingredient, only_store=args.store, use_browser=args.browser, report_dir=args.report_dir)
         save_snapshot(snapshot, args.output)
     total = fresh = 0
     for store_id, store in snapshot['stores'].items():
@@ -668,4 +699,3 @@ if __name__ == '__main__':
     except (ValueError, OSError, RuntimeError, KeyError, TypeError, PriceError) as exc:
         print('No se pudo completar la actualización:', str(exc))
         raise SystemExit(1)
-

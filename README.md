@@ -6,11 +6,11 @@ Proyecto web completo en español, pensado para organizar comidas en Chile. Dise
 
 La columna **Tienda** muestra los supermercados por ingrediente, sin seleccionar una tienda para toda la compra. El presupuesto toma el menor costo consultado vigente para la cantidad pendiente, descontando stock y considerando envases completos. Las marcas pueden diferir: cada oferta indica su producto, formato y precio por kg, litro o unidad. Los precios anteriores se muestran como referencia y no compiten como vigentes.
 
-El actualizador consulta Jumbo, Santa Isabel, Lider, Tottus y Unimarc cada seis horas. La última ejecución real verificó 41 ofertas: Jumbo 21/23, Santa Isabel 9/23 y Lider 11/23; Tottus devolvió HTTP 403 y Unimarc no entregó fichas públicas en su respuesta de búsqueda. Las fuentes tienen cobertura parcial: una configuración no garantiza extracción, y las páginas pueden bloquearla o requerir JavaScript. Consulta [SUPERMERCADOS.md](SUPERMERCADOS.md) y los estados publicados en `dist/prices.json`.
+El actualizador consulta Jumbo, Santa Isabel, Lider, Tottus y Unimarc cada dos horas. Tottus y Unimarc se consultan con Chromium en GitHub Actions; las otras cadenas usan API pública y HTML. Netlify sirve los resultados guardados. Cada ejecución conserva un snapshot y un informe por tienda durante 30 días. Consulta [SUPERMERCADOS.md](SUPERMERCADOS.md), los estados de `dist/prices.json` y su `runUrl` para comprobar la cobertura real. Hay 23 ingredientes configurados por cadena; esto no equivale al catálogo completo ni garantiza que las cinco entreguen precios.
 
 Para conectar el sitio existente de Netlify, vincula este repositorio y selecciona la rama `main`, la base del proyecto vacía, ningún comando de compilación y `dist` como carpeta de publicación. `dist/index.html` ya está incluido en el repositorio. No subas el ZIP como si fuera código fuente.
 
-El workflow «Actualizar precios de La Junta» permite una ejecución manual desde Actions y tiene un horario cada seis horas. Una vez vinculado Netlify al repositorio, los cambios publicados en `dist` podrán generar nuevos despliegues. Una ejecución terminada no garantiza precios obtenidos: revisa los estados y fechas en `dist/prices.json`.
+El workflow «Actualizar precios de La Junta» permite una ejecución manual desde Actions y tiene un horario cada dos horas. Una vez vinculado Netlify al repositorio, los cambios publicados en `dist` podrán generar nuevos despliegues. Una ejecución terminada no garantiza precios obtenidos: revisa los estados y fechas en `dist/prices.json`.
 
 ## Abrir ahora
 
@@ -41,9 +41,9 @@ Hay instrucciones adicionales en [GUIA-PUBLICACION.md](GUIA-PUBLICACION.md). El 
 - Descuento del stock que ya tienes, precios editables y total por persona.
 - Lista que puedes marcar, copiar, descargar como TXT e imprimir o guardar como PDF desde el navegador.
 - Fichas de productos de Jumbo y búsquedas de ingredientes en Jumbo y Mercado Libre.
-- Actualizador de precios en Python: primero VTEX público; si no hay información utilizable, extracción del HTML mediante JSON-LD, metadatos o selectores configurables.
+- Actualizador de precios en Python: API pública y HTML, más Chromium para ejecutar JavaScript en Tottus y Unimarc. Las fichas se validan mediante JSON-LD, metadatos o selectores configurables.
 - Precio y formato del producto real, fecha de consulta y etiquetas para precios anteriores, editados o de ejemplo.
-- Automatización cada seis horas mediante cron o el workflow incluido para GitHub Actions.
+- Automatización cada dos horas mediante cron o el workflow incluido para GitHub Actions.
 - Controles accesibles mediante teclado, etiquetas para lectores de pantalla y respeto de la preferencia de movimiento reducido.
 
 ## Archivos para editar
@@ -60,6 +60,8 @@ Hay instrucciones adicionales en [GUIA-PUBLICACION.md](GUIA-PUBLICACION.md). El 
 | `dist/prices-snapshot.js` | Copia para abrir la web directamente como archivo local |
 | `dist/assets/` | Fotografía y favicon incluidos |
 | `pricing/sync_prices.py` | Consulta VTEX, extracción HTML y conservación de precios anteriores |
+| `pricing/browser_client.py` | Navegador aislado por tienda y diagnóstico de navegación |
+| `pricing/report_prices.py` | Snapshot completo de los productos configurados y cobertura por ejecución |
 | `pricing/sources.json` | Tiendas, productos exactos, formatos y reglas de coincidencia |
 | `.github/workflows/update-prices.yml` | Ejecución programada y publicación de los archivos de precios en tu repositorio |
 | `tests/` | Pruebas de cálculo y actualización sin consultas a tiendas |
@@ -100,16 +102,18 @@ python3 -m unittest discover -s tests -p 'test_*.py'
 python3 pricing/sync_prices.py --validate-config
 ```
 
-También están disponibles `npm run check`, `npm test` y `npm run test:prices`. **No hace falta ejecutar `npm install` ni instalar paquetes de Python.** Node solo se utiliza para las comprobaciones; Python 3.11 o superior se utiliza para actualizar precios. Ninguno es necesario para servir la web estática.
+También están disponibles `npm run check`, `npm test` y `npm run test:prices`. **La web y las pruebas unitarias no requieren `npm install`.** El extractor con navegador sí requiere instalar `pricing/requirements.txt` y Chromium, como indica la guía de precios. Node solo se utiliza para las comprobaciones; Python 3.11 o superior se utiliza para actualizar precios. Ninguno es necesario para servir la web estática.
 
-Se incluyen 33 pruebas de JavaScript y 24 de Python. Cubren cálculo, comparación de envases, stock antes de elegir supermercado, rechazo de precios vencidos, extracción, enlaces seguros y la ejecución del actualizador ante una búsqueda fallida. Las pruebas unitarias usan respuestas sintéticas; las ejecuciones reales están registradas en Actions. No se ejecutaron pruebas visuales en navegador.
+Se incluyen pruebas de JavaScript y Python, más una prueba de Chromium con una ficha sintética cuyo precio aparece después de ejecutar JavaScript. Cubren cálculo, comparación de envases, stock antes de elegir supermercado, rechazo de precios vencidos, extracción, enlaces seguros y la ejecución del actualizador ante una búsqueda fallida. Las pruebas unitarias usan respuestas sintéticas; las ejecuciones reales están registradas en Actions. No se ejecutaron pruebas visuales en navegador.
 
 ## Activar precios automáticos
 
 Lee [PRECIOS-AUTOMATICOS.md](PRECIOS-AUTOMATICOS.md). El actualizador funciona fuera del navegador y publica dos archivos que consume la web:
 
 ```sh
-python3 pricing/sync_prices.py
+python3 -m pip install -r pricing/requirements.txt
+python3 -m playwright install --with-deps chromium
+python3 pricing/sync_prices.py --browser --report-dir artifacts/pricing
 ```
 
 El catálogo configura **23 ingredientes en cinco supermercados**: cinco fichas de referencia y dieciocho búsquedas adicionales para carnes, verduras y despensa. Se exige coincidencia del nombre y formato; los productos sin coincidencia quedan sin precio. Para otras marcas o ingredientes hay que ampliar y comprobar `pricing/sources.json`. Mercado Libre no participa en la comparación de supermercados.

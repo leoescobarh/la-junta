@@ -280,7 +280,10 @@
             "original"
           ],
           "expected_pattern": "\\b2\\s*(?:l|lt|litros?)\\b",
-          "query": "Coca Cola original 2 L"
+          "query": "Coca Cola original 2 L",
+          "excluded_terms": [
+            "retornable"
+          ]
         },
         {
           "ingredient": "agua",
@@ -583,7 +586,10 @@
             "original"
           ],
           "expected_pattern": "\\b2\\s*(?:l|lt|litros?)\\b",
-          "query": "Coca Cola original 2 L"
+          "query": "Coca Cola original 2 L",
+          "excluded_terms": [
+            "retornable"
+          ]
         },
         {
           "ingredient": "agua",
@@ -885,7 +891,10 @@
             "original"
           ],
           "expected_pattern": "\\b2\\s*(?:l|lt|litros?)\\b",
-          "query": "Coca Cola original 2 L"
+          "query": "Coca Cola original 2 L",
+          "excluded_terms": [
+            "retornable"
+          ]
         },
         {
           "ingredient": "agua",
@@ -1188,7 +1197,10 @@
             "original"
           ],
           "expected_pattern": "\\b2\\s*(?:l|lt|litros?)\\b",
-          "query": "Coca Cola original 2 L"
+          "query": "Coca Cola original 2 L",
+          "excluded_terms": [
+            "retornable"
+          ]
         },
         {
           "ingredient": "agua",
@@ -1213,7 +1225,13 @@
           "expected_pattern": "\\b2\\s*kg\\b",
           "query": "Hielo 2 kg"
         }
-      ]
+      ],
+      "browser": {
+        "enabled": true,
+        "maxPages": 60,
+        "waitMilliseconds": 12000,
+        "budgetSeconds": 300
+      }
     },
     "unimarc": {
       "name": "Unimarc",
@@ -1491,7 +1509,10 @@
             "original"
           ],
           "expected_pattern": "\\b2\\s*(?:l|lt|litros?)\\b",
-          "query": "Coca Cola original 2 L"
+          "query": "Coca Cola original 2 L",
+          "excluded_terms": [
+            "retornable"
+          ]
         },
         {
           "ingredient": "agua",
@@ -1516,7 +1537,13 @@
           "expected_pattern": "\\b2\\s*kg\\b",
           "query": "Hielo 2 kg"
         }
-      ]
+      ],
+      "browser": {
+        "enabled": true,
+        "maxPages": 60,
+        "waitMilliseconds": 12000,
+        "budgetSeconds": 300
+      }
     }
   }
 }

@@ -9,3 +9,4 @@ __pycache__/
 *.pyc
 .sync.lock
 *.tmp
+artifacts/

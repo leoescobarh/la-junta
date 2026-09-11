@@ -32,13 +32,15 @@ def product_links(html, store, target):
             name = product_identity(value)
             for key in ('url', 'link', 'productUrl', 'canonicalUrl'):
                 add(value.get(key), name)
+            if store.get('slug_prefix') and value.get('productName') and value.get('linkText'):
+                add(store['slug_prefix'] + value['linkText'], name)
             for item in value.values():
                 if isinstance(item, (dict, list)):
                     walk(item)
     for index, node in enumerate(doc.nodes):
         if node['tag'] == 'a':
             add(node['attrs'].get('href'), node['attrs'].get('title', '') + ' ' + doc.text(index))
-        elif node['tag'] == 'script' and (node['attrs'].get('type') == 'application/ld+json' or node['attrs'].get('id') == '__NEXT_DATA__'):
+        elif node['tag'] == 'script' and (node['attrs'].get('type') == 'application/ld+json' or node['attrs'].get('id') == '__NEXT_DATA__' or node['attrs'].get('data-junta-catalog') == 'true'):
             try:
                 walk(json.loads(node['text']))
             except ValueError:
@@ -47,7 +49,7 @@ def product_links(html, store, target):
 
 
 def discover_product(client, target, store):
-    from sync_prices import PriceError, AccessBlocked, parse_vtex, parse_html, safe_url
+    from sync_prices import PriceError, AccessBlocked, parse_vtex, parse_page, safe_url
     attempts = []
     if store.get('vtex') and store['origin'] not in getattr(client, 'unavailable_apis', set()):
         api = store['origin'] + '/api/catalog_system/pub/products/search/' + quote(target['query'], safe='')
@@ -82,7 +84,7 @@ def discover_product(client, target, store):
     attempts.append({'source': 'html-search', 'url': search_url, 'candidates': len(links)})
     for url in links:
         try:
-            found = parse_html(client.get(url), {**target, 'product_url': url}, store)
+            found = parse_page(client, client.get(url), {**target, 'product_url': url}, store)
             if found['available'] is not False:
                 return found, attempts + [{'source': 'html-search', 'status': 'ok'}]
         except AccessBlocked:
@@ -91,4 +93,3 @@ def discover_product(client, target, store):
             attempts.append({'source': 'html-product', 'url': url, 'status': error.code})
             continue
     raise PriceError('no_matching_public_product', 'La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.', attempts)
-

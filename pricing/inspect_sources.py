@@ -28,7 +28,7 @@ def inspect_page(html):
                 walk(child, path + '/' + str(i))
     for i, node in enumerate(doc.nodes):
         attrs = node['attrs']
-        if node['tag'] == 'script' and attrs.get('src'):
+        if node['tag'] == 'script' and str(attrs.get('src', '')).startswith('/'):
             result['assets'].append(attrs['src'])
         if node['tag'] == 'script' and (attrs.get('type') == 'application/ld+json' or attrs.get('id') == '__NEXT_DATA__'):
             try:
@@ -65,4 +65,3 @@ if __name__ == '__main__':
             except PriceError as error:
                 print(json.dumps({'store': sid, 'url': url, 'error': error.code, 'message': str(error)}, ensure_ascii=False), flush=True)
                 break
-

@@ -1,9 +1,6 @@
 name: Diagnosticar fuentes públicas
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ['pricing/inspect_sources.py']
 permissions:
   contents: read
 jobs:
@@ -16,4 +13,3 @@ jobs:
         with:
           python-version: '3.11'
       - run: python pricing/inspect_sources.py
-
