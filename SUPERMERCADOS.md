@@ -35,3 +35,23 @@ Se respetan robots.txt, dominios autorizados, pausas y presupuestos de consulta.
 ## Ampliación
 
 Edita `pricing/sources.json`: una ficha fija necesita `product_url`; una búsqueda necesita `query` y la tienda necesita `search_url` y `product_path_pattern`. Define `expected_terms`, `expected_pattern`, `unit` y `pack`; no deduzcas cantidades desde el precio. Nuevas cadenas requieren también su entrada y dominios de producto en `dist/data.js`. La instalación y los comandos están en [PRECIOS-AUTOMATICOS.md](PRECIOS-AUTOMATICOS.md).
+
+## Verificación del servicio · 11 de septiembre de 2026
+
+[Ejecución comprobada](https://github.com/leoescobarh/la-junta/actions/runs/34606854981), iniciada a las 13:53 UTC para las consultas. Resultado: 56 precios utilizables entre 115 combinaciones de ingrediente y supermercado.
+
+| Cadena | Precios obtenidos | Sin stock | Sin precio verificable |
+| --- | ---: | ---: | ---: |
+| Jumbo | 21 de 23 | 1 | 1 |
+| Santa Isabel | 8 de 23 | 1 | 14 |
+| Lider | 13 de 23 | 0 | 10 |
+| Tottus | 0 de 23 | 0 | 23 |
+| Unimarc | 14 de 23 | 0 | 9 |
+
+Unimarc obtuvo las 14 ofertas mediante `browser-jsonld`, después de renderizar las fichas. Se consultaron 38 páginas en esa tienda. Tottus devolvió HTTP 403 en la primera página abierta con Chromium, por lo que se detuvo esa cadena. No se verificó un acceso alternativo ni una API facilitada por Tottus.
+
+Se revisaron los nombres y formatos. Se excluyó un combo de pollo con papas que había coincidido con papas chips y se corrigió la interpretación de pesos decimales: el lomo vetado de Unimarc declara 1,1 kg y el de Jumbo 2,2 kg aproximados. Ambas cantidades acompañan a sus precios en la comparación. También se corrigió la espera para que los enlaces a productos relacionados no anticipen la lectura del precio de la ficha.
+
+Pasaron 33 pruebas de Python (incluida una ficha con JavaScript en Chromium), 33 de JavaScript y la comprobación del proyecto. El artefacto `precios-34606854981` contiene el snapshot e informes de esta ejecución y se conserva 30 días. La cobertura de este apartado es histórica; para el dato actual revisa `dist/prices.json` y su `runUrl`.
+
+Los precios se publicaron en `main`. El despliegue efectivo del dominio de Netlify no se comprobó desde esta ejecución; debe consumir `dist` desde esa rama.
