@@ -42,11 +42,13 @@ def page_block(status, title, visible_text=''):
     return None
 
 
-READY = r'''pattern => {
+READY = r'''({pattern, isProduct}) => {
   const path = new RegExp(pattern);
-  if ([...document.querySelectorAll('a[href]')].some(a => path.test(new URL(a.href, location.href).pathname))) return true;
   if ([...document.querySelectorAll('script[type="application/ld+json"]')].some(s => /"offers"\s*:/.test(s.textContent))) return true;
-  return !!document.querySelector('meta[property="product:price:amount"], [itemprop="price"]');
+  if (document.querySelector('meta[property="product:price:amount"], [itemprop="price"]')) return true;
+  // Los enlaces a productos relacionados pueden aparecer antes del precio
+  // de la ficha actual. Solo sirven como señal de carga en una búsqueda.
+  return !isProduct && [...document.querySelectorAll('a[href]')].some(a => path.test(new URL(a.href, location.href).pathname));
 }'''
 
 
@@ -167,7 +169,9 @@ class BrowserClient(PublicClient):
             if status and status >= 400:
                 raise PriceError('http_' + str(status), 'La tienda devolvió un error al cargar la página.')
             try:
-                self.page.wait_for_function(READY, arg=self.store['product_path_pattern'], timeout=self.options.get('waitMilliseconds', 12000))
+                self.page.wait_for_function(READY, arg={'pattern': self.store['product_path_pattern'],
+                    'isProduct': bool(re.search(self.store['product_path_pattern'], urlsplit(self.page.url).path))},
+                    timeout=self.options.get('waitMilliseconds', 12000))
             except Exception:
                 # Se inspecciona lo que sí cargó; un timeout no inventa datos.
                 pass

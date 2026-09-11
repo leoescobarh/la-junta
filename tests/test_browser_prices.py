@@ -74,7 +74,7 @@ class BrowserPolicyTests(unittest.TestCase):
 class ChromiumIntegrationTests(unittest.TestCase):
     def test_javascript_product_is_rendered_and_extracted(self):
         product = {'@type': 'Product', 'name': 'Mayonesa Prueba 800 g', 'offers': {'price': 1234, 'priceCurrency': 'CLP'}}
-        page = '<html><title>Ficha de prueba</title><body><script>setTimeout(() => {const s=document.createElement("script");s.type="application/ld+json";s.textContent=' + json.dumps(json.dumps(product)) + ';document.body.appendChild(s)}, 150)</script></body></html>'
+        page = '<html><title>Ficha de prueba</title><body><a href="/product/relacionado">Otro producto</a><script>setTimeout(() => {const s=document.createElement("script");s.type="application/ld+json";s.textContent=' + json.dumps(json.dumps(product)) + ';document.body.appendChild(s)}, 150)</script></body></html>'
         client = BrowserClient({'unimarc': STORE}, delay=1)
         try:
             client._ensure_browser()

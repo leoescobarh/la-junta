@@ -1348,7 +1348,7 @@
             "480"
           ],
           "expected_pattern": "\\b8\\s*un",
-          "query": "Pan Hot Dog Castaño 480 g 8 un."
+          "query": "pan hot dog castaño"
         },
         {
           "ingredient": "vienesa",
@@ -1360,7 +1360,7 @@
             "san jorge"
           ],
           "expected_pattern": "\\b20\\s*un",
-          "query": "Salchichas San Jorge 1 kg 20 un."
+          "query": "salchicha san jorge"
         },
         {
           "ingredient": "mayo",
@@ -1386,7 +1386,7 @@
             "gran seleccion"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg"
+          "query": "arroz tucapel"
         },
         {
           "ingredient": "pasta",
@@ -1398,7 +1398,7 @@
             "carozzi"
           ],
           "expected_pattern": "\\b400\\s*g\\b",
-          "query": "Pasta Spaghetti N°5 Carozzi 400 g"
+          "query": "spaghetti carozzi"
         },
         {
           "ingredient": "tomate",
