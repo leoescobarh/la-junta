@@ -8,7 +8,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'pricing'))
 from browser_client import BrowserClient, page_block, public_resource, report_url
-from sync_prices import parse_page, refresh_product, fingerprint, PriceError, AccessBlocked
+from sync_prices import parse_page, refresh_product, fingerprint, verify_name, measured_pack, read_config, PriceError, AccessBlocked
 
 STORE = {'origin': 'https://www.unimarc.cl', 'allowed_hosts': ['www.unimarc.cl'], 'currency': 'CLP',
          'vtex': False, 'product_path_pattern': '/product/', 'browser': {'enabled': True, 'waitMilliseconds': 3000}}
@@ -17,6 +17,23 @@ TARGET = {'ingredient': 'mayo', 'expected_terms': ['mayonesa', 'prueba'], 'expec
 
 
 class BrowserPolicyTests(unittest.TestCase):
+    def test_fixed_weight_does_not_match_the_end_of_a_decimal(self):
+        target = {'expected_terms': ['lomo'], 'expected_pattern': r'\b1\s*kg\b'}
+        with self.assertRaises(PriceError):
+            verify_name('Lomo vetado 1.1 kg', target)
+        verify_name('Lomo vetado 1 kg', target)
+
+    def test_catalog_rejects_prepared_food_and_uses_the_declared_beef_weight(self):
+        config = read_config(Path(__file__).resolve().parents[1] / 'pricing/sources.json')
+        for store in config['stores'].values():
+            targets = {p['ingredient']: p for p in store['products']}
+            with self.assertRaises(PriceError):
+                verify_name('pollo asado + papas fritas 250 g elaboración propia', targets['papasChips'])
+            verify_name('Papas Fritas Artesanal Sal de Mar 250 g', targets['papasChips'])
+            name = 'lomo vetado vacuno bagual negro al vacío 1.1 kg'
+            verify_name(name, targets['vacuno'])
+            self.assertEqual(measured_pack(name, targets['vacuno']), 1.1)
+
     def test_stops_on_blocks_without_treating_an_ordinary_captcha_script_as_a_block(self):
         self.assertEqual(page_block(403, 'Tienda').code, 'http_403')
         self.assertEqual(page_block(200, 'Just a moment...').code, 'challenge')

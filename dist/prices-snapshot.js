@@ -2888,10 +2888,14 @@ globalThis.JuntaPriceSnapshot = {
         "vacuno": {
           "ingredientId": "vacuno",
           "productUrl": "https://www.unimarc.cl/product/lomo-vetado-porc-vac-b-n-cat-v-kg",
+          "productName": "lomo vetado vacuno bagual negro al vacío 1.1 kg",
           "pack": 1,
           "unit": "kg",
-          "fingerprint": "8356fc7c3bf54f9bf6fe8d95",
+          "fingerprint": "64caf6ce013eb40d0a5af08f",
           "checkedAt": "2026-09-11T13:41:34Z",
+          "status": "error",
+          "error": "configuration_changed",
+          "message": "Resultado retirado al revisar el producto y su formato; se verificará en la próxima consulta.",
           "attempts": [
             {
               "source": "html-search",
@@ -2921,15 +2925,12 @@ globalThis.JuntaPriceSnapshot = {
             {
               "source": "html-search",
               "status": "ok"
+            },
+            {
+              "source": "validation-review",
+              "status": "configuration_changed"
             }
-          ],
-          "price": 25289,
-          "currency": "CLP",
-          "productName": "lomo vetado vacuno bagual negro al vacío 1.1 kg",
-          "available": true,
-          "source": "browser-jsonld",
-          "status": "ok",
-          "fetchedAt": "2026-09-11T13:41:34Z"
+          ]
         },
         "pollo": {
           "ingredientId": "pollo",
@@ -3142,11 +3143,15 @@ globalThis.JuntaPriceSnapshot = {
         },
         "papasChips": {
           "ingredientId": "papasChips",
-          "productUrl": "https://www.unimarc.cl/product/pollo-asado-papas-fritas-elab-prop",
+          "productUrl": null,
+          "productName": "pollo asado + papas fritas 250 g elaboración propia",
           "pack": 0.25,
           "unit": "kg",
-          "fingerprint": "5b39d1b258792f60e7eba010",
+          "fingerprint": "b255dffe95ed58a1b69f707f",
           "checkedAt": "2026-09-11T13:43:00Z",
+          "status": "error",
+          "error": "configuration_changed",
+          "message": "Resultado retirado al revisar el producto y su formato; se verificará en la próxima consulta.",
           "attempts": [
             {
               "source": "html-search",
@@ -3156,15 +3161,12 @@ globalThis.JuntaPriceSnapshot = {
             {
               "source": "html-search",
               "status": "ok"
+            },
+            {
+              "source": "validation-review",
+              "status": "configuration_changed"
             }
-          ],
-          "price": 10780,
-          "currency": "CLP",
-          "productName": "pollo asado + papas fritas 250 g elaboración propia",
-          "available": true,
-          "source": "browser-jsonld",
-          "status": "ok",
-          "fetchedAt": "2026-09-11T13:43:00Z"
+          ]
         },
         "nachos": {
           "ingredientId": "nachos",

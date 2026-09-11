@@ -70,7 +70,9 @@ def verify_name(name, target):
     if not name or not all(normalized(term) in text for term in target['expected_terms']):
         raise PriceError('product_mismatch', 'El producto o su formato no coincide con la ficha configurada.')
     pattern = target.get('expected_pattern')
-    if pattern and not re.search(pattern, text, re.I):
+    # Un límite de palabra también coincide después de un decimal: "1 kg"
+    # no debe aceptar el último 1 de "1.1 kg" ni "250 g" de "0.250 g".
+    if pattern and not re.search(r'(?<![\d.,])(?:' + pattern + ')', text, re.I):
         raise PriceError('product_mismatch', 'Cambió el formato del producto; requiere revisión.')
     if target.get('name_pattern') and not re.search(target['name_pattern'], text, re.I):
         raise PriceError('product_mismatch', 'La categoría del producto no coincide con el ingrediente.')

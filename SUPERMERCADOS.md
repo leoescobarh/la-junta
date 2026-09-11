@@ -16,7 +16,7 @@ El presupuesto compara el costo de cubrir la cantidad faltante después de desco
 
 El navegador se ejecuta en GitHub Actions, con una sesión anónima nueva por tienda. Espera contenido cargado mediante JavaScript. Puede descubrir enlaces desde el HTML, JSON-LD, Next.js y respuestas JSON públicas observadas en los dominios de la tienda; después verifica el precio en la ficha concreta. No consulta supermercados desde el navegador del visitante.
 
-Se inspeccionan hasta cinco candidatos por búsqueda y se exige coincidencia de producto, presentación y moneda CLP. No se toman cuotas, mínimos de AggregateOffer ni promociones identificadas como condicionadas. El catálogo actual usa formatos explícitos. El modo opcional `measure_from_name` permite otras presentaciones solo cuando su cantidad es inequívoca; no está activado en los objetivos iniciales.
+Se inspeccionan hasta cinco candidatos por búsqueda y se exige coincidencia de producto, presentación y moneda CLP. No se toman cuotas, mínimos de AggregateOffer ni promociones identificadas como condicionadas. El catálogo usa formatos explícitos. Para lomo vetado, `measure_from_name` obtiene el peso de la ficha (entre 0,25 y 3 kg) y rechaza medidas ambiguas: una pieza de 1,1 kg se compara como 1,1 kg. Las papas chips excluyen platos preparados y combos.
 
 Las cinco cadenas tienen 23 ingredientes configurados cada una. Los demás ingredientes de la calculadora mantienen estimaciones identificadas mientras no se configuren fuentes. Este servicio no es un rastreo completo de cada supermercado ni de todas las cadenas de Chile. Las páginas pueden cambiar o impedir el acceso; instalar un navegador no garantiza eludir esas limitaciones.
 

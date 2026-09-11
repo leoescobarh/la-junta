@@ -108,15 +108,27 @@
         },
         {
           "ingredient": "vacuno",
-          "label": "Lomo vetado vacuno 1 kg",
+          "label": "Lomo vetado vacuno · formato de la ficha",
           "unit": "kg",
           "pack": 1,
           "expected_terms": [
             "lomo",
             "vetado"
           ],
-          "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Lomo vetado vacuno 1 kg"
+          "expected_pattern": "\\b\\d+(?:[.,]\\d+)?\\s*kg\\b",
+          "query": "Lomo vetado vacuno 1 kg",
+          "measure_from_name": true,
+          "pack_range": [
+            0.25,
+            3
+          ],
+          "excluded_terms": [
+            "cerdo",
+            "pollo",
+            "pavo",
+            "hamburguesa",
+            "molida"
+          ]
         },
         {
           "ingredient": "pollo",
@@ -232,7 +244,17 @@
             "fritas"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Papas fritas 250 g"
+          "query": "Papas fritas 250 g",
+          "name_pattern": "^papas?\\s+(?:fritas|chips)\\b",
+          "excluded_terms": [
+            "pollo",
+            "combo",
+            "elaboracion propia",
+            "congelad",
+            "pre-frita",
+            "prefrita",
+            "baston"
+          ]
         },
         {
           "ingredient": "nachos",
@@ -414,15 +436,27 @@
         },
         {
           "ingredient": "vacuno",
-          "label": "Lomo vetado vacuno 1 kg",
+          "label": "Lomo vetado vacuno · formato de la ficha",
           "unit": "kg",
           "pack": 1,
           "expected_terms": [
             "lomo",
             "vetado"
           ],
-          "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Lomo vetado vacuno 1 kg"
+          "expected_pattern": "\\b\\d+(?:[.,]\\d+)?\\s*kg\\b",
+          "query": "Lomo vetado vacuno 1 kg",
+          "measure_from_name": true,
+          "pack_range": [
+            0.25,
+            3
+          ],
+          "excluded_terms": [
+            "cerdo",
+            "pollo",
+            "pavo",
+            "hamburguesa",
+            "molida"
+          ]
         },
         {
           "ingredient": "pollo",
@@ -538,7 +572,17 @@
             "fritas"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Papas fritas 250 g"
+          "query": "Papas fritas 250 g",
+          "name_pattern": "^papas?\\s+(?:fritas|chips)\\b",
+          "excluded_terms": [
+            "pollo",
+            "combo",
+            "elaboracion propia",
+            "congelad",
+            "pre-frita",
+            "prefrita",
+            "baston"
+          ]
         },
         {
           "ingredient": "nachos",
@@ -719,15 +763,27 @@
         },
         {
           "ingredient": "vacuno",
-          "label": "Lomo vetado vacuno 1 kg",
+          "label": "Lomo vetado vacuno · formato de la ficha",
           "unit": "kg",
           "pack": 1,
           "expected_terms": [
             "lomo",
             "vetado"
           ],
-          "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Lomo vetado vacuno 1 kg"
+          "expected_pattern": "\\b\\d+(?:[.,]\\d+)?\\s*kg\\b",
+          "query": "Lomo vetado vacuno 1 kg",
+          "measure_from_name": true,
+          "pack_range": [
+            0.25,
+            3
+          ],
+          "excluded_terms": [
+            "cerdo",
+            "pollo",
+            "pavo",
+            "hamburguesa",
+            "molida"
+          ]
         },
         {
           "ingredient": "pollo",
@@ -843,7 +899,17 @@
             "fritas"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Papas fritas 250 g"
+          "query": "Papas fritas 250 g",
+          "name_pattern": "^papas?\\s+(?:fritas|chips)\\b",
+          "excluded_terms": [
+            "pollo",
+            "combo",
+            "elaboracion propia",
+            "congelad",
+            "pre-frita",
+            "prefrita",
+            "baston"
+          ]
         },
         {
           "ingredient": "nachos",
@@ -1025,15 +1091,27 @@
         },
         {
           "ingredient": "vacuno",
-          "label": "Lomo vetado vacuno 1 kg",
+          "label": "Lomo vetado vacuno · formato de la ficha",
           "unit": "kg",
           "pack": 1,
           "expected_terms": [
             "lomo",
             "vetado"
           ],
-          "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Lomo vetado vacuno 1 kg"
+          "expected_pattern": "\\b\\d+(?:[.,]\\d+)?\\s*kg\\b",
+          "query": "Lomo vetado vacuno 1 kg",
+          "measure_from_name": true,
+          "pack_range": [
+            0.25,
+            3
+          ],
+          "excluded_terms": [
+            "cerdo",
+            "pollo",
+            "pavo",
+            "hamburguesa",
+            "molida"
+          ]
         },
         {
           "ingredient": "pollo",
@@ -1149,7 +1227,17 @@
             "fritas"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Papas fritas 250 g"
+          "query": "Papas fritas 250 g",
+          "name_pattern": "^papas?\\s+(?:fritas|chips)\\b",
+          "excluded_terms": [
+            "pollo",
+            "combo",
+            "elaboracion propia",
+            "congelad",
+            "pre-frita",
+            "prefrita",
+            "baston"
+          ]
         },
         {
           "ingredient": "nachos",
@@ -1337,15 +1425,27 @@
         },
         {
           "ingredient": "vacuno",
-          "label": "Lomo vetado vacuno 1 kg",
+          "label": "Lomo vetado vacuno · formato de la ficha",
           "unit": "kg",
           "pack": 1,
           "expected_terms": [
             "lomo",
             "vetado"
           ],
-          "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Lomo vetado vacuno 1 kg"
+          "expected_pattern": "\\b\\d+(?:[.,]\\d+)?\\s*kg\\b",
+          "query": "Lomo vetado vacuno 1 kg",
+          "measure_from_name": true,
+          "pack_range": [
+            0.25,
+            3
+          ],
+          "excluded_terms": [
+            "cerdo",
+            "pollo",
+            "pavo",
+            "hamburguesa",
+            "molida"
+          ]
         },
         {
           "ingredient": "pollo",
@@ -1461,7 +1561,17 @@
             "fritas"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Papas fritas 250 g"
+          "query": "Papas fritas 250 g",
+          "name_pattern": "^papas?\\s+(?:fritas|chips)\\b",
+          "excluded_terms": [
+            "pollo",
+            "combo",
+            "elaboracion propia",
+            "congelad",
+            "pre-frita",
+            "prefrita",
+            "baston"
+          ]
         },
         {
           "ingredient": "nachos",
