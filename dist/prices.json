@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-12T10:57:46Z",
+  "generatedAt": "2026-09-12T15:38:19Z",
   "maxAgeHours": 24,
   "stores": {
     "jumbo": {
@@ -8,7 +8,7 @@
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
       "engine": "http",
-      "checkedAt": "2026-09-12T10:57:46Z",
+      "checkedAt": "2026-09-12T15:38:19Z",
       "configured": 23,
       "status": "partial",
       "products": {
@@ -18,7 +18,7 @@
           "pack": 8,
           "unit": "un",
           "fingerprint": "f4945c1e9097aeb9837807f5",
-          "checkedAt": "2026-09-12T10:57:46Z",
+          "checkedAt": "2026-09-12T15:38:19Z",
           "attempts": [
             {
               "source": "vtex",
@@ -38,7 +38,7 @@
             "unit": "un",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:49:50Z",
+            "fetchedAt": "2026-09-12T10:57:46Z",
             "fingerprint": "f4945c1e9097aeb9837807f5"
           },
           "price": 2530,
@@ -47,7 +47,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:57:46Z"
+          "fetchedAt": "2026-09-12T15:38:19Z"
         },
         "vienesa": {
           "ingredientId": "vienesa",
@@ -55,7 +55,7 @@
           "pack": 20,
           "unit": "un",
           "fingerprint": "6ec3cb245e0666579194abf4",
-          "checkedAt": "2026-09-12T10:57:51Z",
+          "checkedAt": "2026-09-12T15:38:25Z",
           "attempts": [
             {
               "source": "vtex",
@@ -75,7 +75,7 @@
             "unit": "un",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:49:55Z",
+            "fetchedAt": "2026-09-12T10:57:51Z",
             "fingerprint": "6ec3cb245e0666579194abf4"
           },
           "price": 4150,
@@ -84,7 +84,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:57:51Z"
+          "fetchedAt": "2026-09-12T15:38:25Z"
         },
         "mayo": {
           "ingredientId": "mayo",
@@ -92,7 +92,7 @@
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "769811c49c55ebd7528a058b",
-          "checkedAt": "2026-09-12T10:57:55Z",
+          "checkedAt": "2026-09-12T15:38:29Z",
           "attempts": [
             {
               "source": "vtex",
@@ -112,7 +112,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:01Z",
+            "fetchedAt": "2026-09-12T10:57:55Z",
             "fingerprint": "769811c49c55ebd7528a058b"
           },
           "price": 3530,
@@ -121,7 +121,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:57:55Z"
+          "fetchedAt": "2026-09-12T15:38:29Z"
         },
         "arroz": {
           "ingredientId": "arroz",
@@ -129,7 +129,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "4e33da3179e18384e64aa440",
-          "checkedAt": "2026-09-12T10:57:59Z",
+          "checkedAt": "2026-09-12T15:38:33Z",
           "attempts": [
             {
               "source": "vtex",
@@ -149,7 +149,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:04Z",
+            "fetchedAt": "2026-09-12T10:57:59Z",
             "fingerprint": "4e33da3179e18384e64aa440"
           },
           "price": 1790,
@@ -158,7 +158,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:57:59Z"
+          "fetchedAt": "2026-09-12T15:38:33Z"
         },
         "pasta": {
           "ingredientId": "pasta",
@@ -166,7 +166,7 @@
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "69e887450d3bcf53916f31bd",
-          "checkedAt": "2026-09-12T10:58:04Z",
+          "checkedAt": "2026-09-12T15:38:37Z",
           "attempts": [
             {
               "source": "vtex",
@@ -186,7 +186,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:10Z",
+            "fetchedAt": "2026-09-12T10:58:04Z",
             "fingerprint": "69e887450d3bcf53916f31bd"
           },
           "price": 1090,
@@ -195,7 +195,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:04Z"
+          "fetchedAt": "2026-09-12T15:38:37Z"
         },
         "tomate": {
           "ingredientId": "tomate",
@@ -203,7 +203,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e3cca02f81031920d077665b",
-          "checkedAt": "2026-09-12T10:58:08Z",
+          "checkedAt": "2026-09-12T15:38:42Z",
           "attempts": [
             {
               "source": "known-product",
@@ -220,7 +220,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:15Z",
+            "fetchedAt": "2026-09-12T10:58:08Z",
             "fingerprint": "e3cca02f81031920d077665b"
           },
           "price": 1990,
@@ -229,7 +229,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:08Z"
+          "fetchedAt": "2026-09-12T15:38:42Z"
         },
         "palta": {
           "ingredientId": "palta",
@@ -237,7 +237,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e12c67fe1743d836c8014bd2",
-          "checkedAt": "2026-09-12T10:58:09Z",
+          "checkedAt": "2026-09-12T15:38:44Z",
           "attempts": [
             {
               "source": "known-product",
@@ -254,7 +254,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:17Z",
+            "fetchedAt": "2026-09-12T10:58:09Z",
             "fingerprint": "e12c67fe1743d836c8014bd2"
           },
           "price": 3490,
@@ -263,7 +263,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:09Z"
+          "fetchedAt": "2026-09-12T15:38:44Z"
         },
         "vacuno": {
           "ingredientId": "vacuno",
@@ -271,7 +271,7 @@
           "pack": 2.2,
           "unit": "kg",
           "fingerprint": "64caf6ce013eb40d0a5af08f",
-          "checkedAt": "2026-09-12T10:58:12Z",
+          "checkedAt": "2026-09-12T15:38:45Z",
           "attempts": [
             {
               "source": "known-product",
@@ -288,7 +288,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:20Z",
+            "fetchedAt": "2026-09-12T10:58:12Z",
             "fingerprint": "64caf6ce013eb40d0a5af08f"
           },
           "price": 41778,
@@ -297,7 +297,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:12Z"
+          "fetchedAt": "2026-09-12T15:38:45Z"
         },
         "pollo": {
           "ingredientId": "pollo",
@@ -305,7 +305,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "49e52faf64f515b748ab79b7",
-          "checkedAt": "2026-09-12T10:58:13Z",
+          "checkedAt": "2026-09-12T15:38:47Z",
           "attempts": [
             {
               "source": "known-product",
@@ -322,7 +322,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:21Z",
+            "fetchedAt": "2026-09-12T10:58:13Z",
             "fingerprint": "49e52faf64f515b748ab79b7"
           },
           "price": 6990,
@@ -331,7 +331,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:13Z"
+          "fetchedAt": "2026-09-12T15:38:47Z"
         },
         "chorizo": {
           "ingredientId": "chorizo",
@@ -339,7 +339,7 @@
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "9722d59c712caa16829e98c0",
-          "checkedAt": "2026-09-12T10:58:16Z",
+          "checkedAt": "2026-09-12T15:38:49Z",
           "attempts": [
             {
               "source": "known-product",
@@ -356,7 +356,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:24Z",
+            "fetchedAt": "2026-09-12T10:58:16Z",
             "fingerprint": "9722d59c712caa16829e98c0"
           },
           "price": 4890,
@@ -365,7 +365,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:16Z"
+          "fetchedAt": "2026-09-12T15:38:49Z"
         },
         "carbon": {
           "ingredientId": "carbon",
@@ -373,7 +373,7 @@
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "checkedAt": "2026-09-12T10:58:18Z",
+          "checkedAt": "2026-09-12T15:38:52Z",
           "attempts": [
             {
               "source": "known-product",
@@ -390,7 +390,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:25Z",
+            "fetchedAt": "2026-09-12T10:58:18Z",
             "fingerprint": "8c55ecdf2d45be005ba88c4e"
           },
           "price": 4490,
@@ -399,7 +399,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:18Z"
+          "fetchedAt": "2026-09-12T15:38:52Z"
         },
         "sal": {
           "ingredientId": "sal",
@@ -407,7 +407,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ca88a1da0c9e5f09ad084b7d",
-          "checkedAt": "2026-09-12T10:58:21Z",
+          "checkedAt": "2026-09-12T15:38:54Z",
           "attempts": [
             {
               "source": "known-product",
@@ -424,7 +424,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:28Z",
+            "fetchedAt": "2026-09-12T10:58:21Z",
             "fingerprint": "ca88a1da0c9e5f09ad084b7d"
           },
           "price": 490,
@@ -433,7 +433,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:21Z"
+          "fetchedAt": "2026-09-12T15:38:54Z"
         },
         "queso": {
           "ingredientId": "queso",
@@ -441,7 +441,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-12T10:58:23Z",
+          "checkedAt": "2026-09-12T15:38:55Z",
           "attempts": [
             {
               "source": "known-product",
@@ -458,7 +458,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:30Z",
+            "fetchedAt": "2026-09-12T10:58:23Z",
             "fingerprint": "ed3aeb3e30da066b7d2b1a6b"
           },
           "price": 3150,
@@ -467,7 +467,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:23Z"
+          "fetchedAt": "2026-09-12T15:38:55Z"
         },
         "jamon": {
           "ingredientId": "jamon",
@@ -475,7 +475,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "d3828a2bab61d49d21e97f53",
-          "checkedAt": "2026-09-12T10:58:25Z",
+          "checkedAt": "2026-09-12T15:38:59Z",
           "attempts": [
             {
               "source": "known-product",
@@ -492,7 +492,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:32Z",
+            "fetchedAt": "2026-09-12T10:58:25Z",
             "fingerprint": "d3828a2bab61d49d21e97f53"
           },
           "price": 3450,
@@ -501,7 +501,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:25Z"
+          "fetchedAt": "2026-09-12T15:38:59Z"
         },
         "ketchup": {
           "ingredientId": "ketchup",
@@ -509,7 +509,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "e62b51deaa3779be372bc949",
-          "checkedAt": "2026-09-12T10:58:27Z",
+          "checkedAt": "2026-09-12T15:39:01Z",
           "attempts": [
             {
               "source": "known-product",
@@ -526,7 +526,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:34Z",
+            "fetchedAt": "2026-09-12T10:58:27Z",
             "fingerprint": "e62b51deaa3779be372bc949"
           },
           "price": 2010,
@@ -535,7 +535,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:27Z"
+          "fetchedAt": "2026-09-12T15:39:01Z"
         },
         "mostaza": {
           "ingredientId": "mostaza",
@@ -543,7 +543,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "checkedAt": "2026-09-12T10:58:29Z",
+          "checkedAt": "2026-09-12T15:39:03Z",
           "attempts": [
             {
               "source": "known-product",
@@ -560,7 +560,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:36Z",
+            "fetchedAt": "2026-09-12T10:58:29Z",
             "fingerprint": "ca5e5ba0fbed1363c6a89235"
           },
           "price": 1530,
@@ -569,7 +569,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:29Z"
+          "fetchedAt": "2026-09-12T15:39:03Z"
         },
         "papasChips": {
           "ingredientId": "papasChips",
@@ -577,7 +577,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "b255dffe95ed58a1b69f707f",
-          "checkedAt": "2026-09-12T10:58:32Z",
+          "checkedAt": "2026-09-12T15:39:05Z",
           "attempts": [
             {
               "source": "known-product",
@@ -594,7 +594,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:38Z",
+            "fetchedAt": "2026-09-12T10:58:32Z",
             "fingerprint": "b255dffe95ed58a1b69f707f"
           },
           "price": 3040,
@@ -603,7 +603,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:32Z"
+          "fetchedAt": "2026-09-12T15:39:05Z"
         },
         "nachos": {
           "ingredientId": "nachos",
@@ -611,7 +611,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-12T10:58:34Z",
+          "checkedAt": "2026-09-12T15:39:07Z",
           "attempts": [
             {
               "source": "vtex-search",
@@ -637,7 +637,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-12T10:58:37Z",
+          "checkedAt": "2026-09-12T15:39:10Z",
           "attempts": [
             {
               "source": "known-product",
@@ -654,7 +654,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:46Z",
+            "fetchedAt": "2026-09-12T10:58:37Z",
             "fingerprint": "2eb7e0dcf758ca5594fd9ec4"
           },
           "price": 2790,
@@ -663,7 +663,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:37Z"
+          "fetchedAt": "2026-09-12T15:39:10Z"
         },
         "galletaSalada": {
           "ingredientId": "galletaSalada",
@@ -671,7 +671,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-12T10:58:39Z",
+          "checkedAt": "2026-09-12T15:39:13Z",
           "attempts": [
             {
               "source": "known-product",
@@ -688,7 +688,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:49Z",
+            "fetchedAt": "2026-09-12T10:58:39Z",
             "fingerprint": "76bd36626cdfd104e44e39f6"
           },
           "price": 1190,
@@ -697,7 +697,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:39Z"
+          "fetchedAt": "2026-09-12T15:39:13Z"
         },
         "bebida": {
           "ingredientId": "bebida",
@@ -705,7 +705,7 @@
           "pack": 2,
           "unit": "L",
           "fingerprint": "e368631ac0b88a81f6f9563b",
-          "checkedAt": "2026-09-12T10:58:42Z",
+          "checkedAt": "2026-09-12T15:39:15Z",
           "attempts": [
             {
               "source": "known-product",
@@ -722,7 +722,7 @@
             "unit": "L",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:52Z",
+            "fetchedAt": "2026-09-12T10:58:42Z",
             "fingerprint": "e368631ac0b88a81f6f9563b"
           },
           "price": 2590,
@@ -731,7 +731,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:42Z"
+          "fetchedAt": "2026-09-12T15:39:15Z"
         },
         "agua": {
           "ingredientId": "agua",
@@ -739,7 +739,7 @@
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-12T10:58:43Z",
+          "checkedAt": "2026-09-12T15:39:18Z",
           "attempts": [
             {
               "source": "known-product",
@@ -756,7 +756,7 @@
             "unit": "L",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:54Z",
+            "fetchedAt": "2026-09-12T10:58:43Z",
             "fingerprint": "3bf2d1397844a53378224352"
           },
           "price": 1590,
@@ -765,7 +765,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:43Z"
+          "fetchedAt": "2026-09-12T15:39:18Z"
         },
         "hielo": {
           "ingredientId": "hielo",
@@ -773,7 +773,7 @@
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-12T10:58:45Z",
+          "checkedAt": "2026-09-12T15:39:20Z",
           "attempts": [
             {
               "source": "known-product",
@@ -787,7 +787,7 @@
           "available": false,
           "source": "html-jsonld",
           "status": "unavailable",
-          "fetchedAt": "2026-09-12T10:58:45Z"
+          "fetchedAt": "2026-09-12T15:39:20Z"
         }
       }
     },
@@ -796,7 +796,7 @@
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
       "engine": "http",
-      "checkedAt": "2026-09-12T10:57:46Z",
+      "checkedAt": "2026-09-12T15:38:19Z",
       "configured": 23,
       "status": "partial",
       "products": {
@@ -806,7 +806,7 @@
           "pack": 8,
           "unit": "un",
           "fingerprint": "11378b10dcf592f4cafb4599",
-          "checkedAt": "2026-09-12T10:57:46Z",
+          "checkedAt": "2026-09-12T15:38:19Z",
           "attempts": [
             {
               "source": "vtex",
@@ -835,7 +835,7 @@
           "available": false,
           "source": "html-jsonld",
           "status": "unavailable",
-          "fetchedAt": "2026-09-12T10:57:46Z"
+          "fetchedAt": "2026-09-12T15:38:19Z"
         },
         "vienesa": {
           "ingredientId": "vienesa",
@@ -843,7 +843,7 @@
           "pack": 20,
           "unit": "un",
           "fingerprint": "5da6c1d901c617cccecb6b76",
-          "checkedAt": "2026-09-12T10:57:50Z",
+          "checkedAt": "2026-09-12T15:38:24Z",
           "attempts": [
             {
               "source": "vtex",
@@ -863,7 +863,7 @@
             "unit": "un",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:49:54Z",
+            "fetchedAt": "2026-09-12T10:57:50Z",
             "fingerprint": "5da6c1d901c617cccecb6b76"
           },
           "price": 3590,
@@ -872,7 +872,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:57:50Z"
+          "fetchedAt": "2026-09-12T15:38:24Z"
         },
         "mayo": {
           "ingredientId": "mayo",
@@ -880,7 +880,7 @@
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "82efdfcb029f80a4cbffa6fc",
-          "checkedAt": "2026-09-12T10:57:54Z",
+          "checkedAt": "2026-09-12T15:38:29Z",
           "attempts": [
             {
               "source": "vtex",
@@ -900,7 +900,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:49:58Z",
+            "fetchedAt": "2026-09-12T10:57:54Z",
             "fingerprint": "82efdfcb029f80a4cbffa6fc"
           },
           "price": 3290,
@@ -909,7 +909,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:57:54Z"
+          "fetchedAt": "2026-09-12T15:38:29Z"
         },
         "arroz": {
           "ingredientId": "arroz",
@@ -917,7 +917,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "413a78522433b815fd706bea",
-          "checkedAt": "2026-09-12T10:57:58Z",
+          "checkedAt": "2026-09-12T15:38:32Z",
           "attempts": [
             {
               "source": "vtex",
@@ -937,7 +937,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:02Z",
+            "fetchedAt": "2026-09-12T10:57:58Z",
             "fingerprint": "413a78522433b815fd706bea"
           },
           "price": 1790,
@@ -946,7 +946,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:57:58Z"
+          "fetchedAt": "2026-09-12T15:38:32Z"
         },
         "pasta": {
           "ingredientId": "pasta",
@@ -954,7 +954,7 @@
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "a9718cb484a4d00492fc86d0",
-          "checkedAt": "2026-09-12T10:58:02Z",
+          "checkedAt": "2026-09-12T15:38:36Z",
           "attempts": [
             {
               "source": "vtex",
@@ -974,7 +974,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:06Z",
+            "fetchedAt": "2026-09-12T10:58:02Z",
             "fingerprint": "a9718cb484a4d00492fc86d0"
           },
           "price": 1050,
@@ -983,7 +983,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:02Z"
+          "fetchedAt": "2026-09-12T15:38:36Z"
         },
         "tomate": {
           "ingredientId": "tomate",
@@ -991,7 +991,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "6d1b9755c3c40bc444e599c1",
-          "checkedAt": "2026-09-12T10:58:06Z",
+          "checkedAt": "2026-09-12T15:38:40Z",
           "attempts": [
             {
               "source": "vtex",
@@ -1011,7 +1011,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:10Z",
+            "fetchedAt": "2026-09-12T10:58:06Z",
             "fingerprint": "6d1b9755c3c40bc444e599c1"
           },
           "price": 1990,
@@ -1020,7 +1020,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:06Z"
+          "fetchedAt": "2026-09-12T15:38:40Z"
         },
         "palta": {
           "ingredientId": "palta",
@@ -1028,7 +1028,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "7b958ee2400a2df3a253b2c4",
-          "checkedAt": "2026-09-12T10:58:10Z",
+          "checkedAt": "2026-09-12T15:38:43Z",
           "attempts": [
             {
               "source": "vtex",
@@ -1049,7 +1049,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "64caf6ce013eb40d0a5af08f",
-          "checkedAt": "2026-09-12T10:58:14Z",
+          "checkedAt": "2026-09-12T15:38:47Z",
           "attempts": [
             {
               "source": "vtex-search",
@@ -1075,7 +1075,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e0de8ddc1c7b4fbbc1ef0a4e",
-          "checkedAt": "2026-09-12T10:58:19Z",
+          "checkedAt": "2026-09-12T15:38:54Z",
           "attempts": [
             {
               "source": "vtex",
@@ -1096,7 +1096,7 @@
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "85a43690d154ff8a13c1fab0",
-          "checkedAt": "2026-09-12T10:58:22Z",
+          "checkedAt": "2026-09-12T15:38:56Z",
           "attempts": [
             {
               "source": "vtex",
@@ -1116,7 +1116,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:26Z",
+            "fetchedAt": "2026-09-12T10:58:22Z",
             "fingerprint": "85a43690d154ff8a13c1fab0"
           },
           "price": 4890,
@@ -1125,7 +1125,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:22Z"
+          "fetchedAt": "2026-09-12T15:38:56Z"
         },
         "carbon": {
           "ingredientId": "carbon",
@@ -1133,7 +1133,7 @@
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "1aef129be6f8715b4c70ad78",
-          "checkedAt": "2026-09-12T10:58:27Z",
+          "checkedAt": "2026-09-12T15:39:00Z",
           "attempts": [
             {
               "source": "vtex",
@@ -1154,7 +1154,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "320826d42d32a171b06c21ad",
-          "checkedAt": "2026-09-12T10:58:30Z",
+          "checkedAt": "2026-09-12T15:39:04Z",
           "attempts": [
             {
               "source": "vtex",
@@ -1175,7 +1175,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-12T10:58:34Z",
+          "checkedAt": "2026-09-12T15:39:08Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1197,7 +1197,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "a5e8eefe6f74a34440406b91",
-          "checkedAt": "2026-09-12T10:58:36Z",
+          "checkedAt": "2026-09-12T15:39:10Z",
           "attempts": [
             {
               "source": "vtex",
@@ -1217,7 +1217,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:40Z",
+            "fetchedAt": "2026-09-12T10:58:36Z",
             "fingerprint": "a5e8eefe6f74a34440406b91"
           },
           "price": 3250,
@@ -1226,7 +1226,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:36Z"
+          "fetchedAt": "2026-09-12T15:39:10Z"
         },
         "ketchup": {
           "ingredientId": "ketchup",
@@ -1234,7 +1234,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "57a26ddfdd8dd04e6742cbdd",
-          "checkedAt": "2026-09-12T10:58:40Z",
+          "checkedAt": "2026-09-12T15:39:14Z",
           "attempts": [
             {
               "source": "vtex",
@@ -1254,7 +1254,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:44Z",
+            "fetchedAt": "2026-09-12T10:58:40Z",
             "fingerprint": "57a26ddfdd8dd04e6742cbdd"
           },
           "price": 1920,
@@ -1263,7 +1263,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:40Z"
+          "fetchedAt": "2026-09-12T15:39:14Z"
         },
         "mostaza": {
           "ingredientId": "mostaza",
@@ -1271,7 +1271,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "48fac4a8da5f8e2306e985fb",
-          "checkedAt": "2026-09-12T10:58:44Z",
+          "checkedAt": "2026-09-12T15:39:18Z",
           "attempts": [
             {
               "source": "vtex",
@@ -1292,7 +1292,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "b255dffe95ed58a1b69f707f",
-          "checkedAt": "2026-09-12T10:58:48Z",
+          "checkedAt": "2026-09-12T15:39:22Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1314,7 +1314,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-12T10:58:50Z",
+          "checkedAt": "2026-09-12T15:39:24Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1336,7 +1336,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-12T10:58:53Z",
+          "checkedAt": "2026-09-12T15:39:26Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1358,7 +1358,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-12T10:58:55Z",
+          "checkedAt": "2026-09-12T15:39:28Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1380,7 +1380,7 @@
           "pack": 2,
           "unit": "L",
           "fingerprint": "e368631ac0b88a81f6f9563b",
-          "checkedAt": "2026-09-12T10:58:56Z",
+          "checkedAt": "2026-09-12T15:39:30Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1402,7 +1402,7 @@
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-12T10:58:58Z",
+          "checkedAt": "2026-09-12T15:39:32Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1424,16 +1424,21 @@
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-12T10:59:01Z",
+          "checkedAt": "2026-09-12T15:39:35Z",
           "attempts": [
             {
+              "source": "html-search",
+              "url": "https://www.santaisabel.cl/busqueda?ft=Hielo%202%20kg",
+              "candidates": 0
+            },
+            {
               "source": "sync",
-              "status": "http_404"
+              "status": "no_matching_public_product"
             }
           ],
           "status": "error",
-          "error": "http_404",
-          "message": "La tienda respondió HTTP 404."
+          "error": "no_matching_public_product",
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
         }
       }
     },
@@ -1442,7 +1447,7 @@
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
       "engine": "http",
-      "checkedAt": "2026-09-12T10:57:46Z",
+      "checkedAt": "2026-09-12T15:38:19Z",
       "configured": 23,
       "status": "partial",
       "products": {
@@ -1452,7 +1457,7 @@
           "pack": 8,
           "unit": "un",
           "fingerprint": "b2bb8f210bf3a2668b7faaa3",
-          "checkedAt": "2026-09-12T10:57:46Z",
+          "checkedAt": "2026-09-12T15:38:19Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1469,7 +1474,7 @@
             "unit": "un",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:49:50Z",
+            "fetchedAt": "2026-09-12T10:57:46Z",
             "fingerprint": "b2bb8f210bf3a2668b7faaa3"
           },
           "price": 2290,
@@ -1478,7 +1483,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:57:46Z"
+          "fetchedAt": "2026-09-12T15:38:19Z"
         },
         "vienesa": {
           "ingredientId": "vienesa",
@@ -1486,7 +1491,7 @@
           "pack": 20,
           "unit": "un",
           "fingerprint": "f5d31745f56805b9d25f399b",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:22Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1503,7 +1508,7 @@
             "unit": "un",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:49:53Z",
+            "fetchedAt": "2026-09-12T10:57:48Z",
             "fingerprint": "f5d31745f56805b9d25f399b"
           },
           "price": 4590,
@@ -1512,7 +1517,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:57:48Z"
+          "fetchedAt": "2026-09-12T15:38:22Z"
         },
         "mayo": {
           "ingredientId": "mayo",
@@ -1520,7 +1525,7 @@
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "fee5a640eecf8d4f821ce1df",
-          "checkedAt": "2026-09-12T10:57:51Z",
+          "checkedAt": "2026-09-12T15:38:24Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1537,7 +1542,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:49:55Z",
+            "fetchedAt": "2026-09-12T10:57:51Z",
             "fingerprint": "fee5a640eecf8d4f821ce1df"
           },
           "price": 3000,
@@ -1546,7 +1551,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:57:51Z"
+          "fetchedAt": "2026-09-12T15:38:24Z"
         },
         "arroz": {
           "ingredientId": "arroz",
@@ -1554,7 +1559,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ec5616479e8bb94a101f2b89",
-          "checkedAt": "2026-09-12T10:57:53Z",
+          "checkedAt": "2026-09-12T15:38:25Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1576,7 +1581,7 @@
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "adae243cdb659ee4ea5fff10",
-          "checkedAt": "2026-09-12T10:57:56Z",
+          "checkedAt": "2026-09-12T15:38:28Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1593,7 +1598,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:49:59Z",
+            "fetchedAt": "2026-09-12T10:57:56Z",
             "fingerprint": "adae243cdb659ee4ea5fff10"
           },
           "price": 1150,
@@ -1602,7 +1607,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:57:56Z"
+          "fetchedAt": "2026-09-12T15:38:28Z"
         },
         "tomate": {
           "ingredientId": "tomate",
@@ -1610,7 +1615,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e3cca02f81031920d077665b",
-          "checkedAt": "2026-09-12T10:57:57Z",
+          "checkedAt": "2026-09-12T15:38:30Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1619,22 +1624,22 @@
             },
             {
               "source": "html-product",
-              "url": "https://super.lider.cl/ip/panaderia-envasada/00065832541515?from=/search",
-              "status": "no_public_price"
-            },
-            {
-              "source": "html-product",
               "url": "https://super.lider.cl/ip/pastas-y-salsas/00780257501672?from=/search",
               "status": "no_public_price"
             },
             {
               "source": "html-product",
-              "url": "https://super.lider.cl/ip/panaderia-envasada/00065832541515",
+              "url": "https://super.lider.cl/ip/panaderia-envasada/00065832541515?from=/search",
               "status": "no_public_price"
             },
             {
               "source": "html-product",
               "url": "https://super.lider.cl/ip/pastas-y-salsas/00780257501672",
+              "status": "no_public_price"
+            },
+            {
+              "source": "html-product",
+              "url": "https://super.lider.cl/ip/panaderia-envasada/00065832541515",
               "status": "no_public_price"
             },
             {
@@ -1652,7 +1657,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e12c67fe1743d836c8014bd2",
-          "checkedAt": "2026-09-12T10:58:07Z",
+          "checkedAt": "2026-09-12T15:38:40Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1669,7 +1674,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:10Z",
+            "fetchedAt": "2026-09-12T10:58:07Z",
             "fingerprint": "e12c67fe1743d836c8014bd2"
           },
           "price": 4990,
@@ -1678,7 +1683,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:07Z"
+          "fetchedAt": "2026-09-12T15:38:40Z"
         },
         "vacuno": {
           "ingredientId": "vacuno",
@@ -1686,7 +1691,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "64caf6ce013eb40d0a5af08f",
-          "checkedAt": "2026-09-12T10:58:10Z",
+          "checkedAt": "2026-09-12T15:38:43Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1695,12 +1700,12 @@
             },
             {
               "source": "html-product",
-              "url": "https://super.lider.cl/ip/vacuno/00780467989190?from=/search",
+              "url": "https://super.lider.cl/ip/vacuno/00209551000000?from=/search",
               "status": "no_public_price"
             },
             {
               "source": "html-product",
-              "url": "https://super.lider.cl/ip/vacuno/00209551000000?from=/search",
+              "url": "https://super.lider.cl/ip/vacuno/00780467989190?from=/search",
               "status": "no_public_price"
             },
             {
@@ -1733,7 +1738,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "49e52faf64f515b748ab79b7",
-          "checkedAt": "2026-09-12T10:58:23Z",
+          "checkedAt": "2026-09-12T15:38:54Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1750,7 +1755,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:25Z",
+            "fetchedAt": "2026-09-12T10:58:23Z",
             "fingerprint": "49e52faf64f515b748ab79b7"
           },
           "price": 5990,
@@ -1759,7 +1764,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:23Z"
+          "fetchedAt": "2026-09-12T15:38:54Z"
         },
         "chorizo": {
           "ingredientId": "chorizo",
@@ -1767,7 +1772,7 @@
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "9722d59c712caa16829e98c0",
-          "checkedAt": "2026-09-12T10:58:25Z",
+          "checkedAt": "2026-09-12T15:38:56Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1784,7 +1789,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:28Z",
+            "fetchedAt": "2026-09-12T10:58:25Z",
             "fingerprint": "9722d59c712caa16829e98c0"
           },
           "price": 5190,
@@ -1793,7 +1798,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:25Z"
+          "fetchedAt": "2026-09-12T15:38:56Z"
         },
         "carbon": {
           "ingredientId": "carbon",
@@ -1801,7 +1806,7 @@
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "checkedAt": "2026-09-12T10:58:26Z",
+          "checkedAt": "2026-09-12T15:38:58Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1818,7 +1823,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:29Z",
+            "fetchedAt": "2026-09-12T10:58:26Z",
             "fingerprint": "8c55ecdf2d45be005ba88c4e"
           },
           "price": 4390,
@@ -1827,7 +1832,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:26Z"
+          "fetchedAt": "2026-09-12T15:38:58Z"
         },
         "sal": {
           "ingredientId": "sal",
@@ -1835,7 +1840,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ca88a1da0c9e5f09ad084b7d",
-          "checkedAt": "2026-09-12T10:58:28Z",
+          "checkedAt": "2026-09-12T15:39:01Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1852,7 +1857,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:32Z",
+            "fetchedAt": "2026-09-12T10:58:28Z",
             "fingerprint": "ca88a1da0c9e5f09ad084b7d"
           },
           "price": 970,
@@ -1861,7 +1866,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:28Z"
+          "fetchedAt": "2026-09-12T15:39:01Z"
         },
         "queso": {
           "ingredientId": "queso",
@@ -1869,7 +1874,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-12T10:58:30Z",
+          "checkedAt": "2026-09-12T15:39:03Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1886,7 +1891,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:33Z",
+            "fetchedAt": "2026-09-12T10:58:30Z",
             "fingerprint": "ed3aeb3e30da066b7d2b1a6b"
           },
           "price": 3000,
@@ -1895,7 +1900,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:30Z"
+          "fetchedAt": "2026-09-12T15:39:03Z"
         },
         "jamon": {
           "ingredientId": "jamon",
@@ -1903,7 +1908,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "d3828a2bab61d49d21e97f53",
-          "checkedAt": "2026-09-12T10:58:33Z",
+          "checkedAt": "2026-09-12T15:39:04Z",
           "attempts": [
             {
               "source": "known-product",
@@ -1920,7 +1925,7 @@
             "unit": "kg",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:50:35Z",
+            "fetchedAt": "2026-09-12T10:58:33Z",
             "fingerprint": "d3828a2bab61d49d21e97f53"
           },
           "price": 2550,
@@ -1929,7 +1934,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:33Z"
+          "fetchedAt": "2026-09-12T15:39:04Z"
         },
         "ketchup": {
           "ingredientId": "ketchup",
@@ -1937,7 +1942,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "e62b51deaa3779be372bc949",
-          "checkedAt": "2026-09-12T10:58:34Z",
+          "checkedAt": "2026-09-12T15:39:06Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1959,7 +1964,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "checkedAt": "2026-09-12T10:58:36Z",
+          "checkedAt": "2026-09-12T15:39:08Z",
           "attempts": [
             {
               "source": "html-search",
@@ -1981,7 +1986,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "b255dffe95ed58a1b69f707f",
-          "checkedAt": "2026-09-12T10:58:38Z",
+          "checkedAt": "2026-09-12T15:39:10Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2028,7 +2033,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-12T10:58:53Z",
+          "checkedAt": "2026-09-12T15:39:22Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2050,7 +2055,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-12T10:58:54Z",
+          "checkedAt": "2026-09-12T15:39:24Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2097,7 +2102,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-12T10:59:10Z",
+          "checkedAt": "2026-09-12T15:39:36Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2116,12 +2121,12 @@
             },
             {
               "source": "html-product",
-              "url": "https://super.lider.cl/ip/snacks-y-picoteo/00762220236163",
+              "url": "https://super.lider.cl/ip/snacks-y-picoteo/00780463001028",
               "status": "no_public_price"
             },
             {
               "source": "html-product",
-              "url": "https://super.lider.cl/ip/snacks-y-picoteo/00780222568908",
+              "url": "https://super.lider.cl/ip/snacks-y-picoteo/00762220172024",
               "status": "no_public_price"
             },
             {
@@ -2144,7 +2149,7 @@
           "pack": 2,
           "unit": "L",
           "fingerprint": "e368631ac0b88a81f6f9563b",
-          "checkedAt": "2026-09-12T10:59:23Z",
+          "checkedAt": "2026-09-12T15:39:48Z",
           "attempts": [
             {
               "source": "known-product",
@@ -2161,7 +2166,7 @@
             "unit": "L",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:51:20Z",
+            "fetchedAt": "2026-09-12T10:59:23Z",
             "fingerprint": "e368631ac0b88a81f6f9563b"
           },
           "price": 2000,
@@ -2170,7 +2175,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:59:23Z"
+          "fetchedAt": "2026-09-12T15:39:48Z"
         },
         "agua": {
           "ingredientId": "agua",
@@ -2178,7 +2183,7 @@
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-12T10:59:25Z",
+          "checkedAt": "2026-09-12T15:39:50Z",
           "attempts": [
             {
               "source": "known-product",
@@ -2195,7 +2200,7 @@
             "unit": "L",
             "available": true,
             "source": "html-jsonld",
-            "fetchedAt": "2026-09-12T04:51:23Z",
+            "fetchedAt": "2026-09-12T10:59:25Z",
             "fingerprint": "3bf2d1397844a53378224352"
           },
           "price": 750,
@@ -2204,7 +2209,7 @@
           "available": true,
           "source": "html-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:59:25Z"
+          "fetchedAt": "2026-09-12T15:39:50Z"
         },
         "hielo": {
           "ingredientId": "hielo",
@@ -2212,7 +2217,7 @@
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-12T10:59:26Z",
+          "checkedAt": "2026-09-12T15:39:53Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2245,7 +2250,7 @@
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
       "engine": "chromium",
-      "checkedAt": "2026-09-12T10:57:46Z",
+      "checkedAt": "2026-09-12T15:38:19Z",
       "configured": 23,
       "status": "error",
       "products": {
@@ -2255,7 +2260,7 @@
           "pack": 8,
           "unit": "un",
           "fingerprint": "b2bb8f210bf3a2668b7faaa3",
-          "checkedAt": "2026-09-12T10:57:46Z",
+          "checkedAt": "2026-09-12T15:38:19Z",
           "attempts": [
             {
               "source": "sync",
@@ -2272,7 +2277,7 @@
           "pack": 20,
           "unit": "un",
           "fingerprint": "f5d31745f56805b9d25f399b",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2289,7 +2294,7 @@
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "fee5a640eecf8d4f821ce1df",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2306,7 +2311,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ec5616479e8bb94a101f2b89",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2323,7 +2328,7 @@
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "adae243cdb659ee4ea5fff10",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2340,7 +2345,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e3cca02f81031920d077665b",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2357,7 +2362,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e12c67fe1743d836c8014bd2",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2374,7 +2379,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "64caf6ce013eb40d0a5af08f",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2391,7 +2396,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "49e52faf64f515b748ab79b7",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2408,7 +2413,7 @@
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "9722d59c712caa16829e98c0",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2425,7 +2430,7 @@
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2442,7 +2447,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ca88a1da0c9e5f09ad084b7d",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2459,7 +2464,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2476,7 +2481,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "d3828a2bab61d49d21e97f53",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2493,7 +2498,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "e62b51deaa3779be372bc949",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2510,7 +2515,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2527,7 +2532,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "b255dffe95ed58a1b69f707f",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2544,7 +2549,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2561,7 +2566,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2578,7 +2583,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2595,7 +2600,7 @@
           "pack": 2,
           "unit": "L",
           "fingerprint": "e368631ac0b88a81f6f9563b",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2612,7 +2617,7 @@
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2629,7 +2634,7 @@
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-12T10:57:48Z",
+          "checkedAt": "2026-09-12T15:38:21Z",
           "attempts": [
             {
               "source": "sync",
@@ -2647,7 +2652,7 @@
       "currency": "CLP",
       "scope": "Precio web público sin ubicación ni sesión. Productos y formatos indicados; confirmar stock, condiciones y despacho.",
       "engine": "chromium",
-      "checkedAt": "2026-09-12T10:57:46Z",
+      "checkedAt": "2026-09-12T15:38:19Z",
       "configured": 23,
       "status": "partial",
       "products": {
@@ -2657,7 +2662,7 @@
           "pack": 8,
           "unit": "un",
           "fingerprint": "6d0d8fe24d83b31205decc08",
-          "checkedAt": "2026-09-12T10:57:46Z",
+          "checkedAt": "2026-09-12T15:38:19Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2684,7 +2689,7 @@
           "pack": 20,
           "unit": "un",
           "fingerprint": "9db35644f4288be00ab0c401",
-          "checkedAt": "2026-09-12T10:57:58Z",
+          "checkedAt": "2026-09-12T15:38:32Z",
           "attempts": [
             {
               "source": "known-product",
@@ -2701,7 +2706,7 @@
             "unit": "un",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:50:02Z",
+            "fetchedAt": "2026-09-12T10:57:58Z",
             "fingerprint": "9db35644f4288be00ab0c401"
           },
           "price": 3690,
@@ -2710,7 +2715,7 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:57:58Z"
+          "fetchedAt": "2026-09-12T15:38:32Z"
         },
         "mayo": {
           "ingredientId": "mayo",
@@ -2718,7 +2723,7 @@
           "pack": 0.8,
           "unit": "kg",
           "fingerprint": "fee5a640eecf8d4f821ce1df",
-          "checkedAt": "2026-09-12T10:58:02Z",
+          "checkedAt": "2026-09-12T15:38:35Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2765,7 +2770,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "c868181ceb5ae37aa94d137c",
-          "checkedAt": "2026-09-12T10:58:26Z",
+          "checkedAt": "2026-09-12T15:39:00Z",
           "attempts": [
             {
               "source": "html-search",
@@ -2787,7 +2792,7 @@
           "pack": 0.4,
           "unit": "kg",
           "fingerprint": "8317007471c8005510ea9ed7",
-          "checkedAt": "2026-09-12T10:58:30Z",
+          "checkedAt": "2026-09-12T15:39:04Z",
           "attempts": [
             {
               "source": "known-product",
@@ -2804,7 +2809,7 @@
             "unit": "kg",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:50:34Z",
+            "fetchedAt": "2026-09-12T10:58:30Z",
             "fingerprint": "8317007471c8005510ea9ed7"
           },
           "price": 1050,
@@ -2813,7 +2818,7 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:30Z"
+          "fetchedAt": "2026-09-12T15:39:04Z"
         },
         "tomate": {
           "ingredientId": "tomate",
@@ -2821,7 +2826,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e3cca02f81031920d077665b",
-          "checkedAt": "2026-09-12T10:58:34Z",
+          "checkedAt": "2026-09-12T15:39:09Z",
           "attempts": [
             {
               "source": "known-product",
@@ -2838,7 +2843,7 @@
             "unit": "kg",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:50:37Z",
+            "fetchedAt": "2026-09-12T10:58:34Z",
             "fingerprint": "e3cca02f81031920d077665b"
           },
           "price": 1990,
@@ -2847,7 +2852,7 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:34Z"
+          "fetchedAt": "2026-09-12T15:39:09Z"
         },
         "palta": {
           "ingredientId": "palta",
@@ -2855,7 +2860,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "e12c67fe1743d836c8014bd2",
-          "checkedAt": "2026-09-12T10:58:37Z",
+          "checkedAt": "2026-09-12T15:39:12Z",
           "attempts": [
             {
               "source": "known-product",
@@ -2872,7 +2877,7 @@
             "unit": "kg",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:50:41Z",
+            "fetchedAt": "2026-09-12T10:58:37Z",
             "fingerprint": "e12c67fe1743d836c8014bd2"
           },
           "price": 4990,
@@ -2881,7 +2886,7 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:37Z"
+          "fetchedAt": "2026-09-12T15:39:12Z"
         },
         "vacuno": {
           "ingredientId": "vacuno",
@@ -2889,7 +2894,7 @@
           "pack": 1.1,
           "unit": "kg",
           "fingerprint": "64caf6ce013eb40d0a5af08f",
-          "checkedAt": "2026-09-12T10:58:40Z",
+          "checkedAt": "2026-09-12T15:39:16Z",
           "attempts": [
             {
               "source": "known-product",
@@ -2906,7 +2911,7 @@
             "unit": "kg",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:50:45Z",
+            "fetchedAt": "2026-09-12T10:58:40Z",
             "fingerprint": "64caf6ce013eb40d0a5af08f"
           },
           "price": 25289,
@@ -2915,7 +2920,7 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:40Z"
+          "fetchedAt": "2026-09-12T15:39:16Z"
         },
         "pollo": {
           "ingredientId": "pollo",
@@ -2923,7 +2928,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "49e52faf64f515b748ab79b7",
-          "checkedAt": "2026-09-12T10:58:43Z",
+          "checkedAt": "2026-09-12T15:39:19Z",
           "attempts": [
             {
               "source": "known-product",
@@ -2940,7 +2945,7 @@
             "unit": "kg",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:50:48Z",
+            "fetchedAt": "2026-09-12T10:58:43Z",
             "fingerprint": "49e52faf64f515b748ab79b7"
           },
           "price": 6490,
@@ -2949,7 +2954,7 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:43Z"
+          "fetchedAt": "2026-09-12T15:39:19Z"
         },
         "chorizo": {
           "ingredientId": "chorizo",
@@ -2957,7 +2962,7 @@
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "9722d59c712caa16829e98c0",
-          "checkedAt": "2026-09-12T10:58:46Z",
+          "checkedAt": "2026-09-12T15:39:22Z",
           "attempts": [
             {
               "source": "known-product",
@@ -2974,7 +2979,7 @@
             "unit": "kg",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:50:51Z",
+            "fetchedAt": "2026-09-12T10:58:46Z",
             "fingerprint": "9722d59c712caa16829e98c0"
           },
           "price": 4990,
@@ -2983,7 +2988,7 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:46Z"
+          "fetchedAt": "2026-09-12T15:39:22Z"
         },
         "carbon": {
           "ingredientId": "carbon",
@@ -2991,7 +2996,7 @@
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "8c55ecdf2d45be005ba88c4e",
-          "checkedAt": "2026-09-12T10:58:49Z",
+          "checkedAt": "2026-09-12T15:39:25Z",
           "attempts": [
             {
               "source": "known-product",
@@ -3008,7 +3013,7 @@
             "unit": "kg",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:50:54Z",
+            "fetchedAt": "2026-09-12T10:58:49Z",
             "fingerprint": "8c55ecdf2d45be005ba88c4e"
           },
           "price": 3590,
@@ -3017,7 +3022,7 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:49Z"
+          "fetchedAt": "2026-09-12T15:39:25Z"
         },
         "sal": {
           "ingredientId": "sal",
@@ -3025,7 +3030,7 @@
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ca88a1da0c9e5f09ad084b7d",
-          "checkedAt": "2026-09-12T10:58:53Z",
+          "checkedAt": "2026-09-12T15:39:28Z",
           "attempts": [
             {
               "source": "known-product",
@@ -3042,7 +3047,7 @@
             "unit": "kg",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:50:56Z",
+            "fetchedAt": "2026-09-12T10:58:53Z",
             "fingerprint": "ca88a1da0c9e5f09ad084b7d"
           },
           "price": 430,
@@ -3051,7 +3056,7 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:53Z"
+          "fetchedAt": "2026-09-12T15:39:28Z"
         },
         "queso": {
           "ingredientId": "queso",
@@ -3059,7 +3064,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
-          "checkedAt": "2026-09-12T10:58:56Z",
+          "checkedAt": "2026-09-12T15:39:31Z",
           "attempts": [
             {
               "source": "known-product",
@@ -3076,7 +3081,7 @@
             "unit": "kg",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:50:59Z",
+            "fetchedAt": "2026-09-12T10:58:56Z",
             "fingerprint": "ed3aeb3e30da066b7d2b1a6b"
           },
           "price": 3500,
@@ -3085,7 +3090,7 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:56Z"
+          "fetchedAt": "2026-09-12T15:39:31Z"
         },
         "jamon": {
           "ingredientId": "jamon",
@@ -3093,7 +3098,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "d3828a2bab61d49d21e97f53",
-          "checkedAt": "2026-09-12T10:58:59Z",
+          "checkedAt": "2026-09-12T15:39:34Z",
           "attempts": [
             {
               "source": "known-product",
@@ -3110,7 +3115,7 @@
             "unit": "kg",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:51:03Z",
+            "fetchedAt": "2026-09-12T10:58:59Z",
             "fingerprint": "d3828a2bab61d49d21e97f53"
           },
           "price": 2390,
@@ -3119,7 +3124,7 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:58:59Z"
+          "fetchedAt": "2026-09-12T15:39:34Z"
         },
         "ketchup": {
           "ingredientId": "ketchup",
@@ -3127,7 +3132,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "e62b51deaa3779be372bc949",
-          "checkedAt": "2026-09-12T10:59:03Z",
+          "checkedAt": "2026-09-12T15:39:37Z",
           "attempts": [
             {
               "source": "html-search",
@@ -3154,7 +3159,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ca5e5ba0fbed1363c6a89235",
-          "checkedAt": "2026-09-12T10:59:11Z",
+          "checkedAt": "2026-09-12T15:39:45Z",
           "attempts": [
             {
               "source": "known-product",
@@ -3171,7 +3176,7 @@
             "unit": "kg",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:51:14Z",
+            "fetchedAt": "2026-09-12T10:59:11Z",
             "fingerprint": "ca5e5ba0fbed1363c6a89235"
           },
           "price": 990,
@@ -3180,7 +3185,7 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:59:11Z"
+          "fetchedAt": "2026-09-12T15:39:45Z"
         },
         "papasChips": {
           "ingredientId": "papasChips",
@@ -3188,7 +3193,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "b255dffe95ed58a1b69f707f",
-          "checkedAt": "2026-09-12T10:59:15Z",
+          "checkedAt": "2026-09-12T15:39:48Z",
           "attempts": [
             {
               "source": "html-search",
@@ -3215,7 +3220,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "5dacb403dc3db661a3bc3cc3",
-          "checkedAt": "2026-09-12T10:59:23Z",
+          "checkedAt": "2026-09-12T15:39:56Z",
           "attempts": [
             {
               "source": "html-search",
@@ -3237,7 +3242,7 @@
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "2eb7e0dcf758ca5594fd9ec4",
-          "checkedAt": "2026-09-12T10:59:27Z",
+          "checkedAt": "2026-09-12T15:40:00Z",
           "attempts": [
             {
               "source": "html-search",
@@ -3259,7 +3264,7 @@
           "pack": 0.2,
           "unit": "kg",
           "fingerprint": "76bd36626cdfd104e44e39f6",
-          "checkedAt": "2026-09-12T10:59:31Z",
+          "checkedAt": "2026-09-12T15:40:04Z",
           "attempts": [
             {
               "source": "html-search",
@@ -3281,7 +3286,7 @@
           "pack": 2,
           "unit": "L",
           "fingerprint": "e368631ac0b88a81f6f9563b",
-          "checkedAt": "2026-09-12T10:59:36Z",
+          "checkedAt": "2026-09-12T15:40:07Z",
           "attempts": [
             {
               "source": "html-search",
@@ -3323,7 +3328,7 @@
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
-          "checkedAt": "2026-09-12T10:59:53Z",
+          "checkedAt": "2026-09-12T15:40:26Z",
           "attempts": [
             {
               "source": "known-product",
@@ -3340,7 +3345,7 @@
             "unit": "L",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:51:55Z",
+            "fetchedAt": "2026-09-12T10:59:53Z",
             "fingerprint": "3bf2d1397844a53378224352"
           },
           "price": 950,
@@ -3349,7 +3354,7 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:59:53Z"
+          "fetchedAt": "2026-09-12T15:40:26Z"
         },
         "hielo": {
           "ingredientId": "hielo",
@@ -3357,7 +3362,7 @@
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
-          "checkedAt": "2026-09-12T10:59:56Z",
+          "checkedAt": "2026-09-12T15:40:28Z",
           "attempts": [
             {
               "source": "known-product",
@@ -3374,7 +3379,7 @@
             "unit": "kg",
             "available": true,
             "source": "browser-jsonld",
-            "fetchedAt": "2026-09-12T04:51:57Z",
+            "fetchedAt": "2026-09-12T10:59:56Z",
             "fingerprint": "65723e07b1c4ba8ffd2d3b07"
           },
           "price": 1590,
@@ -3383,10 +3388,10 @@
           "available": true,
           "source": "browser-jsonld",
           "status": "ok",
-          "fetchedAt": "2026-09-12T10:59:56Z"
+          "fetchedAt": "2026-09-12T15:40:28Z"
         }
       }
     }
   },
-  "runUrl": "https://github.com/leoescobarh/la-junta/actions/runs/34689773306"
+  "runUrl": "https://github.com/leoescobarh/la-junta/actions/runs/34702810263"
 }
