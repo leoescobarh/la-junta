@@ -87,3 +87,34 @@ class DiscoveryTests(unittest.TestCase):
         with self.assertRaises(PriceError):
             discover_product(Client(), TARGET, STORE)
 
+    def test_second_query_repairs_empty_search_and_deduplicates_tracking_links(self):
+        target = {**TARGET, 'search_queries': ['mayonesa 800 g', 'mayonesa hellmann'],
+                  'expected_terms': ['mayonesa'], 'discovery_terms': ['mayonesa']}
+        class Client:
+            def __init__(self): self.calls = []
+            def get(self, url):
+                self.calls.append(url)
+                if 'mayonesa%20800%20g' in url:
+                    return '<a href="/mayonesa/p?from=search">Mayonesa</a>'
+                if 'mayonesa%20hellmann' in url:
+                    return ('<a href="/mayonesa/p?utm_source=web">Mayonesa 800 g</a>'
+                            '<a href="/mayonesa/p?from=search">Mayonesa 800 g</a>')
+                if '?from=search' in url:
+                    return '<script type="application/ld+json">{"@type":"Product","name":"Mayonesa 250 g","offers":{"price":1000,"priceCurrency":"CLP"}}</script>'
+                return '<script type="application/ld+json">{"@type":"Product","name":"Mayonesa 800 g","offers":{"price":3530,"priceCurrency":"CLP"}}</script>'
+        client = Client()
+        result, attempts = discover_product(client, target, STORE)
+        self.assertEqual(result['price'], 3530)
+        self.assertEqual(client.calls.count('https://www.jumbo.cl/mayonesa/p?from=search'), 1)
+        self.assertEqual(client.calls[-1], 'https://www.jumbo.cl/mayonesa/p?utm_source=web')
+        self.assertEqual(attempts[-1]['query'], 'mayonesa hellmann')
+
+    def test_vtex_search_accepts_relative_product_links(self):
+        payload = json.dumps([{'link': '/mayonesa/p', 'productName': 'Mayonesa 800 g', 'items': [
+            {'itemId': '1', 'nameComplete': 'Mayonesa 800 g', 'sellers': [
+                {'sellerId': '1', 'commertialOffer': {'Price': 3530, 'AvailableQuantity': 4}}]}]}])
+        class Client:
+            def get(self, url): return payload
+        result, attempts = discover_product(Client(), TARGET, {**STORE, 'vtex': True})
+        self.assertEqual(result['productUrl'], 'https://www.jumbo.cl/mayonesa/p')
+        self.assertEqual(result['price'], 3530)

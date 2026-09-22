@@ -136,6 +136,31 @@ class SyncTests(unittest.TestCase):
         with self.assertRaises(s.PriceError):
             s.parse_html('<script type="application/ld+json">' + json.dumps(value) + '</script>', TARGET, STORE)
 
+    def test_price_specification_is_read_when_offer_has_no_direct_price(self):
+        page = html({'priceSpecification': {'price': 2290, 'priceCurrency': 'CLP',
+                                            'priceType': 'https://schema.org/ListPrice'}})
+        self.assertEqual(s.parse_html(page, TARGET, STORE)['price'], 2290)
+
+    def test_fixed_link_is_repaired_from_public_search(self):
+        target = {**TARGET, 'query': 'pan prueba 8 un.'}
+        store = {**STORE, 'vtex': False, 'search_url': 'https://www.jumbo.cl/busqueda?ft=',
+                 'product_path_pattern': r'/p/?$'}
+        stale = html(name='Pan Prueba 12 un.')
+        fresh_search = '<a href="/pan-prueba-actual/p">Pan Prueba 8 un.</a>'
+        fresh = html(name='Pan Prueba 8 un.').replace(', "url": "https://www.jumbo.cl/pan-prueba/p"', '')
+        class RepairClient:
+            def __init__(self): self.calls = []
+            def get(self, url):
+                self.calls.append(url)
+                if url.endswith('/pan-prueba/p'): return stale
+                if 'busqueda?' in url: return fresh_search
+                return fresh
+        client = RepairClient()
+        result = s.refresh_product(client, target, store)
+        self.assertEqual(result['status'], 'ok')
+        self.assertEqual(result['productUrl'], 'https://www.jumbo.cl/pan-prueba-actual/p')
+        self.assertIn('https://www.jumbo.cl/busqueda?ft=pan%20prueba%208%20un.', client.calls)
+
     def test_failure_preserves_actual_observation_date(self):
         previous = s.refresh_product(Client(json.dumps(api())), TARGET, STORE, checked_at='2026-09-01T10:00:00Z')
         result = s.refresh_product(Client('[]', s.PriceError('network_error', 'Sin red')), TARGET, STORE, previous, '2026-09-09T10:00:00Z')
@@ -196,4 +221,3 @@ class SyncTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
