@@ -176,6 +176,13 @@ class SyncTests(unittest.TestCase):
         self.assertEqual(result['status'], 'error')
         self.assertNotIn('price', result)
 
+    def test_discovery_queries_do_not_invalidate_price_history(self):
+        previous = s.refresh_product(Client(json.dumps(api())), TARGET, STORE)
+        target = {**TARGET, 'search_queries': ['pan prueba 8 un.'], 'discovery_terms': ['pan', 'prueba']}
+        result = s.refresh_product(Client(s.PriceError('network_error', 'Sin red')), target, {**STORE, 'vtex': False}, previous)
+        self.assertEqual(result['status'], 'stale')
+        self.assertEqual(result['price'], 1990)
+
     def test_price_parsing_never_turns_thousands_into_pesos(self):
         self.assertEqual(s.parse_price('$1.990', 'es-CL'), 1990)
         self.assertEqual(s.parse_price('CLP 1.990,50', 'es-CL'), 1991)

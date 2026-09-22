@@ -496,6 +496,16 @@ class PublicClient:
 
 
 def fingerprint(target):
+    # Las consultas y términos de descubrimiento son estrategias de búsqueda,
+    # no cambian la presentación cotizada. Excluirlos evita invalidar el
+    # historial al añadir una ruta alternativa para la misma ficha.
+    stable = {key: value for key, value in target.items()
+              if key not in ('search_queries', 'discovery_terms')}
+    return hashlib.sha256(json.dumps(stable, sort_keys=True, ensure_ascii=True).encode()).hexdigest()[:24]
+
+
+def legacy_fingerprint(target):
+    """Huella anterior al separar la estrategia de descubrimiento."""
     return hashlib.sha256(json.dumps(target, sort_keys=True, ensure_ascii=True).encode()).hexdigest()[:24]
 
 
@@ -510,7 +520,7 @@ def last_valid(previous, target):
     if not isinstance(previous, dict):
         return {}
     candidate = previous if previous.get('price') else previous.get('lastValid', {})
-    if not isinstance(candidate, dict) or candidate.get('fingerprint') != fingerprint(target):
+    if not isinstance(candidate, dict) or candidate.get('fingerprint') not in (fingerprint(target), legacy_fingerprint(target)):
         return {}
     keys = ('price', 'currency', 'productName', 'productUrl', 'pack', 'unit', 'available', 'source', 'fetchedAt', 'fingerprint')
     return {key: candidate[key] for key in keys if key in candidate}
