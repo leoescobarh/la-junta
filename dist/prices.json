@@ -3987,8 +3987,8 @@
         },
         "vacuno": {
           "ingredientId": "vacuno",
-          "productUrl": null,
-          "pack": 1,
+          "productUrl": "https://www.unimarc.cl/product/lomo-vetado-porc-vac-b-n-cat-v-kg",
+          "pack": 1.1,
           "unit": "kg",
           "fingerprint": "64caf6ce013eb40d0a5af08f",
           "checkedAt": "2026-09-22T18:52:25Z",
@@ -4013,13 +4013,31 @@
               "status": "no_matching_public_product"
             }
           ],
-          "status": "error",
+          "status": "stale",
           "error": "no_matching_public_product",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
+          "price": 25289,
+          "currency": "CLP",
+          "productName": "lomo vetado vacuno bagual negro al vacío 1.1 kg",
+          "available": true,
+          "source": "browser-jsonld",
+          "fetchedAt": "2026-09-22T11:52:42Z",
+          "lastValid": {
+            "price": 25289,
+            "currency": "CLP",
+            "productName": "lomo vetado vacuno bagual negro al vacío 1.1 kg",
+            "productUrl": "https://www.unimarc.cl/product/lomo-vetado-porc-vac-b-n-cat-v-kg",
+            "pack": 1.1,
+            "unit": "kg",
+            "available": true,
+            "source": "browser-jsonld",
+            "fetchedAt": "2026-09-22T11:52:42Z",
+            "fingerprint": "64caf6ce013eb40d0a5af08f"
+          }
         },
         "pollo": {
           "ingredientId": "pollo",
-          "productUrl": null,
+          "productUrl": "https://www.unimarc.cl/product/pechuga-deshuesada-sadia-iqf-1-kg",
           "pack": 1,
           "unit": "kg",
           "fingerprint": "49e52faf64f515b748ab79b7",
@@ -4045,13 +4063,31 @@
               "status": "no_matching_public_product"
             }
           ],
-          "status": "error",
+          "status": "stale",
           "error": "no_matching_public_product",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
+          "price": 5990,
+          "currency": "CLP",
+          "productName": "pechuga pollo deshuesada sadía congelada 1 kg",
+          "available": true,
+          "source": "browser-jsonld",
+          "fetchedAt": "2026-09-22T11:52:46Z",
+          "lastValid": {
+            "price": 5990,
+            "currency": "CLP",
+            "productName": "pechuga pollo deshuesada sadía congelada 1 kg",
+            "productUrl": "https://www.unimarc.cl/product/pechuga-deshuesada-sadia-iqf-1-kg",
+            "pack": 1,
+            "unit": "kg",
+            "available": true,
+            "source": "browser-jsonld",
+            "fetchedAt": "2026-09-22T11:52:46Z",
+            "fingerprint": "49e52faf64f515b748ab79b7"
+          }
         },
         "chorizo": {
           "ingredientId": "chorizo",
-          "productUrl": null,
+          "productUrl": "https://www.unimarc.cl/product/chorizo-angus-la-preferida-500-gr",
           "pack": 0.5,
           "unit": "kg",
           "fingerprint": "9722d59c712caa16829e98c0",
@@ -4077,13 +4113,31 @@
               "status": "no_matching_public_product"
             }
           ],
-          "status": "error",
+          "status": "stale",
           "error": "no_matching_public_product",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
+          "price": 5290,
+          "currency": "CLP",
+          "productName": "chorizo angus la preferida 500 g",
+          "available": true,
+          "source": "browser-jsonld",
+          "fetchedAt": "2026-09-22T11:52:49Z",
+          "lastValid": {
+            "price": 5290,
+            "currency": "CLP",
+            "productName": "chorizo angus la preferida 500 g",
+            "productUrl": "https://www.unimarc.cl/product/chorizo-angus-la-preferida-500-gr",
+            "pack": 0.5,
+            "unit": "kg",
+            "available": true,
+            "source": "browser-jsonld",
+            "fetchedAt": "2026-09-22T11:52:49Z",
+            "fingerprint": "9722d59c712caa16829e98c0"
+          }
         },
         "carbon": {
           "ingredientId": "carbon",
-          "productUrl": null,
+          "productUrl": "https://www.unimarc.cl/product/carbon-premiun-black-steak-comp-2-5-kg",
           "pack": 2.5,
           "unit": "kg",
           "fingerprint": "8c55ecdf2d45be005ba88c4e",
@@ -4109,13 +4163,31 @@
               "status": "no_matching_public_product"
             }
           ],
-          "status": "error",
+          "status": "stale",
           "error": "no_matching_public_product",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
+          "price": 3590,
+          "currency": "CLP",
+          "productName": "carbón premium black steak & comp 2.5 kg · Black Steak&company",
+          "available": true,
+          "source": "browser-jsonld",
+          "fetchedAt": "2026-09-22T11:52:53Z",
+          "lastValid": {
+            "price": 3590,
+            "currency": "CLP",
+            "productName": "carbón premium black steak & comp 2.5 kg · Black Steak&company",
+            "productUrl": "https://www.unimarc.cl/product/carbon-premiun-black-steak-comp-2-5-kg",
+            "pack": 2.5,
+            "unit": "kg",
+            "available": true,
+            "source": "browser-jsonld",
+            "fetchedAt": "2026-09-22T11:52:53Z",
+            "fingerprint": "8c55ecdf2d45be005ba88c4e"
+          }
         },
         "sal": {
           "ingredientId": "sal",
-          "productUrl": null,
+          "productUrl": "https://www.unimarc.cl/product/sal-fina-nuestra-cocina-1-kg",
           "pack": 1,
           "unit": "kg",
           "fingerprint": "ca88a1da0c9e5f09ad084b7d",
@@ -4141,13 +4213,31 @@
               "status": "no_matching_public_product"
             }
           ],
-          "status": "error",
+          "status": "stale",
           "error": "no_matching_public_product",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
+          "price": 430,
+          "currency": "CLP",
+          "productName": "sal fina nuestra cocina bolsa 1 kg",
+          "available": true,
+          "source": "browser-jsonld",
+          "fetchedAt": "2026-09-22T11:52:57Z",
+          "lastValid": {
+            "price": 430,
+            "currency": "CLP",
+            "productName": "sal fina nuestra cocina bolsa 1 kg",
+            "productUrl": "https://www.unimarc.cl/product/sal-fina-nuestra-cocina-1-kg",
+            "pack": 1,
+            "unit": "kg",
+            "available": true,
+            "source": "browser-jsonld",
+            "fetchedAt": "2026-09-22T11:52:57Z",
+            "fingerprint": "ca88a1da0c9e5f09ad084b7d"
+          }
         },
         "queso": {
           "ingredientId": "queso",
-          "productUrl": null,
+          "productUrl": "https://www.unimarc.cl/product/queso-gauda-soprole-250-gr",
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ed3aeb3e30da066b7d2b1a6b",
@@ -4173,9 +4263,27 @@
               "status": "no_matching_public_product"
             }
           ],
-          "status": "error",
+          "status": "stale",
           "error": "no_matching_public_product",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
+          "price": 3500,
+          "currency": "CLP",
+          "productName": "queso gauda soprole laminado 250 g",
+          "available": true,
+          "source": "browser-jsonld",
+          "fetchedAt": "2026-09-22T11:53:00Z",
+          "lastValid": {
+            "price": 3500,
+            "currency": "CLP",
+            "productName": "queso gauda soprole laminado 250 g",
+            "productUrl": "https://www.unimarc.cl/product/queso-gauda-soprole-250-gr",
+            "pack": 0.25,
+            "unit": "kg",
+            "available": true,
+            "source": "browser-jsonld",
+            "fetchedAt": "2026-09-22T11:53:00Z",
+            "fingerprint": "ed3aeb3e30da066b7d2b1a6b"
+          }
         },
         "jamon": {
           "ingredientId": "jamon",
@@ -4265,7 +4373,7 @@
         },
         "mostaza": {
           "ingredientId": "mostaza",
-          "productUrl": null,
+          "productUrl": "https://www.unimarc.cl/product/mostaza-dp-nuestra-cocina-250-gr",
           "pack": 0.25,
           "unit": "kg",
           "fingerprint": "ca5e5ba0fbed1363c6a89235",
@@ -4291,9 +4399,27 @@
               "status": "no_matching_public_product"
             }
           ],
-          "status": "error",
+          "status": "stale",
           "error": "no_matching_public_product",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
+          "price": 990,
+          "currency": "CLP",
+          "productName": "mostaza nuestra cocina doypack 250 g",
+          "available": true,
+          "source": "browser-jsonld",
+          "fetchedAt": "2026-09-22T11:53:16Z",
+          "lastValid": {
+            "price": 990,
+            "currency": "CLP",
+            "productName": "mostaza nuestra cocina doypack 250 g",
+            "productUrl": "https://www.unimarc.cl/product/mostaza-dp-nuestra-cocina-250-gr",
+            "pack": 0.25,
+            "unit": "kg",
+            "available": true,
+            "source": "browser-jsonld",
+            "fetchedAt": "2026-09-22T11:53:16Z",
+            "fingerprint": "ca5e5ba0fbed1363c6a89235"
+          }
         },
         "papasChips": {
           "ingredientId": "papasChips",
@@ -4457,7 +4583,7 @@
         },
         "agua": {
           "ingredientId": "agua",
-          "productUrl": null,
+          "productUrl": "https://www.unimarc.cl/product/agua-min-benedictino-s-gas-1-5-l",
           "pack": 1.5,
           "unit": "L",
           "fingerprint": "3bf2d1397844a53378224352",
@@ -4483,13 +4609,31 @@
               "status": "no_matching_public_product"
             }
           ],
-          "status": "error",
+          "status": "stale",
           "error": "no_matching_public_product",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
+          "price": 950,
+          "currency": "CLP",
+          "productName": "agua purificada benedictino sin gas botella 1.5 l",
+          "available": true,
+          "source": "browser-jsonld",
+          "fetchedAt": "2026-09-22T11:53:51Z",
+          "lastValid": {
+            "price": 950,
+            "currency": "CLP",
+            "productName": "agua purificada benedictino sin gas botella 1.5 l",
+            "productUrl": "https://www.unimarc.cl/product/agua-min-benedictino-s-gas-1-5-l",
+            "pack": 1.5,
+            "unit": "L",
+            "available": true,
+            "source": "browser-jsonld",
+            "fetchedAt": "2026-09-22T11:53:51Z",
+            "fingerprint": "3bf2d1397844a53378224352"
+          }
         },
         "hielo": {
           "ingredientId": "hielo",
-          "productUrl": null,
+          "productUrl": "https://www.unimarc.cl/product/hielo-nuestra-cocina-hp-2-kg",
           "pack": 2,
           "unit": "kg",
           "fingerprint": "65723e07b1c4ba8ffd2d3b07",
@@ -4515,9 +4659,27 @@
               "status": "no_matching_public_product"
             }
           ],
-          "status": "error",
+          "status": "stale",
           "error": "no_matching_public_product",
-          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables."
+          "message": "La búsqueda pública no entregó una ficha con nombre, formato y precio verificables.",
+          "price": 1590,
+          "currency": "CLP",
+          "productName": "hielo nuestra cocina bolsa 2 kg",
+          "available": true,
+          "source": "browser-jsonld",
+          "fetchedAt": "2026-09-22T11:53:54Z",
+          "lastValid": {
+            "price": 1590,
+            "currency": "CLP",
+            "productName": "hielo nuestra cocina bolsa 2 kg",
+            "productUrl": "https://www.unimarc.cl/product/hielo-nuestra-cocina-hp-2-kg",
+            "pack": 2,
+            "unit": "kg",
+            "available": true,
+            "source": "browser-jsonld",
+            "fetchedAt": "2026-09-22T11:53:54Z",
+            "fingerprint": "65723e07b1c4ba8ffd2d3b07"
+          }
         }
       }
     }
