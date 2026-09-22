@@ -4,7 +4,7 @@ El proyecto incluye un actualizador ejecutable y una integración con la calcula
 
 ## Estado de la entrega
 
-La extracción real de las cinco fichas iniciales de Jumbo se verificó desde GitHub Actions el 10 de septiembre de 2026, mediante HTML JSON-LD. El catálogo ahora contempla 23 ingredientes en cinco supermercados. Esto expresa la cobertura configurada, no la cantidad de precios obtenidos: revisa `dist/prices.json` y el enlace `runUrl` de su ejecución para conocer la cobertura real.
+La última ejecución disponible de GitHub Actions fue el 22 de septiembre de 2026. El catálogo contempla 23 ingredientes en cinco supermercados. Esto expresa la cobertura configurada, no la cantidad de precios obtenidos: revisa `dist/prices.json` y el enlace `runUrl` de su ejecución para conocer la cobertura real.
 
 Cada ejecución registra qué tiendas entregan datos utilizables y el motivo de los fallos. La calculadora compara las ofertas en la columna Tienda, descarta precios anteriores de la selección automática y usa valores de ejemplo identificados cuando no hay una oferta vigente. Tottus y Unimarc se consultan con Chromium cuando se usa `--browser`. Si sus páginas bloquean el acceso o no exponen una oferta inequívoca, quedan sin confirmar.
 
@@ -12,7 +12,7 @@ Cada ejecución registra qué tiendas entregan datos utilizables y el motivo de 
 
 1. `pricing/sources.json` identifica la ficha, ingrediente, moneda, formato y palabras esperadas. Se consulta `robots.txt` antes de leer rutas de la tienda.
 2. Si `vtex` está activado, prueba la búsqueda pública por URL de producto de la [API Search de VTEX](https://developers.vtex.com/docs/api-reference/search-api). Exige producto, SKU y vendedor inequívocos.
-3. En Tottus y Unimarc, `--browser` carga las páginas con Chromium y espera contenido renderizado. En las demás cadenas, si la API no existe, no devuelve datos o su respuesta no es utilizable, descarga la ficha pública y busca un `Product` con `Offer` en JSON-LD. Luego prueba metadatos de producto y, si los configuras, selectores HTML específicos. La estructura de precio y moneda se basa en [Schema.org Offer](https://schema.org/Offer).
+3. En Tottus y Unimarc, `--browser` carga las páginas con Chromium y espera contenido renderizado. En las demás cadenas, si la API no existe, no devuelve datos o su respuesta no es utilizable, descarga la ficha pública y busca un `Product` con `Offer` en JSON-LD. También acepta una `PriceSpecification` simple, microdatos, metadatos de producto y, si los configuras, selectores HTML específicos. La estructura de precio y moneda se basa en [Schema.org Offer](https://schema.org/Offer).
 4. Exige nombre/formato esperado, precio positivo y CLP. No elige arbitrariamente el menor precio entre múltiples ofertas ni utiliza `AggregateOffer.lowPrice`. No interpreta promociones por cantidad, tarjetas o membresías como un precio general cuando están identificadas como condicionales.
 5. Escribe `dist/prices.json` y `dist/prices-snapshot.js`. Cada archivo se reemplaza de forma atómica. Si una consulta falla, conserva el precio anterior solo si corresponde a la misma configuración, sin cambiar su fecha real.
 6. La web usa estos datos al abrirse y revisa su archivo público cada cinco minutos cuando la pestaña está visible y no se está editando un control. «Revisar actualización» consulta ese archivo, no la tienda.
@@ -31,7 +31,7 @@ Una respuesta de autenticación, bloqueo o límite de consultas detiene las cons
 | `arroz` | [Arroz Tucapel Grado 1 Gran Selección](https://www.jumbo.cl/arroz-grado-1-tucapel-gran-seleccion-grano-largo-y-ancho-1-kg/p) | 1 kg |
 | `pasta` | [Spaghetti Carozzi N°5](https://www.jumbo.cl/spaghetti-n-5-carozzi-bolsa-400-g-2/p) | 0,4 kg |
 
-Además se buscan dieciocho ingredientes de verduras, carnes, despensa, picoteo y bebidas con formato explícito. `pricing/discover.py` descubre hasta cinco fichas por búsqueda y valida su nombre y formato antes de leer precios. Los ingredientes sin resultado conservan estimaciones identificadas. Mercado Libre no participa en la comparación de supermercados. Los importes corresponden al contexto web público consultado, sin ubicación, sesión ni despacho. La disponibilidad local y el precio final se confirman en la tienda.
+Además se buscan dieciocho ingredientes de verduras, carnes, despensa, picoteo y bebidas con formato explícito. `pricing/discover.py` usa hasta tres consultas de respaldo por producto, deduplica enlaces con parámetros de seguimiento y prioriza títulos que declaran el formato. Puede reparar una ficha fija que cambió de URL mediante el buscador público. Descubre hasta ocho candidatos por búsqueda y valida su nombre y formato antes de leer precios. Los ingredientes sin resultado conservan estimaciones identificadas. Mercado Libre no participa en la comparación de supermercados. Los importes corresponden al contexto web público consultado, sin ubicación, sesión ni despacho. La disponibilidad local y el precio final se confirman en la tienda.
 
 ## Primera ejecución
 

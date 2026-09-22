@@ -319,12 +319,36 @@ def parse_html(html, target, store):
                 return offer_value(offers.get('price'), offers.get('priceCurrency'), product_identity(product),
                                    availability(offers.get('availability')), 'html-jsonld', target,
                                    offers.get('priceValidUntil'))
+            # Algunos catálogos publican PriceSpecification en vez de price.
+            # Solo se acepta una especificación simple, sin precio unitario ni
+            # condiciones, para no confundir el precio por kilo o la oferta club.
+            specification = offers.get('priceSpecification')
+            if isinstance(specification, list):
+                if len(specification) != 1:
+                    raise PriceError('ambiguous_offer', 'Hay varias especificaciones de precio.')
+                specification = specification[0]
+            if isinstance(specification, dict) and specification.get('price') is not None:
+                if any(specification.get(key) for key in ('eligibleCustomerType', 'eligibleMembershipTier', 'eligibleQuantity', 'referenceQuantity', 'unitCode')):
+                    raise PriceError('conditional_price', 'La especificación de precio tiene condiciones o unidad de referencia.')
+                return offer_value(specification.get('price'), specification.get('priceCurrency') or offers.get('priceCurrency'),
+                                   product_identity(product), availability(offers.get('availability')), 'html-jsonld-specification', target,
+                                   offers.get('priceValidUntil') or specification.get('validThrough'))
     # Open Graph de producto: se exige nombre y precio únicos en la página.
     try:
         price = doc.one('meta[property="product:price:amount"]')
         currency = doc.one('meta[property="product:price:currency"]')
         name = doc.one('meta[property="og:title"]')
         return offer_value(price, currency, name, None, 'html-meta', target)
+    except PriceError as error:
+        if error.code in ('product_mismatch', 'currency_mismatch', 'invalid_price'):
+            raise
+    # Microdata de producto (común en plantillas antiguas). Se exige un único
+    # nombre, precio y moneda para no leer widgets de recomendaciones.
+    try:
+        name = doc.one('[itemprop="name"]')
+        price = doc.one('[itemprop="price"]')
+        currency = doc.one('[itemprop="priceCurrency"]') if doc.select('[itemprop="priceCurrency"]') else store['currency']
+        return offer_value(price, currency, name, None, 'html-microdata', target)
     except PriceError as error:
         if error.code in ('product_mismatch', 'currency_mismatch', 'invalid_price'):
             raise
@@ -538,11 +562,18 @@ def refresh_product(client, target, store, previous=None, checked_at=None):
         except AccessBlocked:
             raise
         except PriceError as error:
-            if not target.get('fallback'):
+            # Las URLs de fichas cambian con frecuencia. Cuando existe una
+            # consulta pública, intenta reparar el enlace mediante búsqueda;
+            # una ficha explícitamente agotada sigue siendo unavailable y no
+            # se sustituye por otra presentación.
+            if error.code in ('out_of_stock', 'unavailable'):
+                raise
+            recovery = target.get('fallback') or target
+            if not recovery.get('query'):
                 raise
             from discover import discover_product
             base['attempts'].append({'source': 'fixed-product', 'status': error.code, 'url': target['product_url']})
-            found, attempts = discover_product(client, target['fallback'], store)
+            found, attempts = discover_product(client, recovery, store)
             base['attempts'].extend(attempts)
         base['attempts'].append({'source': 'html', 'status': 'ok'})
         return {**base, **found, 'status': 'unavailable' if found['available'] is False else 'ok', 'fetchedAt': checked_at}

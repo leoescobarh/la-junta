@@ -31,7 +31,16 @@
             "castaño",
             "480"
           ],
-          "expected_pattern": "\\b8\\s*un"
+          "expected_pattern": "\\b8\\s*un",
+          "search_queries": [
+            "pan hot dog castaño 8 unidades",
+            "pan hot dog 8 un"
+          ],
+          "discovery_terms": [
+            "pan",
+            "hot",
+            "dog"
+          ]
         },
         {
           "ingredient": "vienesa",
@@ -55,7 +64,15 @@
             "mayonesa",
             "hellmann"
           ],
-          "expected_pattern": "\\b800\\s*g\\b"
+          "expected_pattern": "\\b800\\s*g\\b",
+          "search_queries": [
+            "mayonesa hellmann 800 g",
+            "mayonesa hellmann doypack"
+          ],
+          "discovery_terms": [
+            "mayonesa",
+            "hellmann"
+          ]
         },
         {
           "ingredient": "arroz",
@@ -69,7 +86,15 @@
             "grado 1",
             "gran seleccion"
           ],
-          "expected_pattern": "\\b1\\s*kg\\b"
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "search_queries": [
+            "arroz tucapel grado 1 1 kg",
+            "arroz tucapel 1 kg"
+          ],
+          "discovery_terms": [
+            "arroz",
+            "tucapel"
+          ]
         },
         {
           "ingredient": "pasta",
@@ -128,6 +153,10 @@
             "pavo",
             "hamburguesa",
             "molida"
+          ],
+          "search_queries": [
+            "lomo vetado 1 kg",
+            "lomo vetado vacuno"
           ]
         },
         {
@@ -140,7 +169,11 @@
             "deshuesad"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Pechuga pollo deshuesada 1 kg"
+          "query": "Pechuga pollo deshuesada 1 kg",
+          "search_queries": [
+            "pechuga pollo 1 kg",
+            "pechuga deshuesada 1 kg"
+          ]
         },
         {
           "ingredient": "chorizo",
@@ -151,7 +184,11 @@
             "choriz"
           ],
           "expected_pattern": "\\b500\\s*g\\b",
-          "query": "Chorizo 500 g"
+          "query": "Chorizo 500 g",
+          "search_queries": [
+            "chorizo 500 g",
+            "chorizo parrillero"
+          ]
         },
         {
           "ingredient": "carbon",
@@ -162,7 +199,11 @@
             "carbon"
           ],
           "expected_pattern": "\\b2[.,]5\\s*kg\\b",
-          "query": "Carbon 2.5 kg"
+          "query": "Carbon 2.5 kg",
+          "search_queries": [
+            "carbon vegetal 2.5 kg",
+            "carbon 2 kg"
+          ]
         },
         {
           "ingredient": "sal",
@@ -181,6 +222,10 @@
             "salsa",
             "salmon",
             "galleta"
+          ],
+          "search_queries": [
+            "sal fina 1 kg",
+            "sal de mesa 1 kg"
           ]
         },
         {
@@ -198,6 +243,10 @@
           "excluded_terms": [
             "granulado",
             "rallado"
+          ],
+          "search_queries": [
+            "queso gauda laminado 250 g",
+            "queso laminado 250 g"
           ]
         },
         {
@@ -221,7 +270,11 @@
             "ketchup"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Ketchup 250 g"
+          "query": "Ketchup 250 g",
+          "search_queries": [
+            "ketchup hellmann 250 g",
+            "ketchup 250 g"
+          ]
         },
         {
           "ingredient": "mostaza",
@@ -232,7 +285,11 @@
             "mostaza"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Mostaza 250 g"
+          "query": "Mostaza 250 g",
+          "search_queries": [
+            "mostaza 250 g",
+            "mostaza amarilla 250 g"
+          ]
         },
         {
           "ingredient": "papasChips",
@@ -254,6 +311,13 @@
             "pre-frita",
             "prefrita",
             "baston"
+          ],
+          "search_queries": [
+            "papas chips 250 g",
+            "papas fritas bolsa 250 g"
+          ],
+          "discovery_terms": [
+            "papas"
           ]
         },
         {
@@ -265,7 +329,11 @@
             "nachos"
           ],
           "expected_pattern": "\\b200\\s*g\\b",
-          "query": "Nachos 200 g"
+          "query": "Nachos 200 g",
+          "search_queries": [
+            "nachos 200 g",
+            "tortillas maiz nachos"
+          ]
         },
         {
           "ingredient": "frutosSecos",
@@ -277,7 +345,14 @@
             "frutos"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Mix frutos secos 250 g"
+          "query": "Mix frutos secos 250 g",
+          "search_queries": [
+            "mix frutos secos 250 g",
+            "frutos secos 250 g"
+          ],
+          "discovery_terms": [
+            "frutos"
+          ]
         },
         {
           "ingredient": "galletaSalada",
@@ -289,7 +364,14 @@
             "salad"
           ],
           "expected_pattern": "\\b200\\s*g\\b",
-          "query": "Galletas saladas 200 g"
+          "query": "Galletas saladas 200 g",
+          "search_queries": [
+            "galletas saladas 200 g",
+            "crackers salados 200 g"
+          ],
+          "discovery_terms": [
+            "galleta"
+          ]
         },
         {
           "ingredient": "bebida",
@@ -305,6 +387,14 @@
           "query": "Coca Cola original 2 L",
           "excluded_terms": [
             "retornable"
+          ],
+          "search_queries": [
+            "coca cola 2 litros",
+            "bebida cola 2 l"
+          ],
+          "discovery_terms": [
+            "coca",
+            "cola"
           ]
         },
         {
@@ -317,7 +407,11 @@
             "sin gas"
           ],
           "expected_pattern": "\\b1[.,]5\\s*(?:l|lt|litros?)\\b",
-          "query": "Agua mineral sin gas 1.5 L"
+          "query": "Agua mineral sin gas 1.5 L",
+          "search_queries": [
+            "agua mineral 1.5 l",
+            "agua mineral sin gas"
+          ]
         },
         {
           "ingredient": "hielo",
@@ -328,7 +422,11 @@
             "hielo"
           ],
           "expected_pattern": "\\b2\\s*kg\\b",
-          "query": "Hielo 2 kg"
+          "query": "Hielo 2 kg",
+          "search_queries": [
+            "hielo bolsa 2 kg",
+            "hielo bolsa"
+          ]
         }
       ]
     },
@@ -359,7 +457,16 @@
             "castaño",
             "480"
           ],
-          "expected_pattern": "\\b8\\s*un"
+          "expected_pattern": "\\b8\\s*un",
+          "search_queries": [
+            "pan hot dog castaño 8 unidades",
+            "pan hot dog 8 un"
+          ],
+          "discovery_terms": [
+            "pan",
+            "hot",
+            "dog"
+          ]
         },
         {
           "ingredient": "vienesa",
@@ -383,7 +490,15 @@
             "mayonesa",
             "hellmann"
           ],
-          "expected_pattern": "\\b800\\s*g\\b"
+          "expected_pattern": "\\b800\\s*g\\b",
+          "search_queries": [
+            "mayonesa hellmann 800 g",
+            "mayonesa hellmann doypack"
+          ],
+          "discovery_terms": [
+            "mayonesa",
+            "hellmann"
+          ]
         },
         {
           "ingredient": "arroz",
@@ -397,7 +512,15 @@
             "grado 1",
             "gran seleccion"
           ],
-          "expected_pattern": "\\b1\\s*kg\\b"
+          "expected_pattern": "\\b1\\s*kg\\b",
+          "search_queries": [
+            "arroz tucapel grado 1 1 kg",
+            "arroz tucapel 1 kg"
+          ],
+          "discovery_terms": [
+            "arroz",
+            "tucapel"
+          ]
         },
         {
           "ingredient": "pasta",
@@ -456,6 +579,10 @@
             "pavo",
             "hamburguesa",
             "molida"
+          ],
+          "search_queries": [
+            "lomo vetado 1 kg",
+            "lomo vetado vacuno"
           ]
         },
         {
@@ -468,7 +595,11 @@
             "deshuesad"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "product_url": "https://www.santaisabel.cl/pollo-pechuga-desh-2034037/p"
+          "product_url": "https://www.santaisabel.cl/pollo-pechuga-desh-2034037/p",
+          "search_queries": [
+            "pechuga pollo 1 kg",
+            "pechuga deshuesada 1 kg"
+          ]
         },
         {
           "ingredient": "chorizo",
@@ -479,7 +610,11 @@
             "choriz"
           ],
           "expected_pattern": "\\b500\\s*g\\b",
-          "product_url": "https://www.santaisabel.cl/chorizo-angus-la-preferida-500-g-8-2/p"
+          "product_url": "https://www.santaisabel.cl/chorizo-angus-la-preferida-500-g-8-2/p",
+          "search_queries": [
+            "chorizo 500 g",
+            "chorizo parrillero"
+          ]
         },
         {
           "ingredient": "carbon",
@@ -490,7 +625,11 @@
             "carbon"
           ],
           "expected_pattern": "\\b2[.,]5\\s*kg\\b",
-          "product_url": "https://www.santaisabel.cl/carbon-quebracho-blanco-2-5-kg-beef-maker-1895137/p"
+          "product_url": "https://www.santaisabel.cl/carbon-quebracho-blanco-2-5-kg-beef-maker-1895137/p",
+          "search_queries": [
+            "carbon vegetal 2.5 kg",
+            "carbon 2 kg"
+          ]
         },
         {
           "ingredient": "sal",
@@ -509,7 +648,11 @@
             "salmon",
             "galleta"
           ],
-          "product_url": "https://www.santaisabel.cl/sal-fina-cuisine-and-co-1kg-1924568/p"
+          "product_url": "https://www.santaisabel.cl/sal-fina-cuisine-and-co-1kg-1924568/p",
+          "search_queries": [
+            "sal fina 1 kg",
+            "sal de mesa 1 kg"
+          ]
         },
         {
           "ingredient": "queso",
@@ -526,6 +669,10 @@
           "excluded_terms": [
             "granulado",
             "rallado"
+          ],
+          "search_queries": [
+            "queso gauda laminado 250 g",
+            "queso laminado 250 g"
           ]
         },
         {
@@ -549,7 +696,11 @@
             "ketchup"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "product_url": "https://www.santaisabel.cl/ketchup-hellmanns-doypack-250-g-2/p"
+          "product_url": "https://www.santaisabel.cl/ketchup-hellmanns-doypack-250-g-2/p",
+          "search_queries": [
+            "ketchup hellmann 250 g",
+            "ketchup 250 g"
+          ]
         },
         {
           "ingredient": "mostaza",
@@ -560,7 +711,11 @@
             "mostaza"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "product_url": "https://www.santaisabel.cl/mostaza-jb-doypack-250-g/p"
+          "product_url": "https://www.santaisabel.cl/mostaza-jb-doypack-250-g/p",
+          "search_queries": [
+            "mostaza 250 g",
+            "mostaza amarilla 250 g"
+          ]
         },
         {
           "ingredient": "papasChips",
@@ -582,6 +737,13 @@
             "pre-frita",
             "prefrita",
             "baston"
+          ],
+          "search_queries": [
+            "papas chips 250 g",
+            "papas fritas bolsa 250 g"
+          ],
+          "discovery_terms": [
+            "papas"
           ]
         },
         {
@@ -593,7 +755,11 @@
             "nachos"
           ],
           "expected_pattern": "\\b200\\s*g\\b",
-          "query": "Nachos 200 g"
+          "query": "Nachos 200 g",
+          "search_queries": [
+            "nachos 200 g",
+            "tortillas maiz nachos"
+          ]
         },
         {
           "ingredient": "frutosSecos",
@@ -605,7 +771,14 @@
             "frutos"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Mix frutos secos 250 g"
+          "query": "Mix frutos secos 250 g",
+          "search_queries": [
+            "mix frutos secos 250 g",
+            "frutos secos 250 g"
+          ],
+          "discovery_terms": [
+            "frutos"
+          ]
         },
         {
           "ingredient": "galletaSalada",
@@ -617,7 +790,14 @@
             "salad"
           ],
           "expected_pattern": "\\b200\\s*g\\b",
-          "query": "Galletas saladas 200 g"
+          "query": "Galletas saladas 200 g",
+          "search_queries": [
+            "galletas saladas 200 g",
+            "crackers salados 200 g"
+          ],
+          "discovery_terms": [
+            "galleta"
+          ]
         },
         {
           "ingredient": "bebida",
@@ -633,6 +813,14 @@
           "query": "Coca Cola original 2 L",
           "excluded_terms": [
             "retornable"
+          ],
+          "search_queries": [
+            "coca cola 2 litros",
+            "bebida cola 2 l"
+          ],
+          "discovery_terms": [
+            "coca",
+            "cola"
           ]
         },
         {
@@ -645,7 +833,11 @@
             "sin gas"
           ],
           "expected_pattern": "\\b1[.,]5\\s*(?:l|lt|litros?)\\b",
-          "query": "Agua mineral sin gas 1.5 L"
+          "query": "Agua mineral sin gas 1.5 L",
+          "search_queries": [
+            "agua mineral 1.5 l",
+            "agua mineral sin gas"
+          ]
         },
         {
           "ingredient": "hielo",
@@ -656,7 +848,11 @@
             "hielo"
           ],
           "expected_pattern": "\\b2\\s*kg\\b",
-          "query": "Hielo 2 kg"
+          "query": "Hielo 2 kg",
+          "search_queries": [
+            "hielo bolsa 2 kg",
+            "hielo bolsa"
+          ]
         }
       ]
     },
@@ -686,7 +882,16 @@
             "480"
           ],
           "expected_pattern": "\\b8\\s*un",
-          "query": "Pan Hot Dog Castaño 480 g 8 un."
+          "query": "Pan Hot Dog Castaño 480 g 8 un.",
+          "search_queries": [
+            "pan hot dog castaño 8 unidades",
+            "pan hot dog 8 un"
+          ],
+          "discovery_terms": [
+            "pan",
+            "hot",
+            "dog"
+          ]
         },
         {
           "ingredient": "vienesa",
@@ -710,7 +915,15 @@
             "hellmann"
           ],
           "expected_pattern": "\\b800\\s*g\\b",
-          "query": "Mayonesa Hellmann's Doypack 800 g"
+          "query": "Mayonesa Hellmann's Doypack 800 g",
+          "search_queries": [
+            "mayonesa hellmann 800 g",
+            "mayonesa hellmann doypack"
+          ],
+          "discovery_terms": [
+            "mayonesa",
+            "hellmann"
+          ]
         },
         {
           "ingredient": "arroz",
@@ -724,7 +937,15 @@
             "gran seleccion"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg"
+          "query": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg",
+          "search_queries": [
+            "arroz tucapel grado 1 1 kg",
+            "arroz tucapel 1 kg"
+          ],
+          "discovery_terms": [
+            "arroz",
+            "tucapel"
+          ]
         },
         {
           "ingredient": "pasta",
@@ -783,6 +1004,10 @@
             "pavo",
             "hamburguesa",
             "molida"
+          ],
+          "search_queries": [
+            "lomo vetado 1 kg",
+            "lomo vetado vacuno"
           ]
         },
         {
@@ -795,7 +1020,11 @@
             "deshuesad"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Pechuga pollo deshuesada 1 kg"
+          "query": "Pechuga pollo deshuesada 1 kg",
+          "search_queries": [
+            "pechuga pollo 1 kg",
+            "pechuga deshuesada 1 kg"
+          ]
         },
         {
           "ingredient": "chorizo",
@@ -806,7 +1035,11 @@
             "choriz"
           ],
           "expected_pattern": "\\b500\\s*g\\b",
-          "query": "Chorizo 500 g"
+          "query": "Chorizo 500 g",
+          "search_queries": [
+            "chorizo 500 g",
+            "chorizo parrillero"
+          ]
         },
         {
           "ingredient": "carbon",
@@ -817,7 +1050,11 @@
             "carbon"
           ],
           "expected_pattern": "\\b2[.,]5\\s*kg\\b",
-          "query": "Carbon 2.5 kg"
+          "query": "Carbon 2.5 kg",
+          "search_queries": [
+            "carbon vegetal 2.5 kg",
+            "carbon 2 kg"
+          ]
         },
         {
           "ingredient": "sal",
@@ -836,6 +1073,10 @@
             "salsa",
             "salmon",
             "galleta"
+          ],
+          "search_queries": [
+            "sal fina 1 kg",
+            "sal de mesa 1 kg"
           ]
         },
         {
@@ -853,6 +1094,10 @@
           "excluded_terms": [
             "granulado",
             "rallado"
+          ],
+          "search_queries": [
+            "queso gauda laminado 250 g",
+            "queso laminado 250 g"
           ]
         },
         {
@@ -876,7 +1121,11 @@
             "ketchup"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Ketchup 250 g"
+          "query": "Ketchup 250 g",
+          "search_queries": [
+            "ketchup hellmann 250 g",
+            "ketchup 250 g"
+          ]
         },
         {
           "ingredient": "mostaza",
@@ -887,7 +1136,11 @@
             "mostaza"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Mostaza 250 g"
+          "query": "Mostaza 250 g",
+          "search_queries": [
+            "mostaza 250 g",
+            "mostaza amarilla 250 g"
+          ]
         },
         {
           "ingredient": "papasChips",
@@ -909,6 +1162,13 @@
             "pre-frita",
             "prefrita",
             "baston"
+          ],
+          "search_queries": [
+            "papas chips 250 g",
+            "papas fritas bolsa 250 g"
+          ],
+          "discovery_terms": [
+            "papas"
           ]
         },
         {
@@ -920,7 +1180,11 @@
             "nachos"
           ],
           "expected_pattern": "\\b200\\s*g\\b",
-          "query": "Nachos 200 g"
+          "query": "Nachos 200 g",
+          "search_queries": [
+            "nachos 200 g",
+            "tortillas maiz nachos"
+          ]
         },
         {
           "ingredient": "frutosSecos",
@@ -932,7 +1196,14 @@
             "frutos"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Mix frutos secos 250 g"
+          "query": "Mix frutos secos 250 g",
+          "search_queries": [
+            "mix frutos secos 250 g",
+            "frutos secos 250 g"
+          ],
+          "discovery_terms": [
+            "frutos"
+          ]
         },
         {
           "ingredient": "galletaSalada",
@@ -944,7 +1215,14 @@
             "salad"
           ],
           "expected_pattern": "\\b200\\s*g\\b",
-          "query": "Galletas saladas 200 g"
+          "query": "Galletas saladas 200 g",
+          "search_queries": [
+            "galletas saladas 200 g",
+            "crackers salados 200 g"
+          ],
+          "discovery_terms": [
+            "galleta"
+          ]
         },
         {
           "ingredient": "bebida",
@@ -960,6 +1238,14 @@
           "query": "Coca Cola original 2 L",
           "excluded_terms": [
             "retornable"
+          ],
+          "search_queries": [
+            "coca cola 2 litros",
+            "bebida cola 2 l"
+          ],
+          "discovery_terms": [
+            "coca",
+            "cola"
           ]
         },
         {
@@ -972,7 +1258,11 @@
             "sin gas"
           ],
           "expected_pattern": "\\b1[.,]5\\s*(?:l|lt|litros?)\\b",
-          "query": "Agua mineral sin gas 1.5 L"
+          "query": "Agua mineral sin gas 1.5 L",
+          "search_queries": [
+            "agua mineral 1.5 l",
+            "agua mineral sin gas"
+          ]
         },
         {
           "ingredient": "hielo",
@@ -983,7 +1273,11 @@
             "hielo"
           ],
           "expected_pattern": "\\b2\\s*kg\\b",
-          "query": "Hielo 2 kg"
+          "query": "Hielo 2 kg",
+          "search_queries": [
+            "hielo bolsa 2 kg",
+            "hielo bolsa"
+          ]
         }
       ]
     },
@@ -1014,7 +1308,16 @@
             "480"
           ],
           "expected_pattern": "\\b8\\s*un",
-          "query": "Pan Hot Dog Castaño 480 g 8 un."
+          "query": "Pan Hot Dog Castaño 480 g 8 un.",
+          "search_queries": [
+            "pan hot dog castaño 8 unidades",
+            "pan hot dog 8 un"
+          ],
+          "discovery_terms": [
+            "pan",
+            "hot",
+            "dog"
+          ]
         },
         {
           "ingredient": "vienesa",
@@ -1038,7 +1341,15 @@
             "hellmann"
           ],
           "expected_pattern": "\\b800\\s*g\\b",
-          "query": "Mayonesa Hellmann's Doypack 800 g"
+          "query": "Mayonesa Hellmann's Doypack 800 g",
+          "search_queries": [
+            "mayonesa hellmann 800 g",
+            "mayonesa hellmann doypack"
+          ],
+          "discovery_terms": [
+            "mayonesa",
+            "hellmann"
+          ]
         },
         {
           "ingredient": "arroz",
@@ -1052,7 +1363,15 @@
             "gran seleccion"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg"
+          "query": "Arroz Grado 1 Tucapel Gran Selección Grano Largo y Ancho 1 kg",
+          "search_queries": [
+            "arroz tucapel grado 1 1 kg",
+            "arroz tucapel 1 kg"
+          ],
+          "discovery_terms": [
+            "arroz",
+            "tucapel"
+          ]
         },
         {
           "ingredient": "pasta",
@@ -1111,6 +1430,10 @@
             "pavo",
             "hamburguesa",
             "molida"
+          ],
+          "search_queries": [
+            "lomo vetado 1 kg",
+            "lomo vetado vacuno"
           ]
         },
         {
@@ -1123,7 +1446,11 @@
             "deshuesad"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Pechuga pollo deshuesada 1 kg"
+          "query": "Pechuga pollo deshuesada 1 kg",
+          "search_queries": [
+            "pechuga pollo 1 kg",
+            "pechuga deshuesada 1 kg"
+          ]
         },
         {
           "ingredient": "chorizo",
@@ -1134,7 +1461,11 @@
             "choriz"
           ],
           "expected_pattern": "\\b500\\s*g\\b",
-          "query": "Chorizo 500 g"
+          "query": "Chorizo 500 g",
+          "search_queries": [
+            "chorizo 500 g",
+            "chorizo parrillero"
+          ]
         },
         {
           "ingredient": "carbon",
@@ -1145,7 +1476,11 @@
             "carbon"
           ],
           "expected_pattern": "\\b2[.,]5\\s*kg\\b",
-          "query": "Carbon 2.5 kg"
+          "query": "Carbon 2.5 kg",
+          "search_queries": [
+            "carbon vegetal 2.5 kg",
+            "carbon 2 kg"
+          ]
         },
         {
           "ingredient": "sal",
@@ -1164,6 +1499,10 @@
             "salsa",
             "salmon",
             "galleta"
+          ],
+          "search_queries": [
+            "sal fina 1 kg",
+            "sal de mesa 1 kg"
           ]
         },
         {
@@ -1181,6 +1520,10 @@
           "excluded_terms": [
             "granulado",
             "rallado"
+          ],
+          "search_queries": [
+            "queso gauda laminado 250 g",
+            "queso laminado 250 g"
           ]
         },
         {
@@ -1204,7 +1547,11 @@
             "ketchup"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Ketchup 250 g"
+          "query": "Ketchup 250 g",
+          "search_queries": [
+            "ketchup hellmann 250 g",
+            "ketchup 250 g"
+          ]
         },
         {
           "ingredient": "mostaza",
@@ -1215,7 +1562,11 @@
             "mostaza"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Mostaza 250 g"
+          "query": "Mostaza 250 g",
+          "search_queries": [
+            "mostaza 250 g",
+            "mostaza amarilla 250 g"
+          ]
         },
         {
           "ingredient": "papasChips",
@@ -1237,6 +1588,13 @@
             "pre-frita",
             "prefrita",
             "baston"
+          ],
+          "search_queries": [
+            "papas chips 250 g",
+            "papas fritas bolsa 250 g"
+          ],
+          "discovery_terms": [
+            "papas"
           ]
         },
         {
@@ -1248,7 +1606,11 @@
             "nachos"
           ],
           "expected_pattern": "\\b200\\s*g\\b",
-          "query": "Nachos 200 g"
+          "query": "Nachos 200 g",
+          "search_queries": [
+            "nachos 200 g",
+            "tortillas maiz nachos"
+          ]
         },
         {
           "ingredient": "frutosSecos",
@@ -1260,7 +1622,14 @@
             "frutos"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Mix frutos secos 250 g"
+          "query": "Mix frutos secos 250 g",
+          "search_queries": [
+            "mix frutos secos 250 g",
+            "frutos secos 250 g"
+          ],
+          "discovery_terms": [
+            "frutos"
+          ]
         },
         {
           "ingredient": "galletaSalada",
@@ -1272,7 +1641,14 @@
             "salad"
           ],
           "expected_pattern": "\\b200\\s*g\\b",
-          "query": "Galletas saladas 200 g"
+          "query": "Galletas saladas 200 g",
+          "search_queries": [
+            "galletas saladas 200 g",
+            "crackers salados 200 g"
+          ],
+          "discovery_terms": [
+            "galleta"
+          ]
         },
         {
           "ingredient": "bebida",
@@ -1288,6 +1664,14 @@
           "query": "Coca Cola original 2 L",
           "excluded_terms": [
             "retornable"
+          ],
+          "search_queries": [
+            "coca cola 2 litros",
+            "bebida cola 2 l"
+          ],
+          "discovery_terms": [
+            "coca",
+            "cola"
           ]
         },
         {
@@ -1300,7 +1684,11 @@
             "sin gas"
           ],
           "expected_pattern": "\\b1[.,]5\\s*(?:l|lt|litros?)\\b",
-          "query": "Agua mineral sin gas 1.5 L"
+          "query": "Agua mineral sin gas 1.5 L",
+          "search_queries": [
+            "agua mineral 1.5 l",
+            "agua mineral sin gas"
+          ]
         },
         {
           "ingredient": "hielo",
@@ -1311,7 +1699,11 @@
             "hielo"
           ],
           "expected_pattern": "\\b2\\s*kg\\b",
-          "query": "Hielo 2 kg"
+          "query": "Hielo 2 kg",
+          "search_queries": [
+            "hielo bolsa 2 kg",
+            "hielo bolsa"
+          ]
         }
       ],
       "browser": {
@@ -1348,7 +1740,16 @@
             "480"
           ],
           "expected_pattern": "\\b8\\s*un",
-          "query": "pan hot dog castaño"
+          "query": "pan hot dog castaño",
+          "search_queries": [
+            "pan hot dog castaño 8 unidades",
+            "pan hot dog 8 un"
+          ],
+          "discovery_terms": [
+            "pan",
+            "hot",
+            "dog"
+          ]
         },
         {
           "ingredient": "vienesa",
@@ -1372,7 +1773,15 @@
             "hellmann"
           ],
           "expected_pattern": "\\b800\\s*g\\b",
-          "query": "Mayonesa Hellmann's Doypack 800 g"
+          "query": "Mayonesa Hellmann's Doypack 800 g",
+          "search_queries": [
+            "mayonesa hellmann 800 g",
+            "mayonesa hellmann doypack"
+          ],
+          "discovery_terms": [
+            "mayonesa",
+            "hellmann"
+          ]
         },
         {
           "ingredient": "arroz",
@@ -1386,7 +1795,15 @@
             "gran seleccion"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "arroz tucapel"
+          "query": "arroz tucapel",
+          "search_queries": [
+            "arroz tucapel grado 1 1 kg",
+            "arroz tucapel 1 kg"
+          ],
+          "discovery_terms": [
+            "arroz",
+            "tucapel"
+          ]
         },
         {
           "ingredient": "pasta",
@@ -1445,6 +1862,10 @@
             "pavo",
             "hamburguesa",
             "molida"
+          ],
+          "search_queries": [
+            "lomo vetado 1 kg",
+            "lomo vetado vacuno"
           ]
         },
         {
@@ -1457,7 +1878,11 @@
             "deshuesad"
           ],
           "expected_pattern": "\\b1\\s*kg\\b",
-          "query": "Pechuga pollo deshuesada 1 kg"
+          "query": "Pechuga pollo deshuesada 1 kg",
+          "search_queries": [
+            "pechuga pollo 1 kg",
+            "pechuga deshuesada 1 kg"
+          ]
         },
         {
           "ingredient": "chorizo",
@@ -1468,7 +1893,11 @@
             "choriz"
           ],
           "expected_pattern": "\\b500\\s*g\\b",
-          "query": "Chorizo 500 g"
+          "query": "Chorizo 500 g",
+          "search_queries": [
+            "chorizo 500 g",
+            "chorizo parrillero"
+          ]
         },
         {
           "ingredient": "carbon",
@@ -1479,7 +1908,11 @@
             "carbon"
           ],
           "expected_pattern": "\\b2[.,]5\\s*kg\\b",
-          "query": "Carbon 2.5 kg"
+          "query": "Carbon 2.5 kg",
+          "search_queries": [
+            "carbon vegetal 2.5 kg",
+            "carbon 2 kg"
+          ]
         },
         {
           "ingredient": "sal",
@@ -1498,6 +1931,10 @@
             "salsa",
             "salmon",
             "galleta"
+          ],
+          "search_queries": [
+            "sal fina 1 kg",
+            "sal de mesa 1 kg"
           ]
         },
         {
@@ -1515,6 +1952,10 @@
           "excluded_terms": [
             "granulado",
             "rallado"
+          ],
+          "search_queries": [
+            "queso gauda laminado 250 g",
+            "queso laminado 250 g"
           ]
         },
         {
@@ -1538,7 +1979,11 @@
             "ketchup"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Ketchup 250 g"
+          "query": "Ketchup 250 g",
+          "search_queries": [
+            "ketchup hellmann 250 g",
+            "ketchup 250 g"
+          ]
         },
         {
           "ingredient": "mostaza",
@@ -1549,7 +1994,11 @@
             "mostaza"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Mostaza 250 g"
+          "query": "Mostaza 250 g",
+          "search_queries": [
+            "mostaza 250 g",
+            "mostaza amarilla 250 g"
+          ]
         },
         {
           "ingredient": "papasChips",
@@ -1571,6 +2020,13 @@
             "pre-frita",
             "prefrita",
             "baston"
+          ],
+          "search_queries": [
+            "papas chips 250 g",
+            "papas fritas bolsa 250 g"
+          ],
+          "discovery_terms": [
+            "papas"
           ]
         },
         {
@@ -1582,7 +2038,11 @@
             "nachos"
           ],
           "expected_pattern": "\\b200\\s*g\\b",
-          "query": "Nachos 200 g"
+          "query": "Nachos 200 g",
+          "search_queries": [
+            "nachos 200 g",
+            "tortillas maiz nachos"
+          ]
         },
         {
           "ingredient": "frutosSecos",
@@ -1594,7 +2054,14 @@
             "frutos"
           ],
           "expected_pattern": "\\b250\\s*g\\b",
-          "query": "Mix frutos secos 250 g"
+          "query": "Mix frutos secos 250 g",
+          "search_queries": [
+            "mix frutos secos 250 g",
+            "frutos secos 250 g"
+          ],
+          "discovery_terms": [
+            "frutos"
+          ]
         },
         {
           "ingredient": "galletaSalada",
@@ -1606,7 +2073,14 @@
             "salad"
           ],
           "expected_pattern": "\\b200\\s*g\\b",
-          "query": "Galletas saladas 200 g"
+          "query": "Galletas saladas 200 g",
+          "search_queries": [
+            "galletas saladas 200 g",
+            "crackers salados 200 g"
+          ],
+          "discovery_terms": [
+            "galleta"
+          ]
         },
         {
           "ingredient": "bebida",
@@ -1622,6 +2096,14 @@
           "query": "Coca Cola original 2 L",
           "excluded_terms": [
             "retornable"
+          ],
+          "search_queries": [
+            "coca cola 2 litros",
+            "bebida cola 2 l"
+          ],
+          "discovery_terms": [
+            "coca",
+            "cola"
           ]
         },
         {
@@ -1634,7 +2116,11 @@
             "sin gas"
           ],
           "expected_pattern": "\\b1[.,]5\\s*(?:l|lt|litros?)\\b",
-          "query": "Agua mineral sin gas 1.5 L"
+          "query": "Agua mineral sin gas 1.5 L",
+          "search_queries": [
+            "agua mineral 1.5 l",
+            "agua mineral sin gas"
+          ]
         },
         {
           "ingredient": "hielo",
@@ -1645,7 +2131,11 @@
             "hielo"
           ],
           "expected_pattern": "\\b2\\s*kg\\b",
-          "query": "Hielo 2 kg"
+          "query": "Hielo 2 kg",
+          "search_queries": [
+            "hielo bolsa 2 kg",
+            "hielo bolsa"
+          ]
         }
       ],
       "browser": {

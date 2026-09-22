@@ -37,7 +37,7 @@ def page_block(status, title, visible_text=''):
         return AccessBlocked('http_' + str(status), 'La tienda respondió HTTP ' + str(status) + ' al navegador.')
     if re.search(r'just a moment|access denied|verify you are human|checking your browser|captcha', title, re.I):
         return AccessBlocked('challenge', 'La tienda solicita una verificación al navegador.')
-    if re.search(r'verifica que eres humano|verifique que es humano|confirma que no eres un robot|unusual traffic|checking your browser', visible_text, re.I):
+    if re.search(r'verifica que eres humano|verifique que es humano|confirma que no eres un robot|unusual traffic|checking your browser|verificaci[oó]n de seguridad|comprueba que no eres un bot|bots? maliciosos', visible_text, re.I):
         return AccessBlocked('challenge', 'La tienda solicita una verificación al navegador.')
     return None
 
