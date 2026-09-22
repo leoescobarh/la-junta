@@ -29,16 +29,16 @@ Las pruebas usan respuestas sintéticas y comprueban fallos que pueden causar pr
 
 ## Cobertura real observada
 
-El snapshot disponible en `dist/prices.json` fue generado el 22-09-2026 a las 17:04 UTC:
+El snapshot disponible en `dist/prices.json` fue generado el 22-09-2026 a las 18:48 UTC. Después de la primera ejecución se recuperaron desde el snapshot histórico los precios que aún no pudieron reconfirmarse, marcándolos como anteriores:
 
-| Tienda | Precios vigentes | Agotados | Errores | Configurados |
-| --- | ---: | ---: | ---: | ---: |
-| Jumbo | 22 | 0 | 1 | 23 |
-| Santa Isabel | 7 | 2 | 14 | 23 |
-| Lider | 11 | 2 | 10 | 23 |
-| Tottus | 0 | 0 | 23 | 23 |
-| Unimarc | 14 | 0 | 9 | 23 |
-| **Total** | **54** | **4** | **57** | **115** |
+| Tienda | Precios vigentes | Anteriores | Agotados | Errores | Configurados |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Jumbo | 22 | 0 | 0 | 1 | 23 |
+| Santa Isabel | 8 | 0 | 1 | 14 | 23 |
+| Lider | 13 | 0 | 2 | 8 | 23 |
+| Tottus | 0 | 0 | 0 | 23 | 23 |
+| Unimarc | 1 | 13 | 0 | 9 | 23 |
+| **Total** | **44** | **13** | **3** | **55** | **115** |
 
 Tottus quedó sin precios en esa ejecución porque la página respondió con HTTP 403 y, en la revisión manual del navegador, mostró una verificación de seguridad. El extractor conserva el bloqueo y no intenta saltarlo con proxies, CAPTCHA, cookies personales ni cambios de huella. Para conseguir esos precios de forma estable se necesita un canal autorizado de la tienda, un feed público o ejecutar el navegador desde una infraestructura permitida por ella.
 
